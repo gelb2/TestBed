@@ -51,3 +51,40 @@ final class BlueView: UIView {
     }
 
 }
+
+#if canImport(SwiftUI) && DEBUG
+import SwiftUI
+struct UIViewPreview<View: UIView>: UIViewRepresentable {
+    let view: View
+    
+    init(_ builder: @escaping () -> View) {
+        view = builder()
+    }
+    
+    // MARK: UIViewRepresentable
+    
+    func makeUIView(context: Context) -> UIView { view }
+    
+    func updateUIView(_ uiView: UIView, context: Context) { }
+}
+
+#endif
+
+#if canImport(SwiftUI) && DEBUG
+import SwiftUI
+
+struct BlueViewPreview: PreviewProvider {
+    
+    static var previews: some View {
+        Group {
+            UIViewPreview { BlueView() }
+            UIViewPreview {
+                let view = BlueView()
+                view.set(state: .init(buttonName: "Hello World"))
+                return view
+            }
+        }.previewLayout(.fixed(width: 200, height: 200))
+    }
+}
+
+#endif
