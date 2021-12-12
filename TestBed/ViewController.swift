@@ -18,6 +18,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    func update(buttonName name: String) {
+        mainView.set(state: .init(buttonName: name))
+    }
 
 
 }

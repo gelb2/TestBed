@@ -17,6 +17,12 @@ final class BlueView: UIView {
     }
     */
     
+    struct State {
+        var buttonName: String
+    }
+    
+    lazy var button = UIButton()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -30,7 +36,6 @@ final class BlueView: UIView {
     private func setup() {
         backgroundColor = .systemBlue
         
-        let button = UIButton()
         button.setTitle("Button", for: .normal)
         button.sizeToFit()
         button.backgroundColor = .systemRed
@@ -38,6 +43,11 @@ final class BlueView: UIView {
         button.frame.origin.y = 100
         
         addSubview(button)
+    }
+    
+    func set(state: State) {
+        button.setTitle(state.buttonName, for: .normal)
+        button.sizeToFit()
     }
 
 }
