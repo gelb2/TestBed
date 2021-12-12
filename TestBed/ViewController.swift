@@ -8,10 +8,14 @@
 import UIKit
 
 class ViewController: UIViewController {
+    lazy var mainView = BlueView()
 
+    override func loadView() {
+        self.view = mainView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .blue
         // Do any additional setup after loading the view.
     }
 
