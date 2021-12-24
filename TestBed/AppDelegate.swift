@@ -35,6 +35,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func test() {
         print("appDelegate Test")
     }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        print("application did become active")
+    }
+    
+    func applicationWillResignActive(_ application: UIApplication) {
+        print("application will resign active")
+    }
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        print("application did enter background")
+    }
+    
+    
+    
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        print("application will enter foreground")
+    }
+    
 
 
 }
