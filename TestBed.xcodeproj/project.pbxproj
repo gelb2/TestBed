@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2F955AA1E4A44AF03EFC357D /* Pods_TestBed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AD6788B95F84F5C298F4694 /* Pods_TestBed.framework */; };
+		4C68DA9D2775B16700FEAD25 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C68DA9C2775B16700FEAD25 /* ContentView.swift */; };
+		4C68DA9F2775B2C700FEAD25 /* SwiftUILifeCycleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C68DA9E2775B2C700FEAD25 /* SwiftUILifeCycleApp.swift */; };
 		4C6AB1692765B01B00013B9B /* BlueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6AB1682765B01B00013B9B /* BlueView.swift */; };
 		4CE985F22765707D00239C1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE985F12765707D00239C1B /* AppDelegate.swift */; };
 		4CE985F42765707D00239C1B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE985F32765707D00239C1B /* SceneDelegate.swift */; };
@@ -39,6 +41,8 @@
 /* Begin PBXFileReference section */
 		14CDBE1B5850B82835FCC2A0 /* Pods-TestBed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestBed.debug.xcconfig"; path = "Target Support Files/Pods-TestBed/Pods-TestBed.debug.xcconfig"; sourceTree = "<group>"; };
 		4AD6788B95F84F5C298F4694 /* Pods_TestBed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestBed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C68DA9C2775B16700FEAD25 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4C68DA9E2775B2C700FEAD25 /* SwiftUILifeCycleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUILifeCycleApp.swift; sourceTree = "<group>"; };
 		4C6AB1682765B01B00013B9B /* BlueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueView.swift; sourceTree = "<group>"; };
 		4CE985EE2765707D00239C1B /* TestBed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestBed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CE985F12765707D00239C1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,7 +113,9 @@
 				4CE985F12765707D00239C1B /* AppDelegate.swift */,
 				4CE985F32765707D00239C1B /* SceneDelegate.swift */,
 				4CE985F52765707D00239C1B /* ViewController.swift */,
+				4C68DA9E2775B2C700FEAD25 /* SwiftUILifeCycleApp.swift */,
 				4C6AB1682765B01B00013B9B /* BlueView.swift */,
+				4C68DA9C2775B16700FEAD25 /* ContentView.swift */,
 				4CE985FA2765707D00239C1B /* Assets.xcassets */,
 				4CE985FC2765707D00239C1B /* LaunchScreen.storyboard */,
 				4CE985FF2765707D00239C1B /* Info.plist */,
@@ -326,6 +332,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C6AB1692765B01B00013B9B /* BlueView.swift in Sources */,
+				4C68DA9D2775B16700FEAD25 /* ContentView.swift in Sources */,
+				4C68DA9F2775B2C700FEAD25 /* SwiftUILifeCycleApp.swift in Sources */,
 				4CE985F62765707D00239C1B /* ViewController.swift in Sources */,
 				4CE985F22765707D00239C1B /* AppDelegate.swift in Sources */,
 				4CE985F42765707D00239C1B /* SceneDelegate.swift in Sources */,
