@@ -112,10 +112,7 @@
 			children = (
 				4CE985F12765707D00239C1B /* AppDelegate.swift */,
 				4CE985F32765707D00239C1B /* SceneDelegate.swift */,
-				4CE985F52765707D00239C1B /* ViewController.swift */,
-				4C68DA9E2775B2C700FEAD25 /* SwiftUILifeCycleApp.swift */,
-				4C6AB1682765B01B00013B9B /* BlueView.swift */,
-				4C68DA9C2775B16700FEAD25 /* ContentView.swift */,
+				4CEBA77427901CE600904EEC /* SwiftUI_Preview_AppLifeCycleStudy */,
 				4CE985FA2765707D00239C1B /* Assets.xcassets */,
 				4CE985FC2765707D00239C1B /* LaunchScreen.storyboard */,
 				4CE985FF2765707D00239C1B /* Info.plist */,
@@ -138,6 +135,17 @@
 				4CE986142765707D00239C1B /* TestBedUITestsLaunchTests.swift */,
 			);
 			path = TestBedUITests;
+			sourceTree = "<group>";
+		};
+		4CEBA77427901CE600904EEC /* SwiftUI_Preview_AppLifeCycleStudy */ = {
+			isa = PBXGroup;
+			children = (
+				4CE985F52765707D00239C1B /* ViewController.swift */,
+				4C68DA9E2775B2C700FEAD25 /* SwiftUILifeCycleApp.swift */,
+				4C6AB1682765B01B00013B9B /* BlueView.swift */,
+				4C68DA9C2775B16700FEAD25 /* ContentView.swift */,
+			);
+			path = SwiftUI_Preview_AppLifeCycleStudy;
 			sourceTree = "<group>";
 		};
 		6FC9EF0196B7169F2CCBDB93 /* Pods */ = {
