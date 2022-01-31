@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SwiftUIPreviewTestVC: UIViewController {
     lazy var mainView = BlueView()
 
     override func loadView() {
