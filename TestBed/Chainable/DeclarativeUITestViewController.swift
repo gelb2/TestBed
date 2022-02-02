@@ -25,38 +25,47 @@ class DeclarativeUITestViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .yellow
+        self.view.backgroundColor = .white
         self.view.translatesAutoresizingMaskIntoConstraints = false
         
-        _ = UIView().chain
+        let red = UIView().chain
             .add(to: self.view)
             .background(color: .red)
             .cornerRadius(8)
-            .position(x: 50, y: 50)
-            .size(width: 100, height: 100)
-            .position(x: 50, y: 50)
+            .constraint { m in
+                m.edges.equalToSuperview()
+                .inset(UIEdgeInsets(top: 50, left: 50, bottom: 50, right: 50))
+            }
+            .origin
 
-        _ = UIView().chain
-            .add(to: self.view)
+        let green = UIView().chain
+            .add(to: red)
             .background(color: .green)
             .cornerRadius(16)
-            .size(width: 100, height: 100)
-            .position(x: 80, y: 80)
+            .constraint {
+                $0.edges.equalToSuperview()
+                .inset(UIEdgeInsets(top: 50, left: 50, bottom: 50, right: 50))
+            }
+            .origin
 
         _ = UIView().chain
-            .add(to: self.view)
+            .add(to: green)
             .background(color: .blue)
-            .cornerRadius(24)
-            .size(width: 100, height: 100)
-            .position(x: 120, y: 120)
+            .cornerRadius(32)
+            .constraint {
+                $0.edges.equalToSuperview()
+                .inset(UIEdgeInsets(top: 50, left: 50, bottom: 50, right: 50))
+            }
         
         _ = UILabel().chain
             .add(to: self.view)
-            .position(x: 100, y: 250)
             .text("hello world")
             .background(color: .white)
             .color(.cyan)
             .font(size: 32, weight: .medium)
+            .constraint {
+                $0.center.equalToSuperview()
+            }
     }
     
     

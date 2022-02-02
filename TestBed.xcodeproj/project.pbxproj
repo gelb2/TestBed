@@ -13,6 +13,8 @@
 		4C0242D227A7EBDB00B01FB1 /* DeclarativeUITestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0242D127A7EBDB00B01FB1 /* DeclarativeUITestViewController.swift */; };
 		4C0242D427A7EC9F00B01FB1 /* UIView+Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0242D327A7EC9F00B01FB1 /* UIView+Chainable.swift */; };
 		4C0242D627A7F98A00B01FB1 /* UILabel+Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0242D527A7F98A00B01FB1 /* UILabel+Chainable.swift */; };
+		4C0242D927AA671300B01FB1 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4C0242D827AA671300B01FB1 /* SnapKit */; };
+		4C0242DB27AA675A00B01FB1 /* SnapKit+Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0242DA27AA675A00B01FB1 /* SnapKit+Chainable.swift */; };
 		4C68DA9D2775B16700FEAD25 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C68DA9C2775B16700FEAD25 /* ContentView.swift */; };
 		4C68DA9F2775B2C700FEAD25 /* SwiftUILifeCycleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C68DA9E2775B2C700FEAD25 /* SwiftUILifeCycleApp.swift */; };
 		4C6AB1692765B01B00013B9B /* BlueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6AB1682765B01B00013B9B /* BlueView.swift */; };
@@ -51,6 +53,7 @@
 		4C0242D127A7EBDB00B01FB1 /* DeclarativeUITestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeclarativeUITestViewController.swift; sourceTree = "<group>"; };
 		4C0242D327A7EC9F00B01FB1 /* UIView+Chainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Chainable.swift"; sourceTree = "<group>"; };
 		4C0242D527A7F98A00B01FB1 /* UILabel+Chainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Chainable.swift"; sourceTree = "<group>"; };
+		4C0242DA27AA675A00B01FB1 /* SnapKit+Chainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SnapKit+Chainable.swift"; sourceTree = "<group>"; };
 		4C68DA9C2775B16700FEAD25 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4C68DA9E2775B2C700FEAD25 /* SwiftUILifeCycleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUILifeCycleApp.swift; sourceTree = "<group>"; };
 		4C6AB1682765B01B00013B9B /* BlueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueView.swift; sourceTree = "<group>"; };
@@ -75,6 +78,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F955AA1E4A44AF03EFC357D /* Pods_TestBed.framework in Frameworks */,
+				4C0242D927AA671300B01FB1 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +106,7 @@
 				4C0242CF27A7EAD700B01FB1 /* Int+Chainable.swift */,
 				4C0242D327A7EC9F00B01FB1 /* UIView+Chainable.swift */,
 				4C0242D527A7F98A00B01FB1 /* UILabel+Chainable.swift */,
+				4C0242DA27AA675A00B01FB1 /* SnapKit+Chainable.swift */,
 				4C0242D127A7EBDB00B01FB1 /* DeclarativeUITestViewController.swift */,
 			);
 			path = Chainable;
@@ -206,6 +211,9 @@
 			dependencies = (
 			);
 			name = TestBed;
+			packageProductDependencies = (
+				4C0242D827AA671300B01FB1 /* SnapKit */,
+			);
 			productName = TestBed;
 			productReference = 4CE985EE2765707D00239C1B /* TestBed.app */;
 			productType = "com.apple.product-type.application";
@@ -278,6 +286,9 @@
 				Base,
 			);
 			mainGroup = 4CE985E52765707D00239C1B;
+			packageReferences = (
+				4C0242D727AA671300B01FB1 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 4CE985EF2765707D00239C1B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -364,6 +375,7 @@
 			files = (
 				4C6AB1692765B01B00013B9B /* BlueView.swift in Sources */,
 				4C68DA9D2775B16700FEAD25 /* ContentView.swift in Sources */,
+				4C0242DB27AA675A00B01FB1 /* SnapKit+Chainable.swift in Sources */,
 				4C0242D227A7EBDB00B01FB1 /* DeclarativeUITestViewController.swift in Sources */,
 				4C0242CE27A7EA2300B01FB1 /* Chain.swift in Sources */,
 				4C0242D627A7F98A00B01FB1 /* UILabel+Chainable.swift in Sources */,
@@ -728,6 +740,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4C0242D727AA671300B01FB1 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4C0242D827AA671300B01FB1 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4C0242D727AA671300B01FB1 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4CE985E62765707D00239C1B /* Project object */;
 }
