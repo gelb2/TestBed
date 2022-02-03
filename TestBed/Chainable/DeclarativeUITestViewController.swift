@@ -27,7 +27,7 @@ class DeclarativeUITestViewController: BaseViewController {
             .bind(to: loginButton.rx.isEnabled)
             .disposed(by: disposeBag)
         
-        //TODO: Handle option control event rxoperator
+        //TODO: refactor optional control event rxoperator
         loginButton.rx.tap.asObservable()
             .withLatestFrom(Observable.zip(emailField.rx.text, passwordField.rx.text) {
                 ($0, $1) })
