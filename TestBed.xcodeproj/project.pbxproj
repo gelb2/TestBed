@@ -17,6 +17,7 @@
 		4C0242DB27AA675A00B01FB1 /* SnapKit+Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0242DA27AA675A00B01FB1 /* SnapKit+Chainable.swift */; };
 		4C0242DD27AA966500B01FB1 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0242DC27AA966500B01FB1 /* BaseViewController.swift */; };
 		4C0242DF27AA9A8500B01FB1 /* DeclarativeUITestViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0242DE27AA9A8500B01FB1 /* DeclarativeUITestViewController+UI.swift */; };
+		4C18364E27ABC5DE00F56513 /* UIStackView+Chanable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C18364D27ABC5DE00F56513 /* UIStackView+Chanable.swift */; };
 		4C68DA9D2775B16700FEAD25 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C68DA9C2775B16700FEAD25 /* ContentView.swift */; };
 		4C68DA9F2775B2C700FEAD25 /* SwiftUILifeCycleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C68DA9E2775B2C700FEAD25 /* SwiftUILifeCycleApp.swift */; };
 		4C6AB1692765B01B00013B9B /* BlueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6AB1682765B01B00013B9B /* BlueView.swift */; };
@@ -60,6 +61,7 @@
 		4C0242DA27AA675A00B01FB1 /* SnapKit+Chainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SnapKit+Chainable.swift"; sourceTree = "<group>"; };
 		4C0242DC27AA966500B01FB1 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		4C0242DE27AA9A8500B01FB1 /* DeclarativeUITestViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeclarativeUITestViewController+UI.swift"; sourceTree = "<group>"; };
+		4C18364D27ABC5DE00F56513 /* UIStackView+Chanable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Chanable.swift"; sourceTree = "<group>"; };
 		4C68DA9C2775B16700FEAD25 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4C68DA9E2775B2C700FEAD25 /* SwiftUILifeCycleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUILifeCycleApp.swift; sourceTree = "<group>"; };
 		4C6AB1682765B01B00013B9B /* BlueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueView.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				4C0242DA27AA675A00B01FB1 /* SnapKit+Chainable.swift */,
 				4C8C045627ABA5C800FFEB3B /* UITextField+Chainable.swift */,
 				4C8C045827ABACCE00FFEB3B /* UIButton+Chainable.swift */,
+				4C18364D27ABC5DE00F56513 /* UIStackView+Chanable.swift */,
 				4C0242D127A7EBDB00B01FB1 /* DeclarativeUITestViewController.swift */,
 				4C0242DE27AA9A8500B01FB1 /* DeclarativeUITestViewController+UI.swift */,
 				4C0242DC27AA966500B01FB1 /* BaseViewController.swift */,
@@ -393,6 +396,7 @@
 				4C0242CE27A7EA2300B01FB1 /* Chain.swift in Sources */,
 				4C0242D627A7F98A00B01FB1 /* UILabel+Chainable.swift in Sources */,
 				4C0242D027A7EAD700B01FB1 /* Int+Chainable.swift in Sources */,
+				4C18364E27ABC5DE00F56513 /* UIStackView+Chanable.swift in Sources */,
 				4C68DA9F2775B2C700FEAD25 /* SwiftUILifeCycleApp.swift in Sources */,
 				4C0242D427A7EC9F00B01FB1 /* UIView+Chainable.swift in Sources */,
 				4CE985F62765707D00239C1B /* SwiftUIPreviewTestVC.swift in Sources */,
