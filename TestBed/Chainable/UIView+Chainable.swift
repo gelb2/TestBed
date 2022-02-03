@@ -22,17 +22,40 @@ extension Chain where Origin: UIView {
         return self
     }
     
-    func add<P: UIView>(to parent: P) -> Chain {
+    private func add(child: UIView, to parent: UIView) {
         if let parent = parent as? UIStackView {
-            parent.addArrangedSubview(origin)
+            parent.addArrangedSubview(child)
         } else {
-            parent.addSubview(origin)
+            parent.addSubview(child)
         }
+    }
+    
+    func add<P: UIView>(to parent: P) -> Chain {
+        add(child: origin, to: parent)
         return self
     }
     
     func add<V: UIView>(to parentChain: Chain<V>) -> Chain {
         return add(to: parentChain.origin)
+    }
+    
+    func add<V: UIView>(child: V) -> Chain {
+        add(child: child, to: origin)
+        return self
+    }
+    
+    func add<V: UIView>(child: Chain<V>) -> Chain {
+        return add(child: child.origin)
+    }
+    
+    func add<V: UIView>(children: V...) -> Chain {
+        children.forEach { child in add(child: child, to: origin) }
+        return self
+    }
+    
+    func add<V: UIView>(children: Chain<V>...) -> Chain {
+        children.map { $0.origin }.forEach { add(child: $0, to: origin) }
+        return self
     }
     
     func size(width: CGFloat, height: CGFloat) -> Chain {
