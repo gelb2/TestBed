@@ -48,4 +48,10 @@ extension Chain where Origin: UIView {
         
         return self
     }
+    
+    func apply(_ block: (Origin) -> ()) -> Chain {
+        block(origin)
+        return self
+    }
+    
 }

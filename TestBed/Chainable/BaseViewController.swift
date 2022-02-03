@@ -43,12 +43,12 @@ class BaseViewController: UIViewController, BaseViewControllerCustomizable {
     }
     
     private func _setupBindings() {
-        let tapper = UIGestureRecognizer()
+        let tapper = UITapGestureRecognizer()
+        view.addGestureRecognizer(tapper)
+        
         tapper.rx.event.asDriver().drive(onNext: { [weak self] event in
             self?.view.endEditing(true)
         }).disposed(by: disposeBag)
-        
-        view.addGestureRecognizer(tapper)
         
         (self as BaseViewControllerCustomizable).setupBindings?()
     }
