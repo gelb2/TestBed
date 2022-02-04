@@ -11,7 +11,7 @@ extension DeclarativeUITestViewController {
     
     func setupViews() {
         //TODO: Upgrate VStackView API Wrap
-        let stack = VStackView()
+        _ = VStackView()
             .add(to: view)
             .spacing(20)
             .constraint {
@@ -30,8 +30,11 @@ extension DeclarativeUITestViewController {
                                 $0.centerX.top.bottom.equalToSuperview()
                                 $0.size.equalTo(100)
                             }
-                        ).origin,
-                 Spacer(height: 80).origin,
+                        )
+                        .store(to: &profile),
+                 
+                 Spacer(height: 80),
+                 
                  UITextField().chain
                      .apply{ tf in
                          tf.attributedPlaceholder = NSAttributedString(string: "Type Your Email", attributes: [.foregroundColor: UIColor.black])
@@ -40,9 +43,11 @@ extension DeclarativeUITestViewController {
                  //TODO: DarkMode Color Set
                      .border(.roundedRect)
                      .keyboardType(.emailAddress)
+                     .store(to: &emailField)
                      .constraint{
                          $0.height.equalTo(40)
-                     }.origin,
+                     },
+                 
                  UITextField().chain
                      .apply{ tf in
                          tf.attributedPlaceholder = NSAttributedString(string: "Type Your Password", attributes: [.foregroundColor: UIColor.yellow])
@@ -51,11 +56,12 @@ extension DeclarativeUITestViewController {
                  //TODO: DarkMode Color Set
                      .border(.roundedRect)
                      .secure()
+                     .store(to: &passwordField)
                      .constraint{
                          $0.height.equalTo(40)
-                     }.origin,
+                     },
                  
-                 Spacer(height: 100).origin,
+                 Spacer(height: 100),
                  
                  UIButton().chain
                      .title("Log in")
@@ -65,9 +71,10 @@ extension DeclarativeUITestViewController {
                      .titleFont(size: 24, weight: .bold)
                      .cornerRadius(12)
                      .background(color: .brown)
+                     .store(to: &loginButton)
                      .constraint{
                          $0.height.equalTo(60)
-                     }.origin
+                     }
             )
     }
     

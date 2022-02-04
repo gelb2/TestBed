@@ -53,8 +53,10 @@ extension Chain where Origin: UIView {
         return self
     }
     
-    func add<V: UIView>(children: Chain<V>...) -> Chain {
-        children.map { $0.origin }.forEach { add(child: $0, to: origin) }
+    func add(children: ChainAny...) -> Chain {
+        children.map { $0.anyObject }
+            .map { $0 as! UIView }
+            .forEach { add(child: $0, to: origin) }
         return self
     }
     

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2F955AA1E4A44AF03EFC357D /* Pods_TestBed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AD6788B95F84F5C298F4694 /* Pods_TestBed.framework */; };
-		4C0242CE27A7EA2300B01FB1 /* Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0242CD27A7EA2300B01FB1 /* Chain.swift */; };
+		4C0242CE27A7EA2300B01FB1 /* Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0242CD27A7EA2300B01FB1 /* Chainable.swift */; };
 		4C0242D027A7EAD700B01FB1 /* Int+Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0242CF27A7EAD700B01FB1 /* Int+Chainable.swift */; };
 		4C0242D227A7EBDB00B01FB1 /* DeclarativeUITestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0242D127A7EBDB00B01FB1 /* DeclarativeUITestViewController.swift */; };
 		4C0242D427A7EC9F00B01FB1 /* UIView+Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0242D327A7EC9F00B01FB1 /* UIView+Chainable.swift */; };
@@ -53,7 +53,7 @@
 /* Begin PBXFileReference section */
 		14CDBE1B5850B82835FCC2A0 /* Pods-TestBed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestBed.debug.xcconfig"; path = "Target Support Files/Pods-TestBed/Pods-TestBed.debug.xcconfig"; sourceTree = "<group>"; };
 		4AD6788B95F84F5C298F4694 /* Pods_TestBed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestBed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C0242CD27A7EA2300B01FB1 /* Chain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chain.swift; sourceTree = "<group>"; };
+		4C0242CD27A7EA2300B01FB1 /* Chainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chainable.swift; sourceTree = "<group>"; };
 		4C0242CF27A7EAD700B01FB1 /* Int+Chainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Chainable.swift"; sourceTree = "<group>"; };
 		4C0242D127A7EBDB00B01FB1 /* DeclarativeUITestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeclarativeUITestViewController.swift; sourceTree = "<group>"; };
 		4C0242D327A7EC9F00B01FB1 /* UIView+Chainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Chainable.swift"; sourceTree = "<group>"; };
@@ -112,7 +112,7 @@
 		4C0242CC27A7EA1200B01FB1 /* Chainable */ = {
 			isa = PBXGroup;
 			children = (
-				4C0242CD27A7EA2300B01FB1 /* Chain.swift */,
+				4C0242CD27A7EA2300B01FB1 /* Chainable.swift */,
 				4C0242CF27A7EAD700B01FB1 /* Int+Chainable.swift */,
 				4C0242D327A7EC9F00B01FB1 /* UIView+Chainable.swift */,
 				4C0242D527A7F98A00B01FB1 /* UILabel+Chainable.swift */,
@@ -393,7 +393,7 @@
 				4C68DA9D2775B16700FEAD25 /* ContentView.swift in Sources */,
 				4C0242DB27AA675A00B01FB1 /* SnapKit+Chainable.swift in Sources */,
 				4C0242D227A7EBDB00B01FB1 /* DeclarativeUITestViewController.swift in Sources */,
-				4C0242CE27A7EA2300B01FB1 /* Chain.swift in Sources */,
+				4C0242CE27A7EA2300B01FB1 /* Chainable.swift in Sources */,
 				4C0242D627A7F98A00B01FB1 /* UILabel+Chainable.swift in Sources */,
 				4C0242D027A7EAD700B01FB1 /* Int+Chainable.swift in Sources */,
 				4C18364E27ABC5DE00F56513 /* UIStackView+Chanable.swift in Sources */,

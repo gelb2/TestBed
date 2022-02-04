@@ -19,24 +19,24 @@ class DeclarativeUITestViewController: BaseViewController {
     func setupBindings() {
         //TODO: try refactor with debounce?
         //TODO: try refactoring with driver and button bind
-//        Observable.combineLatest(
-//            emailField.rx.text.orEmpty.map { $0.isEmpty },
-//            passwordField.rx.text.orEmpty.map { $0.isEmpty })
-//            { $0 || $1 }
-//            .map { !$0}
-//            .bind(to: loginButton.rx.isEnabled)
-//            .disposed(by: disposeBag)
-//        
-//        //TODO: refactor optional control event rxoperator
-//        loginButton.rx.tap.asObservable()
-//            .withLatestFrom(Observable.zip(emailField.rx.text, passwordField.rx.text) {
-//                ($0, $1) })
-//            .filter { (email, pw) in email != nil && pw != nil }
-//            .map { (email, pw) in (email!, pw!) }
-//            .subscribe(onNext: { [weak self] (email, pw) in
-//                self?.login(email: email, password: pw)
-//            })
-//            .disposed(by: disposeBag)
+        Observable.combineLatest(
+            emailField.rx.text.orEmpty.map { $0.isEmpty },
+            passwordField.rx.text.orEmpty.map { $0.isEmpty })
+            { $0 || $1 }
+            .map { !$0}
+            .bind(to: loginButton.rx.isEnabled)
+            .disposed(by: disposeBag)
+        
+        //TODO: refactor optional control event rxoperator
+        loginButton.rx.tap.asObservable()
+            .withLatestFrom(Observable.zip(emailField.rx.text, passwordField.rx.text) {
+                ($0, $1) })
+            .filter { (email, pw) in email != nil && pw != nil }
+            .map { (email, pw) in (email!, pw!) }
+            .subscribe(onNext: { [weak self] (email, pw) in
+                self?.login(email: email, password: pw)
+            })
+            .disposed(by: disposeBag)
     }
     
     func login(email: String, password: String) {
