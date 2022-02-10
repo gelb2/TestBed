@@ -53,26 +53,33 @@ class StudyListCell: UITableViewCell {
         
         var constraints: [NSLayoutConstraint] = []
         
+        let layoutGuide = UILayoutGuide()
+        contentView.addLayoutGuide(layoutGuide)
+        
         detailViewHeightConstraint = detailView.heightAnchor.constraint(equalToConstant: 0)
         detailViewHeightConstraint.priority = UILayoutPriority(rawValue: 950)
         
         constraints += [
-            titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 4),
-            titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 4),
-            titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -4),
+            layoutGuide.topAnchor.constraint(equalTo: contentView.topAnchor,constant: 4),
+            layoutGuide.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 4),
+            layoutGuide.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -4),
+            layoutGuide.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0),
+            titleLabel.topAnchor.constraint(equalTo: layoutGuide.topAnchor),
+            titleLabel.leadingAnchor.constraint(equalTo: layoutGuide.leadingAnchor),
+            titleLabel.trailingAnchor.constraint(equalTo: layoutGuide.trailingAnchor),
             titleLabel.heightAnchor.constraint(equalToConstant: 64),
             titleLabel.bottomAnchor.constraint(equalTo: descriptionLabel.topAnchor, constant: 4),
-            descriptionLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 4),
-            descriptionLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -4),
+            descriptionLabel.leadingAnchor.constraint(equalTo: layoutGuide.leadingAnchor),
+            descriptionLabel.trailingAnchor.constraint(equalTo: layoutGuide.trailingAnchor),
             descriptionLabel.heightAnchor.constraint(equalToConstant: 48),
             descriptionLabel.bottomAnchor.constraint(equalTo: divider.topAnchor, constant: -12),
             divider.heightAnchor.constraint(equalToConstant: 2),
-            divider.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 2),
-            divider.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -2),
+            divider.leadingAnchor.constraint(equalTo: layoutGuide.leadingAnchor, constant: 2),
+            divider.trailingAnchor.constraint(equalTo: layoutGuide.trailingAnchor, constant: -2),
             divider.bottomAnchor.constraint(equalTo: detailView.topAnchor),
-            detailView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            detailView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            detailView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            detailView.leadingAnchor.constraint(equalTo: layoutGuide.leadingAnchor),
+            detailView.trailingAnchor.constraint(equalTo: layoutGuide.trailingAnchor),
+            detailView.bottomAnchor.constraint(equalTo: layoutGuide.bottomAnchor),
             detailViewHeightConstraint
         ]
 
