@@ -60,6 +60,7 @@ class StudyListViewController: UIViewController {
     
     func configureViews() {
         //왜인지 모르겠지만 seperatorStyle 을 추가로 설정하니 에러로그가 사라졌다
+        tableView.contentInsetAdjustmentBehavior = .never
         tableView.separatorStyle = .none
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 100
