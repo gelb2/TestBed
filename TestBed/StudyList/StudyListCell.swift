@@ -90,11 +90,11 @@ class StudyListCell: UITableViewCell {
         self.contentView.backgroundColor = .yellow
         
         titleLabel.textColor = .black
-        titleLabel.font = UIFont.systemFont(ofSize: 28, weight: .heavy)
+        titleLabel.font = UIFont(name: "magdacleanmono-bold", size: 28) ?? UIFont.systemFont(ofSize: 28, weight: .heavy)
         titleLabel.numberOfLines = 1
         
         descriptionLabel.textColor = .black
-        descriptionLabel.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        descriptionLabel.font = UIFont(name: "magdacleanmono-regular", size: 16) ?? UIFont.systemFont(ofSize: 16, weight: .medium)
         descriptionLabel.numberOfLines = 0
         
         divider.backgroundColor = .orange

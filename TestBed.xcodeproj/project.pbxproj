@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2F955AA1E4A44AF03EFC357D /* Pods_TestBed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AD6788B95F84F5C298F4694 /* Pods_TestBed.framework */; };
+		365AACBE27B6AFE100FBAC52 /* magdacleanmono-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 365AACBD27B6AFCF00FBAC52 /* magdacleanmono-bold.ttf */; };
+		365AACC027B6B32100FBAC52 /* magdacleanmono-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 365AACBF27B6B32100FBAC52 /* magdacleanmono-regular.ttf */; };
 		4C0242CE27A7EA2300B01FB1 /* Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0242CD27A7EA2300B01FB1 /* Chainable.swift */; };
 		4C0242D027A7EAD700B01FB1 /* Int+Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0242CF27A7EAD700B01FB1 /* Int+Chainable.swift */; };
 		4C0242D227A7EBDB00B01FB1 /* DeclarativeUITestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0242D127A7EBDB00B01FB1 /* DeclarativeUITestViewController.swift */; };
@@ -60,6 +62,8 @@
 
 /* Begin PBXFileReference section */
 		14CDBE1B5850B82835FCC2A0 /* Pods-TestBed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestBed.debug.xcconfig"; path = "Target Support Files/Pods-TestBed/Pods-TestBed.debug.xcconfig"; sourceTree = "<group>"; };
+		365AACBD27B6AFCF00FBAC52 /* magdacleanmono-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "magdacleanmono-bold.ttf"; sourceTree = "<group>"; };
+		365AACBF27B6B32100FBAC52 /* magdacleanmono-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "magdacleanmono-regular.ttf"; sourceTree = "<group>"; };
 		4AD6788B95F84F5C298F4694 /* Pods_TestBed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestBed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C0242CD27A7EA2300B01FB1 /* Chainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chainable.swift; sourceTree = "<group>"; };
 		4C0242CF27A7EAD700B01FB1 /* Int+Chainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Chainable.swift"; sourceTree = "<group>"; };
@@ -125,6 +129,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		365AACBC27B6AFAC00FBAC52 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				365AACBD27B6AFCF00FBAC52 /* magdacleanmono-bold.ttf */,
+				365AACBF27B6B32100FBAC52 /* magdacleanmono-regular.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		4C0242CC27A7EA1200B01FB1 /* Chainable */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +211,7 @@
 		4CE985F02765707D00239C1B /* TestBed */ = {
 			isa = PBXGroup;
 			children = (
+				365AACBC27B6AFAC00FBAC52 /* Font */,
 				4CE985F12765707D00239C1B /* AppDelegate.swift */,
 				4CE985F32765707D00239C1B /* SceneDelegate.swift */,
 				4CB5988227B66B68009247AD /* SceneRelated */,
@@ -368,8 +382,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				365AACBE27B6AFE100FBAC52 /* magdacleanmono-bold.ttf in Resources */,
 				4CE985FE2765707D00239C1B /* LaunchScreen.storyboard in Resources */,
 				4CE985FB2765707D00239C1B /* Assets.xcassets in Resources */,
+				365AACC027B6B32100FBAC52 /* magdacleanmono-regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
