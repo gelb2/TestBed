@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+class SceneDelegate: UIResponder, UIWindowSceneDelegate, SceneDelegateRoutable {
 
     var window: UIWindow?
 
@@ -18,8 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        let studyViewModel = StudyModel()
-        let studyListViewController = StudyListViewController(viewModel: studyViewModel)
+        let studyListViewController: StudyListViewController = buildScene(scene: .StudyList) as! StudyListViewController
         
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = studyListViewController

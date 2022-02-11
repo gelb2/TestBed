@@ -7,7 +7,9 @@
 
 import Foundation
 
-enum Scenes {
+enum SceneCategory {
+    case StudyList
+    case SwiftUIPreviewTest
     case DeclarativeUI
     case Unknown
 }

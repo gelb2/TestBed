@@ -11,7 +11,7 @@ import UIKit
 //TODO: Make Route/Coordination Logic.
 //TODO: adapt MVVM Pattern
 //TODO: adapt rxswift, rxcocoa, rxdatasource
-class StudyListViewController: UIViewController {
+class StudyListViewController: UIViewController, StudyListRoutable {
     
     var studyModel: StudyModel
     private var studyViewModel: StudyViewModel
@@ -81,6 +81,12 @@ class StudyListViewController: UIViewController {
 extension StudyListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         toggleCell(tableView, indexPath: indexPath)
+        let indexPathRow = indexPath.row
+        if indexPathRow % 2 == 0 {
+            route(to: .Unknown)
+        } else {
+            route(to: .DeclarativeUI)
+        }
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
