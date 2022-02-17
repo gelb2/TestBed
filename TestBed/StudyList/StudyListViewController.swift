@@ -82,10 +82,13 @@ extension StudyListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         toggleCell(tableView, indexPath: indexPath)
         let indexPathRow = indexPath.row
-        if indexPathRow % 2 == 0 {
-            route(to: .Unknown)
-        } else {
+        if indexPathRow == 0 {
+            //TODO: make ViewModel Send Scene to route(to: ) method
             route(to: .DeclarativeUI)
+        } else if indexPathRow == 1{
+            route(to: .Unknown)
+        } else if indexPathRow == 2 {
+            route(to: .SwiftUIPreviewTest)
         }
     }
     
