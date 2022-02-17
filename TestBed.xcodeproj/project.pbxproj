@@ -179,10 +179,10 @@
 			isa = PBXGroup;
 			children = (
 				4C11A8D527AE61E700EC545B /* SceneCategory.swift */,
+				4C0ECEFE27BE6B4B00BCA3EA /* SceneContext.swift */,
 				4CB5988327B6777B009247AD /* Routable.swift */,
 				4C0ECEFA27BE17A400BCA3EA /* SceneDelegateRoutable.swift */,
 				4C0ECEFC27BE17D400BCA3EA /* StudyListRoutable.swift */,
-				4C0ECEFE27BE6B4B00BCA3EA /* SceneContext.swift */,
 			);
 			path = SceneRelated;
 			sourceTree = "<group>";

@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, SceneDelegateRoutable {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
                  
         self.windowScene = (scene as? UIWindowScene)
-        route(to: .StudyList)
+        route(to: .StudyList(<#T##SceneContext<StudyModel>#>))
         print("scene will connect to")
     }
 

@@ -8,11 +8,11 @@
 //SceneContext is a generic Class for holding UseCaseProtocol instance, ViewModel instance
 import Foundation
 
-class SceneContext<Context> {
+class SceneContext<Dependency> {
     
-    var context: Context
+    var dependency: Dependency
     
-    init(context: Context) {
-        self.context = context
+    init(dependency: Dependency) {
+        self.dependency = dependency
     }
 }
