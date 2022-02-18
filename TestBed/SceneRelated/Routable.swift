@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+//TODO: Make Routable dismiss scene, push navi, pop navi possible
 protocol Sceneable {
     
 }
