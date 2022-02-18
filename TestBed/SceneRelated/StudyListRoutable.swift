@@ -33,16 +33,15 @@ protocol StudyListRoutable: Routable, StudyListSceneBuildable {
 }
 
 extension StudyListRoutable where Self: StudyListViewController {
-    //TODO: Protocol Implementation is too long
-    // Skip unnecessary Scene case with default
+
     func buildScene(scene: SceneCategory) -> Sceneable? {
         var nextScene: Sceneable?
         switch scene {
-        case .SwiftUIPreviewTest:
+        case .studyTopic(.uiStudy(.SwiftUIPreviewTest)):
             nextScene = buildSwiftUIPreviewScene()
-        case .DeclarativeUI:
+        case .studyTopic(.uiStudy(.DeclarativeUI)):
             nextScene = buildDeclarativeUIScene()
-        case .Unknown:
+        case .errorPopup(.Unknown):
             nextScene = buildErrorAlert()
         default: break
         }

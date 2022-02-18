@@ -139,3 +139,60 @@ extension StudyListCell: CellConfigurable {
         toggleDetailView(false)
     }
 }
+
+//해보니까 프리뷰가 되긴 되는데
+//Cell의 뷰들을 잘게 나누고, 잘게 나는 뷰에 대해서 프리뷰를 만들고
+//넣어줄 FakeViewModel이 필요하고
+//프리뷰에서 쓸 뷰가 호출할 메소드는 아주 간략해야 할 것으로 보인다....
+extension StudyListCell {
+    func injectFakeData() {
+        titleLabel.text = "Bear Fried"
+        descriptionLabel.text = "Declartive UI"
+    }
+    
+    func showFakeDetailView() {
+        self.detailViewHeightConstraint.constant = 100
+        self.descriptionLabel.textColor = .red
+        self.detailView.isHidden = false
+    }
+    
+    func hideFakeDetailView() {
+        self.detailViewHeightConstraint.constant = 0
+        self.descriptionLabel.textColor = .blue
+        self.detailView.isHidden = true
+    }
+}
+
+#if canImport(SwiftUI) && DEBUG
+struct StudyListCellPreview<View: UIView>: UIViewRepresentable {
+    let view: View
+    
+    init(_ builder: @escaping () -> View) {
+        view = builder()
+    }
+    
+    // MARK: UIViewRepresentable
+    func makeUIView(context: Context) -> some UIView {
+        view
+    }
+    // MARK: UIViewRepresentable
+    func updateUIView(_ uiView: UIViewType, context: Context) {
+        
+    }
+}
+
+#endif
+
+#if canImport(SwiftUI) && DEBUG
+struct StudyListCellPreviewProvider: PreviewProvider {
+    static var previews: some View {
+        StudyListCellPreview {
+            let cell = StudyListCell(style: .default, reuseIdentifier: "StudyListCell")
+            cell.injectFakeData()
+            cell.hideFakeDetailView()
+            return cell
+        }.previewLayout(.fixed(width: 320, height: 100))
+    }
+}
+
+#endif

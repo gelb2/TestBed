@@ -84,11 +84,11 @@ extension StudyListViewController: UITableViewDelegate {
         let indexPathRow = indexPath.row
         if indexPathRow == 0 {
             //TODO: make ViewModel Send Scene to route(to: ) method
-            route(to: .DeclarativeUI)
+            route(to: .studyTopic(.uiStudy(.DeclarativeUI)))
         } else if indexPathRow == 1{
-            route(to: .Unknown)
+            route(to: .errorPopup(.Unknown))
         } else if indexPathRow == 2 {
-            route(to: .SwiftUIPreviewTest)
+            route(to: .studyTopic(.uiStudy(.SwiftUIPreviewTest)))
         }
     }
     

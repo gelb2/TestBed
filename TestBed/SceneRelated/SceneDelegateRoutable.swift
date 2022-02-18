@@ -12,10 +12,10 @@ protocol SceneDelegateSceneBuildable: SceneBuildable { }
 
 extension SceneDelegateSceneBuildable {
 
-    func buildStudyListScene() -> Sceneable {
+    func buildStudyListScene(context: SceneContext<StudyModel>) -> Sceneable {
         let nextScene: Sceneable
         //TODO: viewModel init refactor
-        let studyModel = StudyModel()
+        let studyModel = context.dependency
         let studyListVC = StudyListViewController(viewModel: studyModel)
         nextScene = studyListVC
         return nextScene
@@ -34,8 +34,8 @@ extension SceneDelegateRoutable where Self: SceneDelegate {
     func buildScene(scene: SceneCategory) -> Sceneable? {
         var nextScene: Sceneable?
         switch scene {
-        case .StudyList:
-            let nextVC = buildStudyListScene()
+        case .main(.StudyList(let context)):
+            let nextVC = buildStudyListScene(context: context)
             nextScene = nextVC
         default: break
         }
