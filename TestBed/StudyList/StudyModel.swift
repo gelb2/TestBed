@@ -9,9 +9,11 @@ import Foundation
 
 class StudyModel {
     var studyViewModel: StudyViewModel
-    
-    
+    //ViewModel For ListView
+    var studyListViewModel: StudyListViewModel
+
     init() {
         self.studyViewModel = StudyViewModel()
+        self.studyListViewModel = StudyListViewModel()
     }
 }

@@ -10,12 +10,7 @@ import SwiftUI
 
 class StudyViewModel {
     //TODO: Consider Which Function Should be handled by This ViewModel
+    //TODO: let the viewModel invoke routeSubject.onNext(scene) + Bind With VC And ListVM
     var studyAnotherFunctionViewModel: String = ""
     
-    //ViewModel For ListView
-    var studyListViewModel: StudyListViewModel
-    
-    init() {
-        self.studyListViewModel = StudyListViewModel()
-    }
 }

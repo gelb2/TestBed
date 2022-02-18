@@ -36,13 +36,18 @@ final class BlueView: UIView {
     private func setup() {
         backgroundColor = .systemBlue
         
-        button.setTitle("Button", for: .normal)
+        button.setTitle("RealButton", for: .normal)
         button.sizeToFit()
         button.backgroundColor = .systemRed
-        button.frame.origin.x = 100
-        button.frame.origin.y = 100
         
+        //프레임이 아니라 오토레이아웃을 잡아도 정상동작은 되는 것으로 보인다.....?
+//        button.frame.origin.x = 100
+//        button.frame.origin.y = 100
+        button.translatesAutoresizingMaskIntoConstraints = false
         addSubview(button)
+        
+        button.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 50).isActive = true
+        button.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: -40).isActive = true
     }
     
     func set(state: State) {

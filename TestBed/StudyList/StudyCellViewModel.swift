@@ -13,9 +13,9 @@ class StudyCellViewModel {
     var isExpended: Bool
     
     //TODO: Refactoring Destination Related Logic And Modeling or enumiration
-    var destinationVC: Scenes
+    var destinationVC: SceneCategory
     
-    init(title: String, description: String, destinationVC: Scenes) {
+    init(title: String, description: String, destinationVC: SceneCategory) {
         self.title = title
         self.description = description
         self.destinationVC = destinationVC

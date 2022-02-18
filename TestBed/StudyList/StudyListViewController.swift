@@ -11,14 +11,18 @@ import UIKit
 //TODO: Make Route/Coordination Logic.
 //TODO: adapt MVVM Pattern
 //TODO: adapt rxswift, rxcocoa, rxdatasource
-class StudyListViewController: UIViewController {
+class StudyListViewController: UIViewController, StudyListRoutable {
     
-    var studyViewModel: StudyViewModel
+    var studyModel: StudyModel
+    private var studyViewModel: StudyViewModel
+    private var studyListViewModel: StudyListViewModel
     
     private var tableView: UITableView = UITableView()
     
-    init(viewModel: StudyViewModel) {
-        self.studyViewModel = viewModel
+    init(viewModel: StudyModel) {
+        self.studyModel = viewModel
+        self.studyViewModel = self.studyModel.studyViewModel
+        self.studyListViewModel = self.studyModel.studyListViewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -77,6 +81,15 @@ class StudyListViewController: UIViewController {
 extension StudyListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         toggleCell(tableView, indexPath: indexPath)
+        let indexPathRow = indexPath.row
+        if indexPathRow == 0 {
+            //TODO: make ViewModel Send Scene to route(to: ) method
+            route(to: .studyTopic(.uiStudy(.DeclarativeUI)))
+        } else if indexPathRow == 1{
+            route(to: .errorPopup(.Unknown))
+        } else if indexPathRow == 2 {
+            route(to: .studyTopic(.uiStudy(.SwiftUIPreviewTest)))
+        }
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
@@ -85,7 +98,7 @@ extension StudyListViewController: UITableViewDelegate {
     
     func toggleCell(_ tableView: UITableView, indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as? StudyListCell
-        let cellViewModel = studyViewModel.studyListViewModel.lists[indexPath.row]
+        let cellViewModel = studyListViewModel.lists[indexPath.row]
         cellViewModel.toggleExpended()
         
         tableView.beginUpdates()
@@ -101,12 +114,12 @@ extension StudyListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return studyViewModel.studyListViewModel.lists.count
+        return studyListViewModel.lists.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "StudyListCell", for: indexPath) as? StudyListCell else { fatalError("dequeud cell is not StudyListCell") }
-        cell.configureData(viewModel: studyViewModel.studyListViewModel.lists[indexPath.row])
+        cell.configureData(viewModel: studyListViewModel.lists[indexPath.row])
 
         return cell
     }
