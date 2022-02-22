@@ -12,12 +12,15 @@ protocol StudyListSceneBuildable: SceneBuildable { }
 
 extension StudyListSceneBuildable {
     func buildSwiftUIPreviewScene() -> Sceneable {
-        let nextVC = SwiftUIPreviewTestVC()
-        return nextVC
+        return SwiftUIPreviewTestVC()
     }
     
     func buildDeclarativeUIScene() -> Sceneable {
         return DeclarativeUITestViewController()
+    }
+    
+    func buildMVVM_ConclusionScene() -> Sceneable {
+        return MVVM_ConclusionViewController(viewModel: "viewmodel")
     }
     
     func buildErrorAlert() -> Sceneable {
@@ -41,6 +44,8 @@ extension StudyListRoutable where Self: StudyListViewController {
             nextScene = buildSwiftUIPreviewScene()
         case .studyTopic(.uiStudy(.DeclarativeUI)):
             nextScene = buildDeclarativeUIScene()
+        case .studyTopic(.rxSwift(.WhatIsMVVM_Conclusion)):
+            nextScene = buildMVVM_ConclusionScene()
         case .errorPopup(.Unknown):
             nextScene = buildErrorAlert()
         default: break

@@ -13,13 +13,15 @@ enum SceneCategory {
     case studyTopic(topicScene)
     case errorPopup(alertType)
     
+    //앱이 처음 켜졌을 시 사용 가능한 Scene. StudyList도 언젠간 다른 Scene이 되고 해당 scene엔 다른 탭바 같은 씬이 올 수 있음.
     enum mainScene {
         case StudyList(SceneContext<StudyModel>)
     }
     
+    //특정 씬에서 행동을 했을 때 타고 들어갈 다른 씬...
     enum topicScene {
         case uiStudy(uiStudyScene)
-        case rxSwfit(rxSwiftScene)
+        case rxSwift(rxSwiftScene)
         case dataStructure(dataStructureScene)
         
         enum uiStudyScene {
@@ -28,7 +30,7 @@ enum SceneCategory {
         }
         
         enum rxSwiftScene {
-            
+            case WhatIsMVVM_Conclusion
         }
         
         enum dataStructureScene {

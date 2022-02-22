@@ -34,6 +34,13 @@
 		4C6AB1692765B01B00013B9B /* BlueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6AB1682765B01B00013B9B /* BlueView.swift */; };
 		4C8C045727ABA5C800FFEB3B /* UITextField+Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8C045627ABA5C800FFEB3B /* UITextField+Chainable.swift */; };
 		4C8C045927ABACCE00FFEB3B /* UIButton+Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8C045827ABACCE00FFEB3B /* UIButton+Chainable.swift */; };
+		4C92D90027C4B5A600D99854 /* MVVM_ConclusionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C92D8FF27C4B5A600D99854 /* MVVM_ConclusionViewController.swift */; };
+		4C92D90227C4B66E00D99854 /* DateToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C92D90127C4B66E00D99854 /* DateToggleView.swift */; };
+		4C92D90527C4B70E00D99854 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C92D90427C4B70E00D99854 /* Presentable.swift */; };
+		4C92D90727C4C03400D99854 /* FontEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C92D90627C4C03400D99854 /* FontEnum.swift */; };
+		4C92D90927C4E2CB00D99854 /* API_InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C92D90827C4E2CB00D99854 /* API_InfoView.swift */; };
+		4C92D90D27C4FFFD00D99854 /* DateToggleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C92D90C27C4FFFD00D99854 /* DateToggleViewModel.swift */; };
+		4C92D90F27C500CD00D99854 /* DateResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C92D90E27C500CD00D99854 /* DateResponseModel.swift */; };
 		4CB26FFC27AFB7DF00293A75 /* StudyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB26FFB27AFB7DF00293A75 /* StudyListViewModel.swift */; };
 		4CB5988427B6777B009247AD /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB5988327B6777B009247AD /* Routable.swift */; };
 		4CE985F22765707D00239C1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE985F12765707D00239C1B /* AppDelegate.swift */; };
@@ -91,6 +98,13 @@
 		4C6AB1682765B01B00013B9B /* BlueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueView.swift; sourceTree = "<group>"; };
 		4C8C045627ABA5C800FFEB3B /* UITextField+Chainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Chainable.swift"; sourceTree = "<group>"; };
 		4C8C045827ABACCE00FFEB3B /* UIButton+Chainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Chainable.swift"; sourceTree = "<group>"; };
+		4C92D8FF27C4B5A600D99854 /* MVVM_ConclusionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_ConclusionViewController.swift; sourceTree = "<group>"; };
+		4C92D90127C4B66E00D99854 /* DateToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateToggleView.swift; sourceTree = "<group>"; };
+		4C92D90427C4B70E00D99854 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
+		4C92D90627C4C03400D99854 /* FontEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontEnum.swift; sourceTree = "<group>"; };
+		4C92D90827C4E2CB00D99854 /* API_InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_InfoView.swift; sourceTree = "<group>"; };
+		4C92D90C27C4FFFD00D99854 /* DateToggleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateToggleViewModel.swift; sourceTree = "<group>"; };
+		4C92D90E27C500CD00D99854 /* DateResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateResponseModel.swift; sourceTree = "<group>"; };
 		4CB26FFB27AFB7DF00293A75 /* StudyListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyListViewModel.swift; sourceTree = "<group>"; };
 		4CB5988327B6777B009247AD /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
 		4CE985EE2765707D00239C1B /* TestBed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestBed.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +154,7 @@
 			children = (
 				365AACBD27B6AFCF00FBAC52 /* magdacleanmono-bold.ttf */,
 				365AACBF27B6B32100FBAC52 /* magdacleanmono-regular.ttf */,
+				4C92D90627C4C03400D99854 /* FontEnum.swift */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -173,6 +188,26 @@
 				4C11A8CC27AE595700EC545B /* StudyListCell.swift */,
 			);
 			path = StudyList;
+			sourceTree = "<group>";
+		};
+		4C92D8FE27C4B50500D99854 /* MVVM_Conclusion */ = {
+			isa = PBXGroup;
+			children = (
+				4C92D8FF27C4B5A600D99854 /* MVVM_ConclusionViewController.swift */,
+				4C92D90127C4B66E00D99854 /* DateToggleView.swift */,
+				4C92D90827C4E2CB00D99854 /* API_InfoView.swift */,
+				4C92D90C27C4FFFD00D99854 /* DateToggleViewModel.swift */,
+				4C92D90E27C500CD00D99854 /* DateResponseModel.swift */,
+			);
+			path = MVVM_Conclusion;
+			sourceTree = "<group>";
+		};
+		4C92D90327C4B70000D99854 /* Presentable */ = {
+			isa = PBXGroup;
+			children = (
+				4C92D90427C4B70E00D99854 /* Presentable.swift */,
+			);
+			path = Presentable;
 			sourceTree = "<group>";
 		};
 		4CB5988227B66B68009247AD /* SceneRelated */ = {
@@ -212,6 +247,7 @@
 		4CE985F02765707D00239C1B /* TestBed */ = {
 			isa = PBXGroup;
 			children = (
+				4C92D90327C4B70000D99854 /* Presentable */,
 				365AACBC27B6AFAC00FBAC52 /* Font */,
 				4CE985F12765707D00239C1B /* AppDelegate.swift */,
 				4CE985F32765707D00239C1B /* SceneDelegate.swift */,
@@ -219,6 +255,7 @@
 				4C11A8C927AE57AA00EC545B /* StudyList */,
 				4C0242CC27A7EA1200B01FB1 /* Chainable */,
 				4CEBA77427901CE600904EEC /* SwiftUI_Preview_AppLifeCycleStudy */,
+				4C92D8FE27C4B50500D99854 /* MVVM_Conclusion */,
 				4CE985FA2765707D00239C1B /* Assets.xcassets */,
 				4CE985FC2765707D00239C1B /* LaunchScreen.storyboard */,
 				4CE985FF2765707D00239C1B /* Info.plist */,
@@ -458,6 +495,7 @@
 				4C68DA9D2775B16700FEAD25 /* ContentView.swift in Sources */,
 				4C0242DB27AA675A00B01FB1 /* SnapKit+Chainable.swift in Sources */,
 				4C11A8CB27AE57C400EC545B /* StudyListViewController.swift in Sources */,
+				4C92D90027C4B5A600D99854 /* MVVM_ConclusionViewController.swift in Sources */,
 				4C11A8CF27AE5D7F00EC545B /* StudyModel.swift in Sources */,
 				4C11A8D327AE5DAA00EC545B /* StudyViewModel.swift in Sources */,
 				4C0ECEFD27BE17D400BCA3EA /* StudyListRoutable.swift in Sources */,
@@ -469,15 +507,21 @@
 				4C0242D027A7EAD700B01FB1 /* Int+Chainable.swift in Sources */,
 				4C18364E27ABC5DE00F56513 /* UIStackView+Chanable.swift in Sources */,
 				4C68DA9F2775B2C700FEAD25 /* SwiftUILifeCycleApp.swift in Sources */,
+				4C92D90227C4B66E00D99854 /* DateToggleView.swift in Sources */,
+				4C92D90F27C500CD00D99854 /* DateResponseModel.swift in Sources */,
 				4C11A8CD27AE595700EC545B /* StudyListCell.swift in Sources */,
+				4C92D90527C4B70E00D99854 /* Presentable.swift in Sources */,
 				4C0242D427A7EC9F00B01FB1 /* UIView+Chainable.swift in Sources */,
+				4C92D90727C4C03400D99854 /* FontEnum.swift in Sources */,
 				4CE985F62765707D00239C1B /* SwiftUIPreviewTestVC.swift in Sources */,
 				4C8C045727ABA5C800FFEB3B /* UITextField+Chainable.swift in Sources */,
 				4C11A8D127AE5D9700EC545B /* StudyCellViewModel.swift in Sources */,
 				4CE985F22765707D00239C1B /* AppDelegate.swift in Sources */,
 				4C11A8D627AE61E700EC545B /* SceneCategory.swift in Sources */,
 				4CB26FFC27AFB7DF00293A75 /* StudyListViewModel.swift in Sources */,
+				4C92D90927C4E2CB00D99854 /* API_InfoView.swift in Sources */,
 				4CE985F42765707D00239C1B /* SceneDelegate.swift in Sources */,
+				4C92D90D27C4FFFD00D99854 /* DateToggleViewModel.swift in Sources */,
 				4C0242DF27AA9A8500B01FB1 /* DeclarativeUITestViewController+UI.swift in Sources */,
 				4C8C045927ABACCE00FFEB3B /* UIButton+Chainable.swift in Sources */,
 				4CB5988427B6777B009247AD /* Routable.swift in Sources */,
