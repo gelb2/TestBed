@@ -44,6 +44,8 @@
 		4C92D91327C5F82300D99854 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C92D91227C5F82300D99854 /* Model.swift */; };
 		4C92D91527C5F91100D99854 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C92D91427C5F91100D99854 /* Service.swift */; };
 		4C92D91727C5FDB700D99854 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C92D91627C5FDB700D99854 /* ViewModel.swift */; };
+		4C92D91A27C6518C00D99854 /* RelayExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C92D91927C6518C00D99854 /* RelayExampleViewController.swift */; };
+		4C93DB4A27C7816B003D168F /* RelayExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C93DB4927C7816B003D168F /* RelayExampleView.swift */; };
 		4CB26FFC27AFB7DF00293A75 /* StudyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB26FFB27AFB7DF00293A75 /* StudyListViewModel.swift */; };
 		4CB5988427B6777B009247AD /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB5988327B6777B009247AD /* Routable.swift */; };
 		4CE985F22765707D00239C1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE985F12765707D00239C1B /* AppDelegate.swift */; };
@@ -111,6 +113,8 @@
 		4C92D91227C5F82300D99854 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		4C92D91427C5F91100D99854 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		4C92D91627C5FDB700D99854 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		4C92D91927C6518C00D99854 /* RelayExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelayExampleViewController.swift; sourceTree = "<group>"; };
+		4C93DB4927C7816B003D168F /* RelayExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelayExampleView.swift; sourceTree = "<group>"; };
 		4CB26FFB27AFB7DF00293A75 /* StudyListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyListViewModel.swift; sourceTree = "<group>"; };
 		4CB5988327B6777B009247AD /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
 		4CE985EE2765707D00239C1B /* TestBed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestBed.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -219,6 +223,15 @@
 			path = Presentable;
 			sourceTree = "<group>";
 		};
+		4C92D91827C6516F00D99854 /* Relay_Example */ = {
+			isa = PBXGroup;
+			children = (
+				4C92D91927C6518C00D99854 /* RelayExampleViewController.swift */,
+				4C93DB4927C7816B003D168F /* RelayExampleView.swift */,
+			);
+			path = Relay_Example;
+			sourceTree = "<group>";
+		};
 		4CB5988227B66B68009247AD /* SceneRelated */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +278,7 @@
 				4C0242CC27A7EA1200B01FB1 /* Chainable */,
 				4CEBA77427901CE600904EEC /* SwiftUI_Preview_AppLifeCycleStudy */,
 				4C92D8FE27C4B50500D99854 /* MVVM_Conclusion */,
+				4C92D91827C6516F00D99854 /* Relay_Example */,
 				4CE985FA2765707D00239C1B /* Assets.xcassets */,
 				4CE985FC2765707D00239C1B /* LaunchScreen.storyboard */,
 				4CE985FF2765707D00239C1B /* Info.plist */,
@@ -512,6 +526,7 @@
 				4C0ECEFB27BE17A400BCA3EA /* SceneDelegateRoutable.swift in Sources */,
 				4C0242D227A7EBDB00B01FB1 /* DeclarativeUITestViewController.swift in Sources */,
 				4C0242CE27A7EA2300B01FB1 /* Chainable.swift in Sources */,
+				4C93DB4A27C7816B003D168F /* RelayExampleView.swift in Sources */,
 				4C0242D627A7F98A00B01FB1 /* UILabel+Chainable.swift in Sources */,
 				4C0242D027A7EAD700B01FB1 /* Int+Chainable.swift in Sources */,
 				4C18364E27ABC5DE00F56513 /* UIStackView+Chanable.swift in Sources */,
@@ -532,6 +547,7 @@
 				4C92D91727C5FDB700D99854 /* ViewModel.swift in Sources */,
 				4CB26FFC27AFB7DF00293A75 /* StudyListViewModel.swift in Sources */,
 				4C92D90927C4E2CB00D99854 /* API_InfoView.swift in Sources */,
+				4C92D91A27C6518C00D99854 /* RelayExampleViewController.swift in Sources */,
 				4CE985F42765707D00239C1B /* SceneDelegate.swift in Sources */,
 				4C0242DF27AA9A8500B01FB1 /* DeclarativeUITestViewController+UI.swift in Sources */,
 				4C8C045927ABACCE00FFEB3B /* UIButton+Chainable.swift in Sources */,

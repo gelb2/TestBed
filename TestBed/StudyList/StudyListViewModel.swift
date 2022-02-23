@@ -22,9 +22,12 @@ class StudyListViewModel {
         let conclusion_MVVM_Context: SceneContext<ViewModel> = SceneContext(dependency: ViewModel())
         let conclusion_MVVM = StudyCellViewModel(title: "Conclusion-WhatIsMVVM-BearFried", description: "'곰튀김의 MVVM 종결", destinationVC: .studyTopic(.rxSwift(.WhatIsMVVM_Conclusion(conclusion_MVVM_Context))))
         
+        let relayExample = StudyCellViewModel(title: "Relay-Example-Bearfried", description: "곰튀김의 Relay 사용과 데이터활용", destinationVC: .studyTopic(.rxSwift(.Relay_How_To_Use)))
+        
         lists.append(declarativeUI)
         lists.append(swiftUIPreviewTest)
         lists.append(conclusion_MVVM)
+        lists.append(relayExample)
         
         for i in 0...20 {
             let dummies = StudyCellViewModel(title: "Dummy \(i)", description: "This is Dummy Data Set Real Data", destinationVC: .errorPopup(.Unknown))

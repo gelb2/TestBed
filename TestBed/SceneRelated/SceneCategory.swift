@@ -31,6 +31,7 @@ enum SceneCategory {
         
         enum rxSwiftScene {
             case WhatIsMVVM_Conclusion(SceneContext<ViewModel>)
+            case Relay_How_To_Use
         }
         
         enum dataStructureScene {
