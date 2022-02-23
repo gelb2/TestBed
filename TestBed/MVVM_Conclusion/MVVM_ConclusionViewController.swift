@@ -6,9 +6,11 @@
 //
 
 import UIKit
-
+import RxSwift
+//TODO: vm, service, repository가 deinit이 되지 않는 듯한 이슈가 보이는데 나중에 수정...
 class MVVM_ConclusionViewController: UIViewController {
     
+    private let disposeBag = DisposeBag()
     var mainView: DateToggleView!
     var apiInfoView: API_InfoView!
     var apiURLString = "http://worldclockapi.com/api/json/utc/now"
@@ -95,17 +97,17 @@ extension MVVM_ConclusionViewController: Presentable {
     
     func bind() {
 
-        viewModel.onUpdated = { [weak self] in
-            DispatchQueue.main.async {
-                self?.mainView.dateStringChanged(self?.viewModel.dateTimeString ?? "")
-            }
-        }
+        viewModel.dateTimeString.observe(on: MainScheduler.instance)
+            .subscribe(onNext: {[weak self] dateString in
+                self?.mainView.dateStringChanged(dateString)
+            })
+            .disposed(by: disposeBag)
         
-        viewModel.onUpdatedForAPIinfo = { [weak self] in
-            DispatchQueue.main.async {
-                self?.apiInfoView.onCalled(self?.viewModel.isDaylightBlaBla ?? false, self?.viewModel.apiCallCount ?? 0)
-            }
-        }
+        viewModel.isDaylightBlaBla.asDriver()
+            .drive(onNext: { [weak self] boolValue in
+                self?.apiInfoView.onCalled(boolValue , self?.viewModel.apiCallCount ?? 0)
+            })
+            .disposed(by: disposeBag)
         
         mainView.today = { [weak self] in
             self?.viewModel.reload()

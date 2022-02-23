@@ -6,23 +6,14 @@
 //
 
 import Foundation
+import RxRelay
 
 class ViewModel {
     
-    var onUpdated: () -> Void = { }
-    var dateTimeString: String = "Loading" {
-        didSet {
-            onUpdated()
-        }
-    }
+    var dateTimeString = BehaviorRelay(value: "Loading")
+    var isDaylightBlaBla = BehaviorRelay(value: false)
     
     var apiCallCount: Int = 0
-    var onUpdatedForAPIinfo: () -> Void = {  }
-    var isDaylightBlaBla: Bool = true {
-        didSet {
-            onUpdatedForAPIinfo()
-        }
-    }
     
     let service = Service()
     
@@ -40,14 +31,14 @@ class ViewModel {
         service.fetchNow { [weak self] model in
             guard let self = self else { return }
             let dateString = self.dateToString(date: model.currentDateTime)
-            self.dateTimeString = dateString
-            self.isDaylightBlaBla = model.isDayLightSavingsTime
+            self.dateTimeString.accept(dateString)
+            self.isDaylightBlaBla.accept(model.isDayLightSavingsTime)
             self.apiCallCount += 1
         }
     }
     
     func moveDay(day: Int) {
         service.moveDay(day: day)
-        dateTimeString = dateToString(date: service.currentModel.currentDateTime)
+        self.dateTimeString.accept(dateToString(date: service.currentModel.currentDateTime))
     }
 }
