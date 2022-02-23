@@ -19,8 +19,9 @@ extension StudyListSceneBuildable {
         return DeclarativeUITestViewController()
     }
     
-    func buildMVVM_ConclusionScene() -> Sceneable {
-        return MVVM_ConclusionViewController(viewModel: "viewmodel")
+    func buildMVVM_ConclusionScene(context: SceneContext<ViewModel>) -> Sceneable {
+        let viewModel = context.dependency
+        return MVVM_ConclusionViewController(viewModel: viewModel)
     }
     
     func buildErrorAlert() -> Sceneable {
@@ -44,8 +45,8 @@ extension StudyListRoutable where Self: StudyListViewController {
             nextScene = buildSwiftUIPreviewScene()
         case .studyTopic(.uiStudy(.DeclarativeUI)):
             nextScene = buildDeclarativeUIScene()
-        case .studyTopic(.rxSwift(.WhatIsMVVM_Conclusion)):
-            nextScene = buildMVVM_ConclusionScene()
+        case .studyTopic(.rxSwift(.WhatIsMVVM_Conclusion(let context))):
+            nextScene = buildMVVM_ConclusionScene(context: context)
         case .errorPopup(.Unknown):
             nextScene = buildErrorAlert()
         default: break

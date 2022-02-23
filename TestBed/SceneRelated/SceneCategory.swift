@@ -30,7 +30,7 @@ enum SceneCategory {
         }
         
         enum rxSwiftScene {
-            case WhatIsMVVM_Conclusion
+            case WhatIsMVVM_Conclusion(SceneContext<ViewModel>)
         }
         
         enum dataStructureScene {

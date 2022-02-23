@@ -18,7 +18,9 @@ class StudyListViewModel {
     func populateStudyData() {
         let declarativeUI = StudyCellViewModel(title: "DeclarativeUI-BearFried", description: "곰튀김의 선언형 UI", destinationVC: .studyTopic(.uiStudy(.DeclarativeUI)))
         let swiftUIPreviewTest = StudyCellViewModel(title: "SwiftUIPreview-Minsone", description: "민소네의 SwiftUI 프리뷰-UIKit", destinationVC: .studyTopic(.uiStudy(.SwiftUIPreviewTest)))
-        let conclusion_MVVM = StudyCellViewModel(title: "Conclusion-WhatIsMVVM-BearFried", description: "'곰튀김의 MVVM 종결", destinationVC: .studyTopic(.rxSwift(.WhatIsMVVM_Conclusion)))
+        
+        let conclusion_MVVM_Context: SceneContext<ViewModel> = SceneContext(dependency: ViewModel())
+        let conclusion_MVVM = StudyCellViewModel(title: "Conclusion-WhatIsMVVM-BearFried", description: "'곰튀김의 MVVM 종결", destinationVC: .studyTopic(.rxSwift(.WhatIsMVVM_Conclusion(conclusion_MVVM_Context))))
         
         lists.append(declarativeUI)
         lists.append(swiftUIPreviewTest)

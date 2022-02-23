@@ -13,7 +13,7 @@ class MVVM_ConclusionViewController: UIViewController {
     var apiInfoView: API_InfoView!
     var apiURLString = "http://worldclockapi.com/api/json/utc/now"
     
-    var model: String = ""
+    var viewModel: ViewModel
     var mainViewModel: String = ""
     var apiInfoViewModel: String = ""
     
@@ -21,8 +21,8 @@ class MVVM_ConclusionViewController: UIViewController {
     //model for viewcontroller
     //model for mainview
     //model as apiRepository
-    init(viewModel: String) {
-        self.model = viewModel
+    init(viewModel: ViewModel) {
+        self.viewModel = viewModel
         self.mainViewModel = apiURLString
         self.apiInfoViewModel = apiURLString
         super.init(nibName: nil, bundle: nil)
@@ -42,19 +42,31 @@ class MVVM_ConclusionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //TODO: bind and refactor
-        fetchData { [weak self] model in
-            
-            
-            
-            print("model date is : \(model.currentDateTime)")
+        
+        viewModel.onUpdated = { [weak self] in
+            DispatchQueue.main.async {
+                self?.mainView.dateLabel.text = self?.viewModel.dateTimeString
+            }
         }
+        
+        viewModel.reload()
+        
         // Do any additional setup after loading the view.
     }
     
-    func doSomething() {
-        //mainView.doSomething()
+    @objc func onYesterday() {
+        viewModel.moveDay(day: -1)
     }
+    
+    @objc func onToday() {
+        mainView.dateLabel.text = "Loading......"
+        viewModel.reload()
+    }
+    
+    @objc func onTomorrow() {
+        viewModel.moveDay(day: 1)
+    }
+    
     
 
     /*
@@ -103,19 +115,12 @@ extension MVVM_ConclusionViewController: Presentable {
     }
     
     func bind() {
+        mainView.yesterdayButton.addTarget(self, action: #selector(onYesterday), for: .touchUpInside)
         
+        mainView.todayButton.addTarget(self, action: #selector(onToday), for: .touchUpInside)
+        
+        mainView.nextDayButton.addTarget(self, action: #selector(onTomorrow), for: .touchUpInside)
     }
 }
 
-extension MVVM_ConclusionViewController {
-    func fetchData(_ onCompleted: @escaping (DateResponseModel) -> ()) {
-        let url = apiURLString
-        
-        URLSession.shared.dataTask(with: URL(string: url)!) { data, response, error in
-            guard let data = data else { return }
-            guard let model = try? JSONDecoder().decode(DateResponseModel.self, from: data) else { return }
-            onCompleted(model)
-        }.resume()
-    }
-}
 

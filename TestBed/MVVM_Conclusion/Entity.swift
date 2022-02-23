@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DateResponseModel: Codable {
+struct UtcTimeModel: Codable {
     var id: String
     var currentDateTime: String
     var utcOffset: String

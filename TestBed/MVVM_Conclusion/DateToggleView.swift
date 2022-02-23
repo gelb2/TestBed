@@ -10,11 +10,11 @@ import SwiftUI
 
 class DateToggleView: UIView {
     
-    private let dateLabel: UILabel = UILabel()
-    private let yesterdayButton: UIButton = UIButton()
-    private let todayButton: UIButton = UIButton()
-    private let nextDayButton: UIButton = UIButton()
-    private var viewModel: String
+    let dateLabel: UILabel = UILabel()
+    let yesterdayButton: UIButton = UIButton()
+    let todayButton: UIButton = UIButton()
+    let nextDayButton: UIButton = UIButton()
+    var viewModel: String
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -74,7 +74,7 @@ extension DateToggleView: Presentable {
     }
     
     func configureViews() {
-        dateLabel.text = "Loading"
+        dateLabel.text = "Loading..."
         dateLabel.textColor = .black
         dateLabel.font = fontSet.makeFont(.magdacleanmonoBold)()
         
@@ -92,7 +92,7 @@ extension DateToggleView: Presentable {
     }
     
     func bind() {
-        print("DateToggleView : \(viewModel)")
+        
     }
 }
 

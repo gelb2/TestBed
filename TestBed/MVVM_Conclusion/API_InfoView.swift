@@ -10,8 +10,8 @@ import SwiftUI
 
 class API_InfoView: UIView {
     
-    private let infoLabel: UILabel = UILabel()
-    private var viewModel: String
+    let infoLabel: UILabel = UILabel()
+    var viewModel: String
     
     //TODO: viewModel
     init(viewModel: String) {
