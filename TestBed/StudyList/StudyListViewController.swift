@@ -45,7 +45,9 @@ class StudyListViewController: UIViewController, StudyListRoutable {
         super.viewWillAppear(animated)
         
     }
-    
+}
+
+extension StudyListViewController: Presentable {
     func initViewHierachy() {
         self.view.translatesAutoresizingMaskIntoConstraints = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -75,21 +77,19 @@ class StudyListViewController: UIViewController, StudyListRoutable {
         tableView.prefetchDataSource = nil
         tableView.isPrefetchingEnabled = false
     }
-
+    
+    func bind() {
+    }
 }
 
 extension StudyListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         toggleCell(tableView, indexPath: indexPath)
+        
+        //TODO: make ViewModel Send Scene to route(to: ) method
         let indexPathRow = indexPath.row
-        if indexPathRow == 0 {
-            //TODO: make ViewModel Send Scene to route(to: ) method
-            route(to: .studyTopic(.uiStudy(.DeclarativeUI)))
-        } else if indexPathRow == 1{
-            route(to: .errorPopup(.Unknown))
-        } else if indexPathRow == 2 {
-            route(to: .studyTopic(.uiStudy(.SwiftUIPreviewTest)))
-        }
+        let nextScene = studyListViewModel.lists[indexPathRow].destinationVC
+        route(to: nextScene)
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {

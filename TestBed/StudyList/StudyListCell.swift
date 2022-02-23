@@ -39,7 +39,37 @@ class StudyListCell: UITableViewCell {
         fatalError()
     }
     
-    private func initViewHierachy() {
+    override func prepareForReuse() {
+        toggleDetailView(false)
+    }
+
+    func toggleDetailView(_ shouldPerformAnimate: Bool = false) {
+        if self.viewModel.isExpended == true {
+            self.detailViewHeightConstraint.constant = 100
+            self.descriptionLabel.textColor = .red
+            self.detailView.isHidden = false
+        } else if self.viewModel.isExpended == false {
+            self.detailViewHeightConstraint.constant = 0
+            self.descriptionLabel.textColor = .blue
+            
+            if shouldPerformAnimate == false {
+                self.detailView.isHidden = true
+            } else if shouldPerformAnimate == true {
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.25 , execute: {
+                    self.detailView.isHidden = true
+                })
+            }
+        }
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        // Configure the view for the selected state
+    }
+}
+
+extension StudyListCell: Presentable {
+    func initViewHierachy() {
 
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -86,15 +116,15 @@ class StudyListCell: UITableViewCell {
         NSLayoutConstraint.activate(constraints)
     }
     
-    private func configureViews() {
+    func configureViews() {
         self.contentView.backgroundColor = .yellow
         
         titleLabel.textColor = .black
-        titleLabel.font = UIFont(name: "magdacleanmono-bold", size: 28) ?? UIFont.systemFont(ofSize: 28, weight: .heavy)
+        titleLabel.font = fontSet.makeFont(.magdacleanmonoBold)()
         titleLabel.numberOfLines = 1
         
         descriptionLabel.textColor = .black
-        descriptionLabel.font = UIFont(name: "magdacleanmono-regular", size: 16) ?? UIFont.systemFont(ofSize: 16, weight: .medium)
+        descriptionLabel.font = fontSet.makeFont(.magdacleanmonoRegular)()
         descriptionLabel.numberOfLines = 0
         
         divider.backgroundColor = .orange
@@ -102,32 +132,7 @@ class StudyListCell: UITableViewCell {
         detailView.backgroundColor = .red
     }
     
-    override func prepareForReuse() {
-        toggleDetailView(false)
-    }
-
-    func toggleDetailView(_ shouldPerformAnimate: Bool = false) {
-        if self.viewModel.isExpended == true {
-            self.detailViewHeightConstraint.constant = 100
-            self.descriptionLabel.textColor = .red
-            self.detailView.isHidden = false
-        } else if self.viewModel.isExpended == false {
-            self.detailViewHeightConstraint.constant = 0
-            self.descriptionLabel.textColor = .blue
-            
-            if shouldPerformAnimate == false {
-                self.detailView.isHidden = true
-            } else if shouldPerformAnimate == true {
-                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.25 , execute: {
-                    self.detailView.isHidden = true
-                })
-            }
-        }
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        // Configure the view for the selected state
+    func bind() {
     }
 }
 
