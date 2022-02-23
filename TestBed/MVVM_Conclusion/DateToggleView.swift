@@ -10,6 +10,12 @@ import SwiftUI
 
 class DateToggleView: UIView {
     
+    var dateStringChanged: (_ dateString: String) -> () = { String in }
+    var loadingTextShow: () -> () = { }
+    var yesterday: () -> () = { }
+    var tomorrow: () -> () = { }
+    var today: () -> () = { }
+    
     let dateLabel: UILabel = UILabel()
     let yesterdayButton: UIButton = UIButton()
     let todayButton: UIButton = UIButton()
@@ -92,7 +98,30 @@ extension DateToggleView: Presentable {
     }
     
     func bind() {
+        self.dateStringChanged = { [weak self] dateString in
+            self?.dateLabel.text = dateString
+        }
         
+        self.loadingTextShow = { [weak self] in
+            self?.dateLabel.text = "loading???"
+        }
+        
+        yesterdayButton.addTarget(self, action: #selector(onYesterday), for: .touchUpInside)
+        todayButton.addTarget(self, action: #selector(onToday), for: .touchUpInside)
+        nextDayButton.addTarget(self, action: #selector(onTomorrow), for: .touchUpInside)
+    }
+    
+    @objc func onYesterday() {
+        yesterday()
+    }
+    
+    @objc func onToday() {
+        loadingTextShow()
+        today()
+    }
+    
+    @objc func onTomorrow() {
+        tomorrow()
     }
 }
 

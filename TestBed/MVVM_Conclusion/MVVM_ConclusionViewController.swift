@@ -43,31 +43,10 @@ class MVVM_ConclusionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel.onUpdated = { [weak self] in
-            DispatchQueue.main.async {
-                self?.mainView.dateLabel.text = self?.viewModel.dateTimeString
-            }
-        }
-        
         viewModel.reload()
         
         // Do any additional setup after loading the view.
     }
-    
-    @objc func onYesterday() {
-        viewModel.moveDay(day: -1)
-    }
-    
-    @objc func onToday() {
-        mainView.dateLabel.text = "Loading......"
-        viewModel.reload()
-    }
-    
-    @objc func onTomorrow() {
-        viewModel.moveDay(day: 1)
-    }
-    
-    
 
     /*
     // MARK: - Navigation
@@ -115,11 +94,30 @@ extension MVVM_ConclusionViewController: Presentable {
     }
     
     func bind() {
-        mainView.yesterdayButton.addTarget(self, action: #selector(onYesterday), for: .touchUpInside)
+
+        viewModel.onUpdated = { [weak self] in
+            DispatchQueue.main.async {
+                self?.mainView.dateStringChanged(self?.viewModel.dateTimeString ?? "")
+            }
+        }
         
-        mainView.todayButton.addTarget(self, action: #selector(onToday), for: .touchUpInside)
+        viewModel.onUpdatedForAPIinfo = { [weak self] in
+            DispatchQueue.main.async {
+                self?.apiInfoView.onCalled(self?.viewModel.isDaylightBlaBla ?? false, self?.viewModel.apiCallCount ?? 0)
+            }
+        }
         
-        mainView.nextDayButton.addTarget(self, action: #selector(onTomorrow), for: .touchUpInside)
+        mainView.today = { [weak self] in
+            self?.viewModel.reload()
+        }
+        
+        mainView.yesterday = { [weak self] in
+            self?.viewModel.moveDay(day: -1)
+        }
+        
+        mainView.tomorrow = { [weak self] in
+            self?.viewModel.moveDay(day: +1)
+        }
     }
 }
 

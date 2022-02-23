@@ -10,6 +10,8 @@ import SwiftUI
 
 class API_InfoView: UIView {
     
+    var onCalled: (_ dayLight: Bool, _ count: Int) -> () = { Bool, Int in }
+    
     let infoLabel: UILabel = UILabel()
     var viewModel: String
     
@@ -53,14 +55,16 @@ extension API_InfoView: Presentable {
     }
     
     func configureViews() {
-        infoLabel.text = "API INFO"
+        infoLabel.text = "DAY LIGHT"
         infoLabel.textColor = .black
         infoLabel.font = fontSet.makeFont(.magdacleanmonoBold)()
         infoLabel.numberOfLines = 0
     }
     
     func bind() {
-        infoLabel.text = "API INFO: \(viewModel)"
+        onCalled = { [weak self] dayLight, callCount in
+            self?.infoLabel.text = "DAY LIGHT \(dayLight) \n COUNT: \(callCount)"
+        }
     }
 }
 

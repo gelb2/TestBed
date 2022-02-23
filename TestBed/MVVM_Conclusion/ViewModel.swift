@@ -10,10 +10,17 @@ import Foundation
 class ViewModel {
     
     var onUpdated: () -> Void = { }
-    
     var dateTimeString: String = "Loading" {
         didSet {
             onUpdated()
+        }
+    }
+    
+    var apiCallCount: Int = 0
+    var onUpdatedForAPIinfo: () -> Void = {  }
+    var isDaylightBlaBla: Bool = true {
+        didSet {
+            onUpdatedForAPIinfo()
         }
     }
     
@@ -34,6 +41,8 @@ class ViewModel {
             guard let self = self else { return }
             let dateString = self.dateToString(date: model.currentDateTime)
             self.dateTimeString = dateString
+            self.isDaylightBlaBla = model.isDayLightSavingsTime
+            self.apiCallCount += 1
         }
     }
     

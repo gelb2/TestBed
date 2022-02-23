@@ -12,7 +12,7 @@ class Service {
     
     let repository = Repository()
     
-    var currentModel = Model(currentDateTime: Date())
+    var currentModel = Model(currentDateTime: Date(), isDayLightSavingsTime: false)
     
     func fetchNow(onCompleted: @escaping (Model) -> ()) {
         repository.fetchNow { [weak self] entity in
@@ -20,8 +20,9 @@ class Service {
             formatter.dateFormat = "yyyy-MM-dd'T'HH:mm'Z'"
             
             guard let now = formatter.date(from: entity.currentDateTime) else { return }
+            let isDayLightSavingsTime = entity.isDayLightSavingsTime
             
-            let model = Model(currentDateTime: now)
+            let model = Model(currentDateTime: now, isDayLightSavingsTime: isDayLightSavingsTime)
             self?.currentModel = model
             onCompleted(model)
         }

@@ -9,4 +9,5 @@ import Foundation
 
 struct Model {
     var currentDateTime: Date
+    var isDayLightSavingsTime: Bool
 }
