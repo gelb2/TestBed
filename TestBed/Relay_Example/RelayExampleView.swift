@@ -22,7 +22,7 @@ class RelayExampleView: UIView {
     let termSixMonthButton = UIButton(type: .system)
     
     let cancelButton = UIButton()
-    let confirmButton = UIButton()
+    let confirmButton = UIButton(type: .system)
     
     
     //TODO: viewmodel
@@ -134,6 +134,7 @@ extension RelayExampleView: Presentable {
         confirmButton.setTitle("확인", for: .normal)
         confirmButton.setTitleColor(.black, for: .normal)
         confirmButton.titleLabel?.font = fontSet.makeFont(.magdacleanmonoBold)()
+        
     }
     
     func bind() {
