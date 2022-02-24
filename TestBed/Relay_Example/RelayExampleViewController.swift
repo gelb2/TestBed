@@ -42,7 +42,6 @@ class RelayExampleViewController: UIViewController {
     }
     
     override func loadView() {
-        self.view = relayView
         initViewHierachy()
         configureViews()
         bind()
@@ -69,7 +68,7 @@ class RelayExampleViewController: UIViewController {
 
 extension RelayExampleViewController: Presentable {
     func initViewHierachy() {
-        
+        self.view = relayView
     }
     
     func configureViews() {
@@ -77,53 +76,54 @@ extension RelayExampleViewController: Presentable {
     }
     
     func bind() {
+        sortRelay.flatMap { [weak self] in
+            Observable.from([
+                ($0 == .latest, self?.relayView.sortLatestButton),
+                ($0 == .oldest, self?.relayView.sortOldestButton)
+            ])
+        }
+            .asDriver(onErrorJustReturn: (false, nil))
+            .drive(onNext:{ selected, button in
+                button?.isSelected = selected
+            }).disposed(by: disposeBag)
+
         
-        sortRelay.map { $0 == .latest }
-            .bind(to: relayView.sortLatestButton.rx.isSelected)
-            .disposed(by: disposeBag)
+        termRelay.flatMap { [weak self] in
+            Observable.from([
+                ($0 == .oneMonth, self?.relayView.termOneMonthButton),
+                ($0 == .threeMonth, self?.relayView.termThreeMonthButton),
+                ($0 == .sixMonth, self?.relayView.termSixMonthButton)
+            ])
+        }
+        .subscribe(onNext: { selected, button in
+            button?.isSelected = selected
+        })
+        .disposed(by: disposeBag)
         
-        sortRelay.map { $0 == .oldest }
-            .bind(to: relayView.sortOldestButton.rx.isSelected)
-            .disposed(by: disposeBag)
         
-        termRelay.map { $0 == .oneMonth }
-            .bind(to: relayView.termOneMonthButton.rx.isSelected)
-            .disposed(by: disposeBag)
-        
-        termRelay.map { $0 == .threeMonth }
-            .bind(to: relayView.termThreeMonthButton.rx.isSelected)
-            .disposed(by: disposeBag)
-        
-        termRelay.map { $0 == .sixMonth }
-            .bind(to: relayView.termSixMonthButton.rx.isSelected)
-            .disposed(by: disposeBag)
-        
-        relayView.sortLatestButton.rx.tap.map { SortType.latest }
+        Observable
+            .merge(relayView.sortLatestButton.rx.tap.map { SortType.latest },
+                   relayView.sortOldestButton.rx.tap.map { SortType.oldest }
+            )
             .bind(to: sortRelay)
             .disposed(by: disposeBag)
         
-        relayView.sortOldestButton.rx.tap.map { SortType.oldest }
-            .bind(to: sortRelay)
-            .disposed(by: disposeBag)
-        
-        
-        relayView.termOneMonthButton.rx.tap.map { TermType.oneMonth }
+        Observable
+            .merge(relayView.termOneMonthButton.rx.tap.map { TermType.oneMonth },
+                   relayView.termThreeMonthButton.rx.tap.map { TermType.threeMonth },
+                   relayView.termSixMonthButton.rx.tap.map { TermType.sixMonth }
+            )
             .bind(to: termRelay)
             .disposed(by: disposeBag)
-        
-        relayView.termThreeMonthButton.rx.tap.map { TermType.threeMonth }
-            .bind(to: termRelay)
-            .disposed(by: disposeBag)
-        
-        
-        relayView.termSixMonthButton.rx.tap.map { TermType.sixMonth }
-            .bind(to: termRelay)
-            .disposed(by: disposeBag)
-        
         
         relayView.confirmButton.rx.tap
             .subscribe(onNext: { [weak self] in
-                self?.dismiss(animated: true, completion: nil)
+                let alert = UIAlertController(title: "정렬 선택 완료", message: "선택 완료 후 화면을 나갑니다", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "확인", style: .default) { action in
+                    self?.dismiss(animated: true, completion: nil)
+                }
+                alert.addAction(okAction)
+                self?.present(alert, animated: true, completion: nil)
             })
             .disposed(by: disposeBag)
         
@@ -133,19 +133,19 @@ extension RelayExampleViewController: Presentable {
             })
             .disposed(by: disposeBag)
         
-//        Observable
-//            .combineLatest(sortRelay.map { $0 != .none }, termRelay.map { $0 != .none })
-//            { $0 && $1 }
-//            .subscribe(onNext: { [weak self] value in
-//                self?.relayView.confirmButton.isEnabled = value
-//            })
-//            .disposed(by: disposeBag)
-        //위 코드는 아래와 효과가 동일하다 내부 로직이나 스레드 여부는 일단 차치하고
         Observable
             .combineLatest(sortRelay.map { $0 != .none }, termRelay.map { $0 != .none })
             { $0 && $1 }
             .bind(to: relayView.confirmButton.rx.isEnabled)
             .disposed(by: disposeBag)
+        //아래 코드는 위와 효과가 동일하다 내부 로직이나 스레드 여부는 일단 차치하고
+        //        Observable
+        //            .combineLatest(sortRelay.map { $0 != .none }, termRelay.map { $0 != .none })
+        //            { $0 && $1 }
+        //            .subscribe(onNext: { [weak self] value in
+        //                self?.relayView.confirmButton.isEnabled = value
+        //            })
+        //            .disposed(by: disposeBag)
     }
     
     
