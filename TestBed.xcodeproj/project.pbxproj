@@ -29,6 +29,7 @@
 		4C11A8D327AE5DAA00EC545B /* StudyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C11A8D227AE5DAA00EC545B /* StudyViewModel.swift */; };
 		4C11A8D627AE61E700EC545B /* SceneCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C11A8D527AE61E700EC545B /* SceneCategory.swift */; };
 		4C18364E27ABC5DE00F56513 /* UIStackView+Chanable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C18364D27ABC5DE00F56513 /* UIStackView+Chanable.swift */; };
+		4C2E835A27C8E8BD0095AB3E /* DateToggleView_PreviewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2E835927C8E8BD0095AB3E /* DateToggleView_PreviewTest.swift */; };
 		4C6801AB27C8BCB300A5F1DC /* ButtonCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6801AA27C8BCB300A5F1DC /* ButtonCountView.swift */; };
 		4C6801AD27C8C14100A5F1DC /* ScanExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6801AC27C8C14100A5F1DC /* ScanExampleViewController.swift */; };
 		4C6801AF27C8CA5000A5F1DC /* TextFilerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6801AE27C8CA5000A5F1DC /* TextFilerView.swift */; };
@@ -101,6 +102,7 @@
 		4C11A8D227AE5DAA00EC545B /* StudyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyViewModel.swift; sourceTree = "<group>"; };
 		4C11A8D527AE61E700EC545B /* SceneCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCategory.swift; sourceTree = "<group>"; };
 		4C18364D27ABC5DE00F56513 /* UIStackView+Chanable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Chanable.swift"; sourceTree = "<group>"; };
+		4C2E835927C8E8BD0095AB3E /* DateToggleView_PreviewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateToggleView_PreviewTest.swift; sourceTree = "<group>"; };
 		4C6801AA27C8BCB300A5F1DC /* ButtonCountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCountView.swift; sourceTree = "<group>"; };
 		4C6801AC27C8C14100A5F1DC /* ScanExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanExampleViewController.swift; sourceTree = "<group>"; };
 		4C6801AE27C8CA5000A5F1DC /* TextFilerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFilerView.swift; sourceTree = "<group>"; };
@@ -206,6 +208,14 @@
 			path = StudyList;
 			sourceTree = "<group>";
 		};
+		4C2E835827C8E8270095AB3E /* Preview_Examples */ = {
+			isa = PBXGroup;
+			children = (
+				4C2E835927C8E8BD0095AB3E /* DateToggleView_PreviewTest.swift */,
+			);
+			path = Preview_Examples;
+			sourceTree = "<group>";
+		};
 		4C6801A827C8BC6D00A5F1DC /* AppDelegateRelated */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +314,7 @@
 				4C92D8FE27C4B50500D99854 /* MVVM_Conclusion */,
 				4C92D91827C6516F00D99854 /* Relay_Example */,
 				4C6801A927C8BC8B00A5F1DC /* Scan_Example */,
+				4C2E835827C8E8270095AB3E /* Preview_Examples */,
 				4CE985FA2765707D00239C1B /* Assets.xcassets */,
 				4CE985FC2765707D00239C1B /* LaunchScreen.storyboard */,
 				4CE985FF2765707D00239C1B /* Info.plist */,
@@ -548,6 +559,7 @@
 				4C11A8D327AE5DAA00EC545B /* StudyViewModel.swift in Sources */,
 				4C0ECEFD27BE17D400BCA3EA /* StudyListRoutable.swift in Sources */,
 				4C0ECEFF27BE6B4B00BCA3EA /* SceneContext.swift in Sources */,
+				4C2E835A27C8E8BD0095AB3E /* DateToggleView_PreviewTest.swift in Sources */,
 				4C6801AD27C8C14100A5F1DC /* ScanExampleViewController.swift in Sources */,
 				4C6801AB27C8BCB300A5F1DC /* ButtonCountView.swift in Sources */,
 				4C0ECEFB27BE17A400BCA3EA /* SceneDelegateRoutable.swift in Sources */,
