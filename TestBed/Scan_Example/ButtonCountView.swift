@@ -53,7 +53,8 @@ extension ButtonCountView: Presentable {
         constraints += [
             tapCountButtonLayout.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),
             tapCountButtonLayout.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            tapCountButtonLayout.trailingAnchor.constraint(equalTo: self.trailingAnchor)
+            tapCountButtonLayout.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            tapCountButtonLayout.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -20)
         ]
         
         constraints += [

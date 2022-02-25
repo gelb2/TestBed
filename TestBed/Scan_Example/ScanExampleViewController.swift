@@ -60,8 +60,7 @@ extension ScanExampleViewController: Presentable {
         constraints += [
             buttonCountView.topAnchor.constraint(equalTo: self.view.topAnchor),
             buttonCountView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
-            buttonCountView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-            buttonCountView.heightAnchor.constraint(equalToConstant: 300)
+            buttonCountView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
         ]
     }
     
