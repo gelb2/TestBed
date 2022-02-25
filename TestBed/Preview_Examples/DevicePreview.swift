@@ -29,25 +29,5 @@ struct DevicePreviewWithExtensionExample: PreviewProvider {
         return DateToggleView_PreviewTest(viewModel: "test").showPreview()
     }
 }
-
-//TODO: research more and upgrade this extension and make it public
-fileprivate extension UIView {
-    private struct Preview: UIViewRepresentable {
-        typealias UIViewType = UIView
-
-        let view: UIView
-
-        func makeUIView(context: Context) -> UIView {
-            return view
-        }
-
-        func updateUIView(_ uiView: UIView, context: Context) {
-        }
-    }
-
-    func showPreview() -> some View {
-        Preview(view: self).previewDevice(PreviewDevice(rawValue: "iPhone 12 Pro"))
-    }
-}
-
 #endif
+

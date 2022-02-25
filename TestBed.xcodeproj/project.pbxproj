@@ -42,6 +42,8 @@
 		4C8C9BE427C8EDF5001B6FF2 /* DynamicTypeSizePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8C9BE327C8EDF5001B6FF2 /* DynamicTypeSizePreview.swift */; };
 		4C8C9BE627C8F079001B6FF2 /* DevicePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8C9BE527C8F079001B6FF2 /* DevicePreview.swift */; };
 		4C8C9BE827C8F581001B6FF2 /* ViewControllerPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8C9BE727C8F581001B6FF2 /* ViewControllerPreview.swift */; };
+		4C8C9BEB27C8FA13001B6FF2 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8C9BEA27C8FA13001B6FF2 /* UIView+Extension.swift */; };
+		4C8C9BED27C8FA67001B6FF2 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8C9BEC27C8FA67001B6FF2 /* UIViewController+Extension.swift */; };
 		4C92D90027C4B5A600D99854 /* MVVM_ConclusionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C92D8FF27C4B5A600D99854 /* MVVM_ConclusionViewController.swift */; };
 		4C92D90227C4B66E00D99854 /* DateToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C92D90127C4B66E00D99854 /* DateToggleView.swift */; };
 		4C92D90527C4B70E00D99854 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C92D90427C4B70E00D99854 /* Presentable.swift */; };
@@ -119,6 +121,8 @@
 		4C8C9BE327C8EDF5001B6FF2 /* DynamicTypeSizePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicTypeSizePreview.swift; sourceTree = "<group>"; };
 		4C8C9BE527C8F079001B6FF2 /* DevicePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicePreview.swift; sourceTree = "<group>"; };
 		4C8C9BE727C8F581001B6FF2 /* ViewControllerPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPreview.swift; sourceTree = "<group>"; };
+		4C8C9BEA27C8FA13001B6FF2 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		4C8C9BEC27C8FA67001B6FF2 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		4C92D8FF27C4B5A600D99854 /* MVVM_ConclusionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_ConclusionViewController.swift; sourceTree = "<group>"; };
 		4C92D90127C4B66E00D99854 /* DateToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateToggleView.swift; sourceTree = "<group>"; };
 		4C92D90427C4B70E00D99854 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
@@ -247,6 +251,15 @@
 			path = Scan_Example;
 			sourceTree = "<group>";
 		};
+		4C8C9BE927C8F9FF001B6FF2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4C8C9BEA27C8FA13001B6FF2 /* UIView+Extension.swift */,
+				4C8C9BEC27C8FA67001B6FF2 /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		4C92D8FE27C4B50500D99854 /* MVVM_Conclusion */ = {
 			isa = PBXGroup;
 			children = (
@@ -316,6 +329,7 @@
 		4CE985F02765707D00239C1B /* TestBed */ = {
 			isa = PBXGroup;
 			children = (
+				4C8C9BE927C8F9FF001B6FF2 /* Extensions */,
 				4C92D90327C4B70000D99854 /* Presentable */,
 				365AACBC27B6AFAC00FBAC52 /* Font */,
 				4C6801A827C8BC6D00A5F1DC /* AppDelegateRelated */,
@@ -576,6 +590,7 @@
 				4C6801AD27C8C14100A5F1DC /* ScanExampleViewController.swift in Sources */,
 				4C6801AB27C8BCB300A5F1DC /* ButtonCountView.swift in Sources */,
 				4C0ECEFB27BE17A400BCA3EA /* SceneDelegateRoutable.swift in Sources */,
+				4C8C9BEB27C8FA13001B6FF2 /* UIView+Extension.swift in Sources */,
 				4C0242D227A7EBDB00B01FB1 /* DeclarativeUITestViewController.swift in Sources */,
 				4C0242CE27A7EA2300B01FB1 /* Chainable.swift in Sources */,
 				4C93DB4A27C7816B003D168F /* RelayExampleView.swift in Sources */,
@@ -598,6 +613,7 @@
 				4C11A8D127AE5D9700EC545B /* StudyCellViewModel.swift in Sources */,
 				4CE985F22765707D00239C1B /* AppDelegate.swift in Sources */,
 				4C92D91327C5F82300D99854 /* Model.swift in Sources */,
+				4C8C9BED27C8FA67001B6FF2 /* UIViewController+Extension.swift in Sources */,
 				4C11A8D627AE61E700EC545B /* SceneCategory.swift in Sources */,
 				4C92D91727C5FDB700D99854 /* ViewModel.swift in Sources */,
 				4CB26FFC27AFB7DF00293A75 /* StudyListViewModel.swift in Sources */,
