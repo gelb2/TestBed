@@ -105,10 +105,13 @@ struct ButtonCountViewPreview<View: UIView>: UIViewRepresentable {
 
 #if canImport(SwiftUI) && DEBUG
 struct ButtonCountViewPreviewProvider: PreviewProvider {
+    
+    static let buttonCountView = ButtonCountView()
+    
     static var previews: some View {
         ButtonCountViewPreview {
-            ButtonCountView()
-        }.previewLayout(.fixed(width: 300, height: 300))
+            buttonCountView
+        }.previewLayout(.fixed(width: 300, height: 100))
     }
 }
 

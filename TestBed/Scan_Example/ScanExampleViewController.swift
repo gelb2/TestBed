@@ -10,6 +10,7 @@ import UIKit
 class ScanExampleViewController: UIViewController {
     
     lazy var buttonCountView: ButtonCountView = ButtonCountView()
+    lazy var textFilerView: TextFilerView = TextFilerView()
     
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -49,8 +50,10 @@ extension ScanExampleViewController: Presentable {
         self.view = UIView()
         
         buttonCountView.translatesAutoresizingMaskIntoConstraints = false
+        textFilerView.translatesAutoresizingMaskIntoConstraints = false
         
         self.view.addSubview(buttonCountView)
+        self.view.addSubview(textFilerView)
         
         var constraints: [NSLayoutConstraint] = []
         defer {
@@ -61,6 +64,12 @@ extension ScanExampleViewController: Presentable {
             buttonCountView.topAnchor.constraint(equalTo: self.view.topAnchor),
             buttonCountView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
             buttonCountView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
+        ]
+        
+        constraints += [
+            textFilerView.topAnchor.constraint(equalTo: buttonCountView.bottomAnchor, constant: 10),
+            textFilerView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            textFilerView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
         ]
     }
     
