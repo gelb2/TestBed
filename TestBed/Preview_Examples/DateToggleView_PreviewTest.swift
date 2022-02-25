@@ -86,15 +86,12 @@ extension DateToggleView_PreviewTest: Presentable {
         
         yesterdayButton.setTitle("yesterday", for: .normal)
         yesterdayButton.setTitleColor(.black, for: .normal)
-        yesterdayButton.titleLabel?.font = fontSet.makeFont(.magdacleanmonoRegular)()
         
         todayButton.setTitle("now", for: .normal)
         todayButton.setTitleColor(.black, for: .normal)
-        todayButton.titleLabel?.font = fontSet.makeFont(.magdacleanmonoRegular)()
         
         nextDayButton.setTitle("tomorrow", for: .normal)
         nextDayButton.setTitleColor(.black, for: .normal)
-        nextDayButton.titleLabel?.font = fontSet.makeFont(.magdacleanmonoRegular)()
     }
     
     func bind() {
@@ -151,11 +148,27 @@ struct DateToggleView_PreviewTestPreviewProvider: PreviewProvider {
         DateToggleView_PreviewTestPreview {
             let view = DateToggleView_PreviewTest(viewModel: "test")
             return view
-        }.previewLayout(.fixed(width: 300, height: 300))
+        }.previewLayout(.fixed(width: 300, height: 200))
         DateToggleView_PreviewTestPreview {
             let view = DateToggleView_PreviewTest(viewModel: "test")
             return view
         }.previewLayout(.sizeThatFits)
+        
+        ForEach(ContentSizeCategory.allCases, id: \.self) { sizeCategory in
+            DateToggleView_PreviewTestPreview {
+                let view = DateToggleView_PreviewTest(viewModel: "test")
+                view.yesterdayButton.titleLabel?.font = .preferredFont(forTextStyle: .body)
+                view.yesterdayButton.titleLabel?.adjustsFontForContentSizeCategory = true
+                view.todayButton.titleLabel?.font = .preferredFont(forTextStyle: .body)
+                view.todayButton.titleLabel?.adjustsFontForContentSizeCategory = true
+                view.nextDayButton.titleLabel?.font = .preferredFont(forTextStyle: .body)
+                view.nextDayButton.titleLabel?.adjustsFontForContentSizeCategory = true
+                return view
+            }.environment(\.sizeCategory, sizeCategory)
+                .previewLayout(.fixed(width: 300, height: 200))
+            .previewDisplayName("\(sizeCategory)")
+        }
+        
     }
 }
 #endif
