@@ -152,7 +152,7 @@ struct DateToggleView_PreviewTestPreviewProvider: PreviewProvider {
         DateToggleView_PreviewTestPreview {
             let view = DateToggleView_PreviewTest(viewModel: "test")
             return view
-        }.previewLayout(.sizeThatFits)
+        }.previewDevice("iPhone 8")
     }
 }
 #endif

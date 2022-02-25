@@ -40,6 +40,7 @@
 		4C8C045927ABACCE00FFEB3B /* UIButton+Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8C045827ABACCE00FFEB3B /* UIButton+Chainable.swift */; };
 		4C8C9BE227C8ED74001B6FF2 /* ColorSchemePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8C9BE127C8ED74001B6FF2 /* ColorSchemePreview.swift */; };
 		4C8C9BE427C8EDF5001B6FF2 /* DynamicTypeSizePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8C9BE327C8EDF5001B6FF2 /* DynamicTypeSizePreview.swift */; };
+		4C8C9BE627C8F079001B6FF2 /* DevicePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8C9BE527C8F079001B6FF2 /* DevicePreview.swift */; };
 		4C92D90027C4B5A600D99854 /* MVVM_ConclusionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C92D8FF27C4B5A600D99854 /* MVVM_ConclusionViewController.swift */; };
 		4C92D90227C4B66E00D99854 /* DateToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C92D90127C4B66E00D99854 /* DateToggleView.swift */; };
 		4C92D90527C4B70E00D99854 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C92D90427C4B70E00D99854 /* Presentable.swift */; };
@@ -115,6 +116,7 @@
 		4C8C045827ABACCE00FFEB3B /* UIButton+Chainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Chainable.swift"; sourceTree = "<group>"; };
 		4C8C9BE127C8ED74001B6FF2 /* ColorSchemePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSchemePreview.swift; sourceTree = "<group>"; };
 		4C8C9BE327C8EDF5001B6FF2 /* DynamicTypeSizePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicTypeSizePreview.swift; sourceTree = "<group>"; };
+		4C8C9BE527C8F079001B6FF2 /* DevicePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicePreview.swift; sourceTree = "<group>"; };
 		4C92D8FF27C4B5A600D99854 /* MVVM_ConclusionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_ConclusionViewController.swift; sourceTree = "<group>"; };
 		4C92D90127C4B66E00D99854 /* DateToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateToggleView.swift; sourceTree = "<group>"; };
 		4C92D90427C4B70E00D99854 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				4C2E835927C8E8BD0095AB3E /* DateToggleView_PreviewTest.swift */,
 				4C8C9BE327C8EDF5001B6FF2 /* DynamicTypeSizePreview.swift */,
 				4C8C9BE127C8ED74001B6FF2 /* ColorSchemePreview.swift */,
+				4C8C9BE527C8F079001B6FF2 /* DevicePreview.swift */,
 			);
 			path = Preview_Examples;
 			sourceTree = "<group>";
@@ -598,6 +601,7 @@
 				4C92D91A27C6518C00D99854 /* RelayExampleViewController.swift in Sources */,
 				4CE985F42765707D00239C1B /* SceneDelegate.swift in Sources */,
 				4C0242DF27AA9A8500B01FB1 /* DeclarativeUITestViewController+UI.swift in Sources */,
+				4C8C9BE627C8F079001B6FF2 /* DevicePreview.swift in Sources */,
 				4C8C045927ABACCE00FFEB3B /* UIButton+Chainable.swift in Sources */,
 				4CB5988427B6777B009247AD /* Routable.swift in Sources */,
 				4C92D91127C5F69F00D99854 /* Repository.swift in Sources */,
