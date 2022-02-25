@@ -11,6 +11,8 @@ import UIKit
 enum fontSet {
     case magdacleanmonoBold
     case magdacleanmonoRegular
+    case defaultHeavy
+    case defaultMedium
     case defaultFont
     
     func makeFont() -> UIFont {
@@ -19,6 +21,10 @@ enum fontSet {
             return UIFont(name: "magdacleanmono-bold", size: 28) ?? UIFont.systemFont(ofSize: 28, weight: .heavy)
         case .magdacleanmonoRegular:
             return UIFont(name: "magdacleanmono-regular", size: 16) ?? UIFont.systemFont(ofSize: 16, weight: .medium)
+        case .defaultHeavy:
+            return UIFont.systemFont(ofSize: 18, weight: .heavy)
+        case .defaultMedium:
+            return UIFont.systemFont(ofSize: 14, weight: .medium)
         case .defaultFont:
             return UIFont.systemFont(ofSize: 14)
         }
