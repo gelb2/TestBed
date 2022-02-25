@@ -29,6 +29,7 @@
 		4C11A8D327AE5DAA00EC545B /* StudyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C11A8D227AE5DAA00EC545B /* StudyViewModel.swift */; };
 		4C11A8D627AE61E700EC545B /* SceneCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C11A8D527AE61E700EC545B /* SceneCategory.swift */; };
 		4C18364E27ABC5DE00F56513 /* UIStackView+Chanable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C18364D27ABC5DE00F56513 /* UIStackView+Chanable.swift */; };
+		4C2E835A27C8E8BD0095AB3E /* DateToggleView_PreviewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2E835927C8E8BD0095AB3E /* DateToggleView_PreviewTest.swift */; };
 		4C6801AB27C8BCB300A5F1DC /* ButtonCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6801AA27C8BCB300A5F1DC /* ButtonCountView.swift */; };
 		4C6801AD27C8C14100A5F1DC /* ScanExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6801AC27C8C14100A5F1DC /* ScanExampleViewController.swift */; };
 		4C6801AF27C8CA5000A5F1DC /* TextFilerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6801AE27C8CA5000A5F1DC /* TextFilerView.swift */; };
@@ -37,6 +38,12 @@
 		4C6AB1692765B01B00013B9B /* BlueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6AB1682765B01B00013B9B /* BlueView.swift */; };
 		4C8C045727ABA5C800FFEB3B /* UITextField+Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8C045627ABA5C800FFEB3B /* UITextField+Chainable.swift */; };
 		4C8C045927ABACCE00FFEB3B /* UIButton+Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8C045827ABACCE00FFEB3B /* UIButton+Chainable.swift */; };
+		4C8C9BE227C8ED74001B6FF2 /* ColorSchemePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8C9BE127C8ED74001B6FF2 /* ColorSchemePreview.swift */; };
+		4C8C9BE427C8EDF5001B6FF2 /* DynamicTypeSizePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8C9BE327C8EDF5001B6FF2 /* DynamicTypeSizePreview.swift */; };
+		4C8C9BE627C8F079001B6FF2 /* DevicePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8C9BE527C8F079001B6FF2 /* DevicePreview.swift */; };
+		4C8C9BE827C8F581001B6FF2 /* ViewControllerPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8C9BE727C8F581001B6FF2 /* ViewControllerPreview.swift */; };
+		4C8C9BEB27C8FA13001B6FF2 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8C9BEA27C8FA13001B6FF2 /* UIView+Extension.swift */; };
+		4C8C9BED27C8FA67001B6FF2 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8C9BEC27C8FA67001B6FF2 /* UIViewController+Extension.swift */; };
 		4C92D90027C4B5A600D99854 /* MVVM_ConclusionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C92D8FF27C4B5A600D99854 /* MVVM_ConclusionViewController.swift */; };
 		4C92D90227C4B66E00D99854 /* DateToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C92D90127C4B66E00D99854 /* DateToggleView.swift */; };
 		4C92D90527C4B70E00D99854 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C92D90427C4B70E00D99854 /* Presentable.swift */; };
@@ -101,6 +108,7 @@
 		4C11A8D227AE5DAA00EC545B /* StudyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyViewModel.swift; sourceTree = "<group>"; };
 		4C11A8D527AE61E700EC545B /* SceneCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCategory.swift; sourceTree = "<group>"; };
 		4C18364D27ABC5DE00F56513 /* UIStackView+Chanable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Chanable.swift"; sourceTree = "<group>"; };
+		4C2E835927C8E8BD0095AB3E /* DateToggleView_PreviewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateToggleView_PreviewTest.swift; sourceTree = "<group>"; };
 		4C6801AA27C8BCB300A5F1DC /* ButtonCountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCountView.swift; sourceTree = "<group>"; };
 		4C6801AC27C8C14100A5F1DC /* ScanExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanExampleViewController.swift; sourceTree = "<group>"; };
 		4C6801AE27C8CA5000A5F1DC /* TextFilerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFilerView.swift; sourceTree = "<group>"; };
@@ -109,6 +117,12 @@
 		4C6AB1682765B01B00013B9B /* BlueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueView.swift; sourceTree = "<group>"; };
 		4C8C045627ABA5C800FFEB3B /* UITextField+Chainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Chainable.swift"; sourceTree = "<group>"; };
 		4C8C045827ABACCE00FFEB3B /* UIButton+Chainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Chainable.swift"; sourceTree = "<group>"; };
+		4C8C9BE127C8ED74001B6FF2 /* ColorSchemePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSchemePreview.swift; sourceTree = "<group>"; };
+		4C8C9BE327C8EDF5001B6FF2 /* DynamicTypeSizePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicTypeSizePreview.swift; sourceTree = "<group>"; };
+		4C8C9BE527C8F079001B6FF2 /* DevicePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicePreview.swift; sourceTree = "<group>"; };
+		4C8C9BE727C8F581001B6FF2 /* ViewControllerPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPreview.swift; sourceTree = "<group>"; };
+		4C8C9BEA27C8FA13001B6FF2 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		4C8C9BEC27C8FA67001B6FF2 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		4C92D8FF27C4B5A600D99854 /* MVVM_ConclusionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_ConclusionViewController.swift; sourceTree = "<group>"; };
 		4C92D90127C4B66E00D99854 /* DateToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateToggleView.swift; sourceTree = "<group>"; };
 		4C92D90427C4B70E00D99854 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
@@ -206,6 +220,18 @@
 			path = StudyList;
 			sourceTree = "<group>";
 		};
+		4C2E835827C8E8270095AB3E /* Preview_Examples */ = {
+			isa = PBXGroup;
+			children = (
+				4C2E835927C8E8BD0095AB3E /* DateToggleView_PreviewTest.swift */,
+				4C8C9BE327C8EDF5001B6FF2 /* DynamicTypeSizePreview.swift */,
+				4C8C9BE127C8ED74001B6FF2 /* ColorSchemePreview.swift */,
+				4C8C9BE527C8F079001B6FF2 /* DevicePreview.swift */,
+				4C8C9BE727C8F581001B6FF2 /* ViewControllerPreview.swift */,
+			);
+			path = Preview_Examples;
+			sourceTree = "<group>";
+		};
 		4C6801A827C8BC6D00A5F1DC /* AppDelegateRelated */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +249,15 @@
 				4C6801AC27C8C14100A5F1DC /* ScanExampleViewController.swift */,
 			);
 			path = Scan_Example;
+			sourceTree = "<group>";
+		};
+		4C8C9BE927C8F9FF001B6FF2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4C8C9BEA27C8FA13001B6FF2 /* UIView+Extension.swift */,
+				4C8C9BEC27C8FA67001B6FF2 /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		4C92D8FE27C4B50500D99854 /* MVVM_Conclusion */ = {
@@ -294,6 +329,7 @@
 		4CE985F02765707D00239C1B /* TestBed */ = {
 			isa = PBXGroup;
 			children = (
+				4C8C9BE927C8F9FF001B6FF2 /* Extensions */,
 				4C92D90327C4B70000D99854 /* Presentable */,
 				365AACBC27B6AFAC00FBAC52 /* Font */,
 				4C6801A827C8BC6D00A5F1DC /* AppDelegateRelated */,
@@ -304,6 +340,7 @@
 				4C92D8FE27C4B50500D99854 /* MVVM_Conclusion */,
 				4C92D91827C6516F00D99854 /* Relay_Example */,
 				4C6801A927C8BC8B00A5F1DC /* Scan_Example */,
+				4C2E835827C8E8270095AB3E /* Preview_Examples */,
 				4CE985FA2765707D00239C1B /* Assets.xcassets */,
 				4CE985FC2765707D00239C1B /* LaunchScreen.storyboard */,
 				4CE985FF2765707D00239C1B /* Info.plist */,
@@ -545,12 +582,15 @@
 				4C11A8CB27AE57C400EC545B /* StudyListViewController.swift in Sources */,
 				4C92D90027C4B5A600D99854 /* MVVM_ConclusionViewController.swift in Sources */,
 				4C11A8CF27AE5D7F00EC545B /* StudyModel.swift in Sources */,
+				4C8C9BE827C8F581001B6FF2 /* ViewControllerPreview.swift in Sources */,
 				4C11A8D327AE5DAA00EC545B /* StudyViewModel.swift in Sources */,
 				4C0ECEFD27BE17D400BCA3EA /* StudyListRoutable.swift in Sources */,
 				4C0ECEFF27BE6B4B00BCA3EA /* SceneContext.swift in Sources */,
+				4C2E835A27C8E8BD0095AB3E /* DateToggleView_PreviewTest.swift in Sources */,
 				4C6801AD27C8C14100A5F1DC /* ScanExampleViewController.swift in Sources */,
 				4C6801AB27C8BCB300A5F1DC /* ButtonCountView.swift in Sources */,
 				4C0ECEFB27BE17A400BCA3EA /* SceneDelegateRoutable.swift in Sources */,
+				4C8C9BEB27C8FA13001B6FF2 /* UIView+Extension.swift in Sources */,
 				4C0242D227A7EBDB00B01FB1 /* DeclarativeUITestViewController.swift in Sources */,
 				4C0242CE27A7EA2300B01FB1 /* Chainable.swift in Sources */,
 				4C93DB4A27C7816B003D168F /* RelayExampleView.swift in Sources */,
@@ -561,8 +601,10 @@
 				4C92D90227C4B66E00D99854 /* DateToggleView.swift in Sources */,
 				4C92D90F27C500CD00D99854 /* Entity.swift in Sources */,
 				4C11A8CD27AE595700EC545B /* StudyListCell.swift in Sources */,
+				4C8C9BE227C8ED74001B6FF2 /* ColorSchemePreview.swift in Sources */,
 				4C92D90527C4B70E00D99854 /* Presentable.swift in Sources */,
 				4C92D91527C5F91100D99854 /* Service.swift in Sources */,
+				4C8C9BE427C8EDF5001B6FF2 /* DynamicTypeSizePreview.swift in Sources */,
 				4C0242D427A7EC9F00B01FB1 /* UIView+Chainable.swift in Sources */,
 				4C92D90727C4C03400D99854 /* FontEnum.swift in Sources */,
 				4C6801AF27C8CA5000A5F1DC /* TextFilerView.swift in Sources */,
@@ -571,6 +613,7 @@
 				4C11A8D127AE5D9700EC545B /* StudyCellViewModel.swift in Sources */,
 				4CE985F22765707D00239C1B /* AppDelegate.swift in Sources */,
 				4C92D91327C5F82300D99854 /* Model.swift in Sources */,
+				4C8C9BED27C8FA67001B6FF2 /* UIViewController+Extension.swift in Sources */,
 				4C11A8D627AE61E700EC545B /* SceneCategory.swift in Sources */,
 				4C92D91727C5FDB700D99854 /* ViewModel.swift in Sources */,
 				4CB26FFC27AFB7DF00293A75 /* StudyListViewModel.swift in Sources */,
@@ -578,6 +621,7 @@
 				4C92D91A27C6518C00D99854 /* RelayExampleViewController.swift in Sources */,
 				4CE985F42765707D00239C1B /* SceneDelegate.swift in Sources */,
 				4C0242DF27AA9A8500B01FB1 /* DeclarativeUITestViewController+UI.swift in Sources */,
+				4C8C9BE627C8F079001B6FF2 /* DevicePreview.swift in Sources */,
 				4C8C045927ABACCE00FFEB3B /* UIButton+Chainable.swift in Sources */,
 				4CB5988427B6777B009247AD /* Routable.swift in Sources */,
 				4C92D91127C5F69F00D99854 /* Repository.swift in Sources */,
