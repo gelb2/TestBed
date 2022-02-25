@@ -41,6 +41,7 @@
 		4C8C9BE227C8ED74001B6FF2 /* ColorSchemePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8C9BE127C8ED74001B6FF2 /* ColorSchemePreview.swift */; };
 		4C8C9BE427C8EDF5001B6FF2 /* DynamicTypeSizePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8C9BE327C8EDF5001B6FF2 /* DynamicTypeSizePreview.swift */; };
 		4C8C9BE627C8F079001B6FF2 /* DevicePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8C9BE527C8F079001B6FF2 /* DevicePreview.swift */; };
+		4C8C9BE827C8F581001B6FF2 /* ViewControllerPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8C9BE727C8F581001B6FF2 /* ViewControllerPreview.swift */; };
 		4C92D90027C4B5A600D99854 /* MVVM_ConclusionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C92D8FF27C4B5A600D99854 /* MVVM_ConclusionViewController.swift */; };
 		4C92D90227C4B66E00D99854 /* DateToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C92D90127C4B66E00D99854 /* DateToggleView.swift */; };
 		4C92D90527C4B70E00D99854 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C92D90427C4B70E00D99854 /* Presentable.swift */; };
@@ -117,6 +118,7 @@
 		4C8C9BE127C8ED74001B6FF2 /* ColorSchemePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSchemePreview.swift; sourceTree = "<group>"; };
 		4C8C9BE327C8EDF5001B6FF2 /* DynamicTypeSizePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicTypeSizePreview.swift; sourceTree = "<group>"; };
 		4C8C9BE527C8F079001B6FF2 /* DevicePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicePreview.swift; sourceTree = "<group>"; };
+		4C8C9BE727C8F581001B6FF2 /* ViewControllerPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPreview.swift; sourceTree = "<group>"; };
 		4C92D8FF27C4B5A600D99854 /* MVVM_ConclusionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_ConclusionViewController.swift; sourceTree = "<group>"; };
 		4C92D90127C4B66E00D99854 /* DateToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateToggleView.swift; sourceTree = "<group>"; };
 		4C92D90427C4B70E00D99854 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 				4C8C9BE327C8EDF5001B6FF2 /* DynamicTypeSizePreview.swift */,
 				4C8C9BE127C8ED74001B6FF2 /* ColorSchemePreview.swift */,
 				4C8C9BE527C8F079001B6FF2 /* DevicePreview.swift */,
+				4C8C9BE727C8F581001B6FF2 /* ViewControllerPreview.swift */,
 			);
 			path = Preview_Examples;
 			sourceTree = "<group>";
@@ -565,6 +568,7 @@
 				4C11A8CB27AE57C400EC545B /* StudyListViewController.swift in Sources */,
 				4C92D90027C4B5A600D99854 /* MVVM_ConclusionViewController.swift in Sources */,
 				4C11A8CF27AE5D7F00EC545B /* StudyModel.swift in Sources */,
+				4C8C9BE827C8F581001B6FF2 /* ViewControllerPreview.swift in Sources */,
 				4C11A8D327AE5DAA00EC545B /* StudyViewModel.swift in Sources */,
 				4C0ECEFD27BE17D400BCA3EA /* StudyListRoutable.swift in Sources */,
 				4C0ECEFF27BE6B4B00BCA3EA /* SceneContext.swift in Sources */,
