@@ -153,22 +153,6 @@ struct DateToggleView_PreviewTestPreviewProvider: PreviewProvider {
             let view = DateToggleView_PreviewTest(viewModel: "test")
             return view
         }.previewLayout(.sizeThatFits)
-        
-        ForEach(ContentSizeCategory.allCases, id: \.self) { sizeCategory in
-            DateToggleView_PreviewTestPreview {
-                let view = DateToggleView_PreviewTest(viewModel: "test")
-                view.yesterdayButton.titleLabel?.font = .preferredFont(forTextStyle: .body)
-                view.yesterdayButton.titleLabel?.adjustsFontForContentSizeCategory = true
-                view.todayButton.titleLabel?.font = .preferredFont(forTextStyle: .body)
-                view.todayButton.titleLabel?.adjustsFontForContentSizeCategory = true
-                view.nextDayButton.titleLabel?.font = .preferredFont(forTextStyle: .body)
-                view.nextDayButton.titleLabel?.adjustsFontForContentSizeCategory = true
-                return view
-            }.environment(\.sizeCategory, sizeCategory)
-                .previewLayout(.fixed(width: 300, height: 200))
-            .previewDisplayName("\(sizeCategory)")
-        }
-        
     }
 }
 #endif
