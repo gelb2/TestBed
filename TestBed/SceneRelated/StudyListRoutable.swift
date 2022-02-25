@@ -28,6 +28,10 @@ extension StudyListSceneBuildable {
         return RelayExampleViewController()
     }
     
+    func buildScanExampleScene() -> Sceneable {
+        return ScanExampleViewController()
+    }
+    
     func buildErrorAlert() -> Sceneable {
         let alert = UIAlertController(title: "UnknownVC", message: "initVC Please", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .destructive, handler: nil)
@@ -53,6 +57,8 @@ extension StudyListRoutable where Self: StudyListViewController {
             nextScene = buildMVVM_ConclusionScene(context: context)
         case .studyTopic(.rxSwift(.Relay_How_To_Use)):
             nextScene = buildRelayExampleScene()
+        case .studyTopic(.rxSwift(.scan_How_To_Use)):
+            nextScene = buildScanExampleScene()
         case .errorPopup(.Unknown):
             nextScene = buildErrorAlert()
         default: break

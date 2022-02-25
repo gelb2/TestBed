@@ -29,6 +29,8 @@
 		4C11A8D327AE5DAA00EC545B /* StudyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C11A8D227AE5DAA00EC545B /* StudyViewModel.swift */; };
 		4C11A8D627AE61E700EC545B /* SceneCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C11A8D527AE61E700EC545B /* SceneCategory.swift */; };
 		4C18364E27ABC5DE00F56513 /* UIStackView+Chanable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C18364D27ABC5DE00F56513 /* UIStackView+Chanable.swift */; };
+		4C6801AB27C8BCB300A5F1DC /* ButtonCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6801AA27C8BCB300A5F1DC /* ButtonCountView.swift */; };
+		4C6801AD27C8C14100A5F1DC /* ScanExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6801AC27C8C14100A5F1DC /* ScanExampleViewController.swift */; };
 		4C68DA9D2775B16700FEAD25 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C68DA9C2775B16700FEAD25 /* ContentView.swift */; };
 		4C68DA9F2775B2C700FEAD25 /* SwiftUILifeCycleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C68DA9E2775B2C700FEAD25 /* SwiftUILifeCycleApp.swift */; };
 		4C6AB1692765B01B00013B9B /* BlueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6AB1682765B01B00013B9B /* BlueView.swift */; };
@@ -98,6 +100,8 @@
 		4C11A8D227AE5DAA00EC545B /* StudyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyViewModel.swift; sourceTree = "<group>"; };
 		4C11A8D527AE61E700EC545B /* SceneCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCategory.swift; sourceTree = "<group>"; };
 		4C18364D27ABC5DE00F56513 /* UIStackView+Chanable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Chanable.swift"; sourceTree = "<group>"; };
+		4C6801AA27C8BCB300A5F1DC /* ButtonCountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCountView.swift; sourceTree = "<group>"; };
+		4C6801AC27C8C14100A5F1DC /* ScanExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanExampleViewController.swift; sourceTree = "<group>"; };
 		4C68DA9C2775B16700FEAD25 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4C68DA9E2775B2C700FEAD25 /* SwiftUILifeCycleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUILifeCycleApp.swift; sourceTree = "<group>"; };
 		4C6AB1682765B01B00013B9B /* BlueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueView.swift; sourceTree = "<group>"; };
@@ -200,6 +204,24 @@
 			path = StudyList;
 			sourceTree = "<group>";
 		};
+		4C6801A827C8BC6D00A5F1DC /* AppDelegateRelated */ = {
+			isa = PBXGroup;
+			children = (
+				4CE985F12765707D00239C1B /* AppDelegate.swift */,
+				4CE985F32765707D00239C1B /* SceneDelegate.swift */,
+			);
+			path = AppDelegateRelated;
+			sourceTree = "<group>";
+		};
+		4C6801A927C8BC8B00A5F1DC /* Scan_Example */ = {
+			isa = PBXGroup;
+			children = (
+				4C6801AA27C8BCB300A5F1DC /* ButtonCountView.swift */,
+				4C6801AC27C8C14100A5F1DC /* ScanExampleViewController.swift */,
+			);
+			path = Scan_Example;
+			sourceTree = "<group>";
+		};
 		4C92D8FE27C4B50500D99854 /* MVVM_Conclusion */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,14 +293,14 @@
 			children = (
 				4C92D90327C4B70000D99854 /* Presentable */,
 				365AACBC27B6AFAC00FBAC52 /* Font */,
-				4CE985F12765707D00239C1B /* AppDelegate.swift */,
-				4CE985F32765707D00239C1B /* SceneDelegate.swift */,
+				4C6801A827C8BC6D00A5F1DC /* AppDelegateRelated */,
 				4CB5988227B66B68009247AD /* SceneRelated */,
 				4C11A8C927AE57AA00EC545B /* StudyList */,
 				4C0242CC27A7EA1200B01FB1 /* Chainable */,
 				4CEBA77427901CE600904EEC /* SwiftUI_Preview_AppLifeCycleStudy */,
 				4C92D8FE27C4B50500D99854 /* MVVM_Conclusion */,
 				4C92D91827C6516F00D99854 /* Relay_Example */,
+				4C6801A927C8BC8B00A5F1DC /* Scan_Example */,
 				4CE985FA2765707D00239C1B /* Assets.xcassets */,
 				4CE985FC2765707D00239C1B /* LaunchScreen.storyboard */,
 				4CE985FF2765707D00239C1B /* Info.plist */,
@@ -523,6 +545,8 @@
 				4C11A8D327AE5DAA00EC545B /* StudyViewModel.swift in Sources */,
 				4C0ECEFD27BE17D400BCA3EA /* StudyListRoutable.swift in Sources */,
 				4C0ECEFF27BE6B4B00BCA3EA /* SceneContext.swift in Sources */,
+				4C6801AD27C8C14100A5F1DC /* ScanExampleViewController.swift in Sources */,
+				4C6801AB27C8BCB300A5F1DC /* ButtonCountView.swift in Sources */,
 				4C0ECEFB27BE17A400BCA3EA /* SceneDelegateRoutable.swift in Sources */,
 				4C0242D227A7EBDB00B01FB1 /* DeclarativeUITestViewController.swift in Sources */,
 				4C0242CE27A7EA2300B01FB1 /* Chainable.swift in Sources */,

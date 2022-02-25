@@ -24,10 +24,13 @@ class StudyListViewModel {
         
         let relayExample = StudyCellViewModel(title: "Relay-Example-Bearfried", description: "곰튀김의 Relay 사용과 데이터활용", destinationVC: .studyTopic(.rxSwift(.Relay_How_To_Use)))
         
+        let scanExample = StudyCellViewModel(title: "Scan-Example-Udemy/Tomy", description: "Udemy/Tomy의 Scan 사용", destinationVC: .studyTopic(.rxSwift(.scan_How_To_Use)))
+        
         lists.append(declarativeUI)
         lists.append(swiftUIPreviewTest)
         lists.append(conclusion_MVVM)
         lists.append(relayExample)
+        lists.append(scanExample)
         
         for i in 0...20 {
             let dummies = StudyCellViewModel(title: "Dummy \(i)", description: "This is Dummy Data Set Real Data", destinationVC: .errorPopup(.Unknown))
