@@ -109,6 +109,7 @@
 		4C11A8D527AE61E700EC545B /* SceneCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCategory.swift; sourceTree = "<group>"; };
 		4C18364D27ABC5DE00F56513 /* UIStackView+Chanable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Chanable.swift"; sourceTree = "<group>"; };
 		4C2E835927C8E8BD0095AB3E /* DateToggleView_PreviewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateToggleView_PreviewTest.swift; sourceTree = "<group>"; };
+		4C4B608E280410C800583D65 /* AssociatedType.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = AssociatedType.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4C6801AA27C8BCB300A5F1DC /* ButtonCountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCountView.swift; sourceTree = "<group>"; };
 		4C6801AC27C8C14100A5F1DC /* ScanExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanExampleViewController.swift; sourceTree = "<group>"; };
 		4C6801AE27C8CA5000A5F1DC /* TextFilerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFilerView.swift; sourceTree = "<group>"; };
@@ -232,6 +233,14 @@
 			path = Preview_Examples;
 			sourceTree = "<group>";
 		};
+		4C4B608D280410B900583D65 /* Playgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				4C4B608E280410C800583D65 /* AssociatedType.playground */,
+			);
+			path = Playgrounds;
+			sourceTree = "<group>";
+		};
 		4C6801A827C8BC6D00A5F1DC /* AppDelegateRelated */ = {
 			isa = PBXGroup;
 			children = (
@@ -329,6 +338,7 @@
 		4CE985F02765707D00239C1B /* TestBed */ = {
 			isa = PBXGroup;
 			children = (
+				4C4B608D280410B900583D65 /* Playgrounds */,
 				4C8C9BE927C8F9FF001B6FF2 /* Extensions */,
 				4C92D90327C4B70000D99854 /* Presentable */,
 				365AACBC27B6AFAC00FBAC52 /* Font */,
