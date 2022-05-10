@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4CE985ED2765707D00239C1B"
-               BuildableName = "TestBed.app"
-               BlueprintName = "TestBed"
-               ReferencedContainer = "container:TestBed.xcodeproj">
+               BlueprintIdentifier = "4C2FC934282A2A5300C451DD"
+               BuildableName = "Landmarks.app"
+               BlueprintName = "Landmarks"
+               ReferencedContainer = "container:Landmarks.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,20 +32,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4CE986032765707D00239C1B"
-               BuildableName = "TestBedTests.xctest"
-               BlueprintName = "TestBedTests"
-               ReferencedContainer = "container:TestBed.xcodeproj">
+               BlueprintIdentifier = "4C2FC949282A2A5400C451DD"
+               BuildableName = "LandmarksTests.xctest"
+               BlueprintName = "LandmarksTests"
+               ReferencedContainer = "container:Landmarks.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4CE9860D2765707D00239C1B"
-               BuildableName = "TestBedUITests.xctest"
-               BlueprintName = "TestBedUITests"
-               ReferencedContainer = "container:TestBed.xcodeproj">
+               BlueprintIdentifier = "4C2FC953282A2A5400C451DD"
+               BuildableName = "LandmarksUITests.xctest"
+               BlueprintName = "LandmarksUITests"
+               ReferencedContainer = "container:Landmarks.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -64,10 +64,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4CE985ED2765707D00239C1B"
-            BuildableName = "TestBed.app"
-            BlueprintName = "TestBed"
-            ReferencedContainer = "container:TestBed.xcodeproj">
+            BlueprintIdentifier = "4C2FC934282A2A5300C451DD"
+            BuildableName = "Landmarks.app"
+            BlueprintName = "Landmarks"
+            ReferencedContainer = "container:Landmarks.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -81,10 +81,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4CE985ED2765707D00239C1B"
-            BuildableName = "TestBed.app"
-            BlueprintName = "TestBed"
-            ReferencedContainer = "container:TestBed.xcodeproj">
+            BlueprintIdentifier = "4C2FC934282A2A5300C451DD"
+            BuildableName = "Landmarks.app"
+            BlueprintName = "Landmarks"
+            ReferencedContainer = "container:Landmarks.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
