@@ -35,6 +35,6 @@ struct LandmarkRow_Preview: PreviewProvider {
             LandmarkRow(landmark: landmarks[0])
             LandmarkRow(landmark: landmarks[1])
         }
-        .previewLayout(.fixed(width: 300, height: 50))
+        .previewLayout(.fixed(width: 300, height: 70))
     }
 }
