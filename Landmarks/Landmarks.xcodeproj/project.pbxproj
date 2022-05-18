@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4C03AC4B2833C9F300396BC6 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C03AC4A2833C9F300396BC6 /* FavoriteButton.swift */; };
+		4C03AC4F2834F94800396BC6 /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C03AC4E2834F94800396BC6 /* Parameters.swift */; };
 		4C2FC939282A2A5300C451DD /* LandmarksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2FC938282A2A5300C451DD /* LandmarksApp.swift */; };
 		4C2FC93B282A2A5300C451DD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2FC93A282A2A5300C451DD /* ContentView.swift */; };
 		4C2FC93D282A2A5400C451DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C2FC93C282A2A5400C451DD /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 /* Begin PBXFileReference section */
 		234A68F7F3213C51B96AAEA0 /* Pods-Landmarks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Landmarks.release.xcconfig"; path = "Target Support Files/Pods-Landmarks/Pods-Landmarks.release.xcconfig"; sourceTree = "<group>"; };
 		4C03AC4A2833C9F300396BC6 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
+		4C03AC4E2834F94800396BC6 /* Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
 		4C2FC935282A2A5300C451DD /* Landmarks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Landmarks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C2FC938282A2A5300C451DD /* LandmarksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarksApp.swift; sourceTree = "<group>"; };
 		4C2FC93A282A2A5300C451DD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				4C2FC967282A2ADE00C451DD /* CircleImage.swift */,
 				4C2FC969282A2AFD00C451DD /* MapView.swift */,
 				4C03AC4A2833C9F300396BC6 /* FavoriteButton.swift */,
+				4C03AC4E2834F94800396BC6 /* Parameters.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 			files = (
 				4C2FC992282A5A8D00C451DD /* Landmark.swift in Sources */,
 				4C2FC942282A2A5400C451DD /* Persistence.swift in Sources */,
+				4C03AC4F2834F94800396BC6 /* Parameters.swift in Sources */,
 				4C2FC96A282A2AFD00C451DD /* MapView.swift in Sources */,
 				4C03AC4B2833C9F300396BC6 /* FavoriteButton.swift in Sources */,
 				4C2FC93B282A2A5300C451DD /* ContentView.swift in Sources */,
