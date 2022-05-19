@@ -28,9 +28,16 @@ struct RotatedText: View {
 
 struct RotatedBadgeSymbol_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            RotatedBadgeSymbol(angle: Angle(degrees: 5))
-            RotatedText()
+        
+        ForEach(["iPhone SE (2nd generation)", "iPhone 13"], id: \.self) { deviceName in
+            Group {
+                RotatedBadgeSymbol(angle: Angle(degrees: 5))
+                    .previewDevice(PreviewDevice(rawValue: deviceName))
+                    .previewDisplayName(deviceName)
+                RotatedText()
+                    .previewDevice(PreviewDevice(rawValue: deviceName))
+                    .previewDisplayName(deviceName)
+            }
         }
     }
 }
