@@ -17,6 +17,7 @@ struct Landmark: Hashable, Codable, Identifiable {
     var state: String
     var description: String
     var isFavorite: Bool
+    var isFeatured: Bool
     
     var category: Category
     //landmarkData.json 에 이미 정의된 category키와 밸류를 위한 것
