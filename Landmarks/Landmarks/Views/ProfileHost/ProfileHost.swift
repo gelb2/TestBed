@@ -22,7 +22,7 @@ struct ProfileHost: View {
             if editMode?.wrappedValue == .inactive { //사용자가 이 뷰를 에디팅 할 수 없는 상태
                 ProfileSummary(profile: modelData.profile)
             } else { //사용자가 이 뷰를 에디팅 할 수 있는 상태
-                Text("Profile Editor")
+                ProfileEditor(profile: $draftProfile)
             }
         }
         .padding()
