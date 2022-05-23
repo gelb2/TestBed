@@ -18,6 +18,14 @@ struct Landmark: Hashable, Codable, Identifiable {
     var description: String
     var isFavorite: Bool
     
+    var category: Category
+    //landmarkData.json 에 이미 정의된 category키와 밸류를 위한 것
+    enum Category: String, CaseIterable, Codable {
+        case lakes = "Lakes"
+        case rivers = "Rivers"
+        case mountains = "Mountains"
+    }
+    
     private var imageName: String
     
     var image: Image {
