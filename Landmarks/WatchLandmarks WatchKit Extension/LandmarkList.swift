@@ -1,8 +1,8 @@
 //
 //  LandmarkList.swift
-//  Landmarks
+//  WatchLandmarks WatchKit Extension
 //
-//  Created by sokol on 2022/05/10.
+//  Created by sokol on 2022/05/28.
 //
 
 import SwiftUI
@@ -32,7 +32,6 @@ struct LandmarkList: View {
                 }
             }
             .navigationTitle("Landmarks")
-            .frame(width: 300)
         }
     }
 }
