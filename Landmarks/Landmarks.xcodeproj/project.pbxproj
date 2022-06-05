@@ -99,6 +99,8 @@
 		4CD597B3284194E000A7BFBF /* MacLandmarksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD597B2284194E000A7BFBF /* MacLandmarksUITests.swift */; };
 		4CD597B5284194E000A7BFBF /* MacLandmarksUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD597B4284194E000A7BFBF /* MacLandmarksUITestsLaunchTests.swift */; };
 		4CDF342A284CB97E0061F10C /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDF3429284CB97E0061F10C /* ColorExtension.swift */; };
+		4CDF342C284CD8F10061F10C /* IdealSizeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDF342B284CD8F10061F10C /* IdealSizeTest.swift */; };
+		4CDF342E284CDBBA0061F10C /* LayoutPriorityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDF342D284CDBBA0061F10C /* LayoutPriorityTest.swift */; };
 		4CE413C92836673900A9A010 /* BadgeSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE413C82836673900A9A010 /* BadgeSymbol.swift */; };
 		CE30CDEE8EE4639FF54E394A /* Pods_Landmarks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C13538F96447A1AC4B6CA9F1 /* Pods_Landmarks.framework */; };
 /* End PBXBuildFile section */
@@ -267,6 +269,8 @@
 		4CD597B2284194E000A7BFBF /* MacLandmarksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacLandmarksUITests.swift; sourceTree = "<group>"; };
 		4CD597B4284194E000A7BFBF /* MacLandmarksUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacLandmarksUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4CDF3429284CB97E0061F10C /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		4CDF342B284CD8F10061F10C /* IdealSizeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdealSizeTest.swift; sourceTree = "<group>"; };
+		4CDF342D284CDBBA0061F10C /* LayoutPriorityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutPriorityTest.swift; sourceTree = "<group>"; };
 		4CE413C82836673900A9A010 /* BadgeSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeSymbol.swift; sourceTree = "<group>"; };
 		8A86546B17D2DA6578C88E4B /* Pods-Landmarks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Landmarks.debug.xcconfig"; path = "Target Support Files/Pods-Landmarks/Pods-Landmarks.debug.xcconfig"; sourceTree = "<group>"; };
 		C13538F96447A1AC4B6CA9F1 /* Pods_Landmarks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Landmarks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -639,6 +643,8 @@
 			isa = PBXGroup;
 			children = (
 				4CDF3427284CB8D80061F10C /* Helpers */,
+				4CDF342B284CD8F10061F10C /* IdealSizeTest.swift */,
+				4CDF342D284CDBBA0061F10C /* LayoutPriorityTest.swift */,
 			);
 			path = SweetSwiftUIBook;
 			sourceTree = "<group>";
@@ -1104,6 +1110,7 @@
 				36CE9D50283BB59D00144C45 /* HIke.swift in Sources */,
 				4C2FC992282A5A8D00C451DD /* Landmark.swift in Sources */,
 				36C862792836D203002D5AF1 /* Badge.swift in Sources */,
+				4CDF342E284CDBBA0061F10C /* LayoutPriorityTest.swift in Sources */,
 				36CE9D5C283C01FC00144C45 /* CategoryHome.swift in Sources */,
 				4C21678B2841AC3C0094007E /* LandmarkCommands.swift in Sources */,
 				36CE9D57283BB7A700144C45 /* HikeGraph.swift in Sources */,
@@ -1132,6 +1139,7 @@
 				4C03AC5128350B3000396BC6 /* BadgeBackground.swift in Sources */,
 				36CE9D67283C1EEC00144C45 /* ProfileSummary.swift in Sources */,
 				4C2FC968282A2ADE00C451DD /* CircleImage.swift in Sources */,
+				4CDF342C284CD8F10061F10C /* IdealSizeTest.swift in Sources */,
 				4CDF342A284CB97E0061F10C /* ColorExtension.swift in Sources */,
 				4C2FC99A282A5EFB00C451DD /* LandmarkRow.swift in Sources */,
 				4C2FC99C282A675200C451DD /* LandmarkList.swift in Sources */,
