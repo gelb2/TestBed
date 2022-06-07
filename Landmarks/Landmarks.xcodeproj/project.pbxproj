@@ -286,6 +286,7 @@
 		4CFB4ABD284E1FAD00EE6818 /* State_BindingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State_BindingTest.swift; sourceTree = "<group>"; };
 		4CFB4ABF284E224300EE6818 /* ObservableObjectTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObjectTest.swift; sourceTree = "<group>"; };
 		4CFB4AC1284E27FD00EE6818 /* EnvironmentObjectTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentObjectTest.swift; sourceTree = "<group>"; };
+		4CFB4AC5284F75BC00EE6818 /* PropertyWrapperTest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PropertyWrapperTest.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8A86546B17D2DA6578C88E4B /* Pods-Landmarks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Landmarks.debug.xcconfig"; path = "Target Support Files/Pods-Landmarks/Pods-Landmarks.debug.xcconfig"; sourceTree = "<group>"; };
 		C13538F96447A1AC4B6CA9F1 /* Pods_Landmarks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Landmarks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -666,6 +667,7 @@
 				4CFB4ABD284E1FAD00EE6818 /* State_BindingTest.swift */,
 				4CFB4ABF284E224300EE6818 /* ObservableObjectTest.swift */,
 				4CFB4AC1284E27FD00EE6818 /* EnvironmentObjectTest.swift */,
+				4CFB4AC5284F75BC00EE6818 /* PropertyWrapperTest.playground */,
 			);
 			path = SweetSwiftUIBook;
 			sourceTree = "<group>";
