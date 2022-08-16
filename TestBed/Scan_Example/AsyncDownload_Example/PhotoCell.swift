@@ -9,19 +9,20 @@ import UIKit
 
 final class PhotoCell: UICollectionViewCell {
     
-    let mainImageView: UIImageView = {
-        let iv = UIImageView()
+    var url: URL? {
+        didSet {
+            guard let url = url?.absoluteString else { return }
+            mainImageView.isLoading = true
+            mainImageView.loadImage(urlString: url)
+        }
+    }
+    
+    let mainImageView: CacheImageView = {
+        let iv = CacheImageView()
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
         iv.translatesAutoresizingMaskIntoConstraints = false
         return iv
-    }()
-    
-    let activityIndicator: UIActivityIndicatorView = {
-        let indicator = UIActivityIndicatorView()
-        indicator.translatesAutoresizingMaskIntoConstraints = false
-        indicator.startAnimating()
-        return indicator
     }()
     
     func display(image: UIImage?) {
@@ -32,8 +33,6 @@ final class PhotoCell: UICollectionViewCell {
         super.init(frame: frame)
         
         self.contentView.addSubview(mainImageView)
-        self.contentView.addSubview(activityIndicator)
-        
         //왜 강사는 contentView.addSubview가 아니라 그냥 addsubView를 했지?
 //        addSubview(mainImageView)
 //        addSubview(activityIndicator)
@@ -42,9 +41,7 @@ final class PhotoCell: UICollectionViewCell {
             mainImageView.topAnchor.constraint(equalTo: contentView.topAnchor),
             mainImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             mainImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            mainImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            activityIndicator.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            activityIndicator.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+            mainImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
     }
     

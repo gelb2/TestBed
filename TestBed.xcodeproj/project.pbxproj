@@ -61,6 +61,7 @@
 		4CB68DA028AB663600BD4599 /* AsyncDownloadExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB68D9F28AB663600BD4599 /* AsyncDownloadExampleViewController.swift */; };
 		4CB68DA228AB676100BD4599 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB68DA128AB676100BD4599 /* PhotoCell.swift */; };
 		4CB68DA428AB692A00BD4599 /* Photos.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CB68DA328AB692A00BD4599 /* Photos.plist */; };
+		4CB68DA628AB79D800BD4599 /* CacheImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB68DA528AB79D800BD4599 /* CacheImageView.swift */; };
 		4CE985F22765707D00239C1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE985F12765707D00239C1B /* AppDelegate.swift */; };
 		4CE985F42765707D00239C1B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE985F32765707D00239C1B /* SceneDelegate.swift */; };
 		4CE985F62765707D00239C1B /* SwiftUIPreviewTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE985F52765707D00239C1B /* SwiftUIPreviewTestVC.swift */; };
@@ -144,6 +145,7 @@
 		4CB68D9F28AB663600BD4599 /* AsyncDownloadExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncDownloadExampleViewController.swift; sourceTree = "<group>"; };
 		4CB68DA128AB676100BD4599 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		4CB68DA328AB692A00BD4599 /* Photos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Photos.plist; sourceTree = "<group>"; };
+		4CB68DA528AB79D800BD4599 /* CacheImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheImageView.swift; sourceTree = "<group>"; };
 		4CE985EE2765707D00239C1B /* TestBed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestBed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CE985F12765707D00239C1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CE985F32765707D00239C1B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -331,6 +333,7 @@
 			children = (
 				4CB68D9F28AB663600BD4599 /* AsyncDownloadExampleViewController.swift */,
 				4CB68DA128AB676100BD4599 /* PhotoCell.swift */,
+				4CB68DA528AB79D800BD4599 /* CacheImageView.swift */,
 				4CB68DA328AB692A00BD4599 /* Photos.plist */,
 			);
 			name = AsyncDownload_Example;
@@ -626,6 +629,7 @@
 				4C0ECEFF27BE6B4B00BCA3EA /* SceneContext.swift in Sources */,
 				4C2E835A27C8E8BD0095AB3E /* DateToggleView_PreviewTest.swift in Sources */,
 				4C6801AD27C8C14100A5F1DC /* ScanExampleViewController.swift in Sources */,
+				4CB68DA628AB79D800BD4599 /* CacheImageView.swift in Sources */,
 				4C6801AB27C8BCB300A5F1DC /* ButtonCountView.swift in Sources */,
 				4C0ECEFB27BE17A400BCA3EA /* SceneDelegateRoutable.swift in Sources */,
 				4C8C9BEB27C8FA13001B6FF2 /* UIView+Extension.swift in Sources */,

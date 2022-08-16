@@ -98,7 +98,11 @@ extension AsyncDownloadExampleViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! PhotoCell
                 
         //downloadingImageWithURLSession(indexPath: indexPath)
-        downloadWithGlobalQueue(at: indexPath)
+        //downloadWithGlobalQueue(at: indexPath)
+        
+        cell.url = urls[indexPath.item]
+        
+        print("cache data count : \(imageCache.count)")
         
         return cell
     }
