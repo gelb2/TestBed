@@ -22,6 +22,13 @@ class AsyncDownloadExampleViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
     }
     
+    //캐시를 다 날리는 과정이 있어야 할까?
+    //NSCache를 쓰는 것이 더 낫지 않을까
+    deinit {
+        print("asyncVC deinit")
+        imageCache.removeAll()
+    }
+    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
