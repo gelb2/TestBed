@@ -58,6 +58,9 @@
 		4C93DB4A27C7816B003D168F /* RelayExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C93DB4927C7816B003D168F /* RelayExampleView.swift */; };
 		4CB26FFC27AFB7DF00293A75 /* StudyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB26FFB27AFB7DF00293A75 /* StudyListViewModel.swift */; };
 		4CB5988427B6777B009247AD /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB5988327B6777B009247AD /* Routable.swift */; };
+		4CB68DA028AB663600BD4599 /* AsyncDownloadExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB68D9F28AB663600BD4599 /* AsyncDownloadExampleViewController.swift */; };
+		4CB68DA228AB676100BD4599 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB68DA128AB676100BD4599 /* PhotoCell.swift */; };
+		4CB68DA428AB692A00BD4599 /* Photos.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CB68DA328AB692A00BD4599 /* Photos.plist */; };
 		4CE985F22765707D00239C1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE985F12765707D00239C1B /* AppDelegate.swift */; };
 		4CE985F42765707D00239C1B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE985F32765707D00239C1B /* SceneDelegate.swift */; };
 		4CE985F62765707D00239C1B /* SwiftUIPreviewTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE985F52765707D00239C1B /* SwiftUIPreviewTestVC.swift */; };
@@ -138,6 +141,9 @@
 		4C93DB4927C7816B003D168F /* RelayExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelayExampleView.swift; sourceTree = "<group>"; };
 		4CB26FFB27AFB7DF00293A75 /* StudyListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyListViewModel.swift; sourceTree = "<group>"; };
 		4CB5988327B6777B009247AD /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
+		4CB68D9F28AB663600BD4599 /* AsyncDownloadExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncDownloadExampleViewController.swift; sourceTree = "<group>"; };
+		4CB68DA128AB676100BD4599 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		4CB68DA328AB692A00BD4599 /* Photos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Photos.plist; sourceTree = "<group>"; };
 		4CE985EE2765707D00239C1B /* TestBed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestBed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CE985F12765707D00239C1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CE985F32765707D00239C1B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -313,6 +319,24 @@
 			path = SceneRelated;
 			sourceTree = "<group>";
 		};
+		4CB68D9B28AB635E00BD4599 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		4CB68D9C28AB65A400BD4599 /* AsyncDownload_Example */ = {
+			isa = PBXGroup;
+			children = (
+				4CB68D9F28AB663600BD4599 /* AsyncDownloadExampleViewController.swift */,
+				4CB68DA128AB676100BD4599 /* PhotoCell.swift */,
+				4CB68DA328AB692A00BD4599 /* Photos.plist */,
+			);
+			name = AsyncDownload_Example;
+			path = Scan_Example/AsyncDownload_Example;
+			sourceTree = "<group>";
+		};
 		4CE985E52765707D00239C1B = {
 			isa = PBXGroup;
 			children = (
@@ -344,12 +368,14 @@
 				365AACBC27B6AFAC00FBAC52 /* Font */,
 				4C6801A827C8BC6D00A5F1DC /* AppDelegateRelated */,
 				4CB5988227B66B68009247AD /* SceneRelated */,
+				4CB68D9B28AB635E00BD4599 /* New Group */,
 				4C11A8C927AE57AA00EC545B /* StudyList */,
 				4C0242CC27A7EA1200B01FB1 /* Chainable */,
 				4CEBA77427901CE600904EEC /* SwiftUI_Preview_AppLifeCycleStudy */,
 				4C92D8FE27C4B50500D99854 /* MVVM_Conclusion */,
 				4C92D91827C6516F00D99854 /* Relay_Example */,
 				4C6801A927C8BC8B00A5F1DC /* Scan_Example */,
+				4CB68D9C28AB65A400BD4599 /* AsyncDownload_Example */,
 				4C2E835827C8E8270095AB3E /* Preview_Examples */,
 				4CE985FA2765707D00239C1B /* Assets.xcassets */,
 				4CE985FC2765707D00239C1B /* LaunchScreen.storyboard */,
@@ -519,6 +545,7 @@
 				4CE985FE2765707D00239C1B /* LaunchScreen.storyboard in Resources */,
 				4CE985FB2765707D00239C1B /* Assets.xcassets in Resources */,
 				365AACC027B6B32100FBAC52 /* magdacleanmono-regular.ttf in Resources */,
+				4CB68DA428AB692A00BD4599 /* Photos.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +615,7 @@
 				4C0242DD27AA966500B01FB1 /* BaseViewController.swift in Sources */,
 				4C6AB1692765B01B00013B9B /* BlueView.swift in Sources */,
 				4C68DA9D2775B16700FEAD25 /* ContentView.swift in Sources */,
+				4CB68DA028AB663600BD4599 /* AsyncDownloadExampleViewController.swift in Sources */,
 				4C0242DB27AA675A00B01FB1 /* SnapKit+Chainable.swift in Sources */,
 				4C11A8CB27AE57C400EC545B /* StudyListViewController.swift in Sources */,
 				4C92D90027C4B5A600D99854 /* MVVM_ConclusionViewController.swift in Sources */,
@@ -616,6 +644,7 @@
 				4C92D91527C5F91100D99854 /* Service.swift in Sources */,
 				4C8C9BE427C8EDF5001B6FF2 /* DynamicTypeSizePreview.swift in Sources */,
 				4C0242D427A7EC9F00B01FB1 /* UIView+Chainable.swift in Sources */,
+				4CB68DA228AB676100BD4599 /* PhotoCell.swift in Sources */,
 				4C92D90727C4C03400D99854 /* FontEnum.swift in Sources */,
 				4C6801AF27C8CA5000A5F1DC /* TextFilerView.swift in Sources */,
 				4CE985F62765707D00239C1B /* SwiftUIPreviewTestVC.swift in Sources */,

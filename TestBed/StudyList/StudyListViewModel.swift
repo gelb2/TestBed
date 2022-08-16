@@ -26,11 +26,14 @@ class StudyListViewModel {
         
         let scanExample = StudyCellViewModel(title: "Scan-Example-Udemy/Tomy", description: "Udemy/Tomy의 Scan 사용", destinationVC: .studyTopic(.rxSwift(.scan_How_To_Use)))
         
+        let cacheExample = StudyCellViewModel(title: "CacheImage+GCD", description: "이미지 캐싱과 GCD를 이용한 비동기처리", destinationVC: .studyTopic(.gcd(.asyncronous_downloadImage_cache)))
+        
         lists.append(declarativeUI)
         lists.append(swiftUIPreviewTest)
         lists.append(conclusion_MVVM)
         lists.append(relayExample)
         lists.append(scanExample)
+        lists.append(cacheExample)
         
         for i in 0...20 {
             let dummies = StudyCellViewModel(title: "Dummy \(i)", description: "This is Dummy Data Set Real Data", destinationVC: .errorPopup(.Unknown))

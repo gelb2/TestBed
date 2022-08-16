@@ -32,6 +32,10 @@ extension StudyListSceneBuildable {
         return ScanExampleViewController()
     }
     
+    func buildAsyncDownloadingScene() -> Sceneable {
+        return AsyncDownloadExampleViewController()
+    }
+    
     func buildErrorAlert() -> Sceneable {
         let alert = UIAlertController(title: "UnknownVC", message: "initVC Please", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .destructive, handler: nil)
@@ -59,6 +63,8 @@ extension StudyListRoutable where Self: StudyListViewController {
             nextScene = buildRelayExampleScene()
         case .studyTopic(.rxSwift(.scan_How_To_Use)):
             nextScene = buildScanExampleScene()
+        case .studyTopic(.gcd(.asyncronous_downloadImage_cache)):
+            nextScene = buildAsyncDownloadingScene()
         case .errorPopup(.Unknown):
             nextScene = buildErrorAlert()
         default: break
