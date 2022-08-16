@@ -59,10 +59,10 @@ extension AsyncDownloadExampleViewController: Presentable {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            collectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            collectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+            collectionView.topAnchor.constraint(equalTo: view.topAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
         
     }
@@ -96,19 +96,46 @@ extension AsyncDownloadExampleViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! PhotoCell
-        
-        // 🎾 cellForItemAt에서 처리하면 동시성처리가 안되고 있는 것임
-        if let data = try? Data(contentsOf: urls[indexPath.item]),
-          let image = UIImage(data: data) {
-          cell.display(image: image)
-        } else {
-          cell.display(image: nil)
-        }
+                
+        //downloadingImageWithURLSession(indexPath: indexPath)
+        downloadWithGlobalQueue(at: indexPath)
         
         return cell
     }
+}
+
+extension AsyncDownloadExampleViewController {
+    // 🎾 글로벌큐를 이용한 다운로드 및 셀 표시
+    private func downloadWithGlobalQueue(at indexPath: IndexPath) {
+        DispatchQueue.global(qos: .utility).async { [weak self] in
+            guard let self = self else { return }
+            
+            let url = self.urls[indexPath.item]
+            guard let data = try? Data(contentsOf: url),
+                  let image = UIImage(data: data) else { return }
+            
+            DispatchQueue.main.async {
+                if let cell = self.collectionView.cellForItem(at: indexPath) as? PhotoCell {
+                    cell.display(image: image)
+                }
+            }
+        }
+    }
     
-        
-    
+    // 🎾 URL세션을 이용한 다운로드 및 셀 표시
+    private func downloadingImageWithURLSession(indexPath: IndexPath) {
+        URLSession.shared.dataTask(with: urls[indexPath.item]) { [weak self] data, response, error in
+            
+            guard let self = self,
+                let data = data,
+                let image = UIImage(data: data) else { return }
+            
+            DispatchQueue.main.async {
+                if let cell = self.collectionView.cellForItem(at: indexPath) as? PhotoCell {
+                    cell.display(image: image)
+                }
+            }
+        }.resume()
+    }
 }
 
