@@ -31,8 +31,12 @@ final class PhotoCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        addSubview(mainImageView)
-        addSubview(activityIndicator)
+        self.contentView.addSubview(mainImageView)
+        self.contentView.addSubview(activityIndicator)
+        
+        //왜 강사는 contentView.addSubview가 아니라 그냥 addsubView를 했지?
+//        addSubview(mainImageView)
+//        addSubview(activityIndicator)
         
         NSLayoutConstraint.activate([
             mainImageView.topAnchor.constraint(equalTo: contentView.topAnchor),
