@@ -16,6 +16,13 @@ class StudyListViewModel {
     }
     
     func populateStudyData() {
+        defer {
+            for i in 0...20 {
+                let dummies = StudyCellViewModel(title: "Dummy \(i)", description: "This is Dummy Data Set Real Data", destinationVC: .errorPopup(.Unknown))
+                lists.append(dummies)
+            }
+        }
+        
         let declarativeUI = StudyCellViewModel(title: "DeclarativeUI-BearFried", description: "곰튀김의 선언형 UI", destinationVC: .studyTopic(.uiStudy(.DeclarativeUI)))
         let swiftUIPreviewTest = StudyCellViewModel(title: "SwiftUIPreview-Minsone", description: "민소네의 SwiftUI 프리뷰-UIKit", destinationVC: .studyTopic(.uiStudy(.SwiftUIPreviewTest)))
         
@@ -28,16 +35,14 @@ class StudyListViewModel {
         
         let cacheExample = StudyCellViewModel(title: "CacheImage+GCD", description: "이미지 캐싱과 GCD를 이용한 비동기처리", destinationVC: .studyTopic(.gcd(.asyncronous_downloadImage_cache)))
         
+        let nsCacheExample_GCD = StudyCellViewModel(title: "NSCacheImage+GCD", description: "NSCache이용한 이미지 캐싱과 GCD를 이용한 비동기처리", destinationVC: .studyTopic(.gcd(.asyncronous_downloadImage_NSCache)))
+        
         lists.append(declarativeUI)
         lists.append(swiftUIPreviewTest)
         lists.append(conclusion_MVVM)
         lists.append(relayExample)
         lists.append(scanExample)
         lists.append(cacheExample)
-        
-        for i in 0...20 {
-            let dummies = StudyCellViewModel(title: "Dummy \(i)", description: "This is Dummy Data Set Real Data", destinationVC: .errorPopup(.Unknown))
-            lists.append(dummies)
-        }
+        lists.append(nsCacheExample_GCD)
     }
 }

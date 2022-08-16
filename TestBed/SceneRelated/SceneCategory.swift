@@ -38,6 +38,7 @@ enum SceneCategory {
         
         enum gcdScene {
             case asyncronous_downloadImage_cache
+            case asyncronous_downloadImage_NSCache
         }
         
         enum dataStructureScene {
