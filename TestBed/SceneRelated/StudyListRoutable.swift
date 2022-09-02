@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 
 protocol StudyListSceneBuildable: SceneBuildable { }
 
@@ -40,6 +41,10 @@ extension StudyListSceneBuildable {
         return AsyncDownloadExampleViewController_NSCache()
     }
     
+    func buildYoutube_codeWithChris_unitTest_TDD() -> Sceneable {
+        return UIHostingController(rootView: SongList())
+    }
+    
     func buildErrorAlert() -> Sceneable {
         let alert = UIAlertController(title: "UnknownVC", message: "initVC Please", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .destructive, handler: nil)
@@ -71,6 +76,8 @@ extension StudyListRoutable where Self: StudyListViewController {
             nextScene = buildAsyncDownloadingScene()
         case .studyTopic(.gcd(.asyncronous_downloadImage_NSCache)):
             nextScene = buildAsyncDownloading_NSCache_Scene()
+        case .studyTopic(.unitTest(.youtube_codeWithChris_unitTest_TDD)):
+            nextScene = buildYoutube_codeWithChris_unitTest_TDD()
         case .errorPopup(.Unknown):
             nextScene = buildErrorAlert()
         default: break

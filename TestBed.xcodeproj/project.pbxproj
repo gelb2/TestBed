@@ -263,8 +263,8 @@
 		36D36B5C28C1935F0023FA4D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				36D36B5D28C1939A0023FA4D /* AddUpdateSong.swift */,
 				36D36B5F28C194FF0023FA4D /* SongList.swift */,
+				36D36B5D28C1939A0023FA4D /* AddUpdateSong.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
