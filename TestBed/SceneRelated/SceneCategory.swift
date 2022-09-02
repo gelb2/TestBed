@@ -23,6 +23,7 @@ enum SceneCategory {
         case uiStudy(uiStudyScene)
         case rxSwift(rxSwiftScene)
         case dataStructure(dataStructureScene)
+        case gcd(gcdScene)
         
         enum uiStudyScene {
             case DeclarativeUI
@@ -33,6 +34,11 @@ enum SceneCategory {
             case WhatIsMVVM_Conclusion(SceneContext<ViewModel>)
             case Relay_How_To_Use
             case scan_How_To_Use
+        }
+        
+        enum gcdScene {
+            case asyncronous_downloadImage_cache
+            case asyncronous_downloadImage_NSCache
         }
         
         enum dataStructureScene {
