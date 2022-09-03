@@ -29,7 +29,11 @@ extension Mockable {
             let data = try Data(contentsOf: path)
             let decodedObject = try JSONDecoder().decode([T].self, from: data)
             return decodedObject
-        } catch {
+        } catch let error {
+            print("error message")
+            print(String(describing: error))
+            print("error message end")
+            
             fatalError("failed decode data")
         }
     }
