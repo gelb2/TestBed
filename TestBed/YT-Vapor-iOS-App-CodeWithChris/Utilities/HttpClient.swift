@@ -23,7 +23,17 @@ enum HttpError: Error {
     case badURL, badResponse, errorDecodingData, invalidURL
 }
 
-class HttpClient {
+//To isolate UnitTest from the real environment(ex. internet, Real Database)
+//make protocol and force the class adapt the protocol
+//this protocol is going to be adapted by MockHttpClient class in UnitTest Related File
+//HTTPClient instance in viewModel also adapt this protocol
+protocol HTTPClientProtocol {
+    func fetch<T: Codable>(url: URL) async throws -> [T]
+    func sendData<T: Codable>(to url: URL, object: T, httpMethod: String) async throws
+    func delete(at id: UUID, url: URL) async throws
+}
+
+class HttpClient: HTTPClientProtocol {
     
     
     func fetch<T: Codable>(url: URL) async throws -> [T] {

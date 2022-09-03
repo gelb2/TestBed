@@ -11,9 +11,9 @@ import SwiftUI
 class SongListViewModel: ObservableObject {
     @Published var songs = [Song]()
     
-    var httpClient: HttpClient
+    var httpClient: HTTPClientProtocol
     
-    init(httpClient: HttpClient) {
+    init(httpClient: HTTPClientProtocol) {
         self.httpClient = httpClient
     }
     

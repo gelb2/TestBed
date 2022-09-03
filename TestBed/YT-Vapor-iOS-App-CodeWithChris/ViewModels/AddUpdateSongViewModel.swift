@@ -21,13 +21,13 @@ final class AddUpdateSongViewModel: ObservableObject {
         songID != nil ? "Update Song" : "Add Song"
     }
     
-    var httpClient: HttpClient
+    var httpClient: HTTPClientProtocol
     
-    init(httpClient: HttpClient) {
+    init(httpClient: HTTPClientProtocol) {
         self.httpClient = httpClient
     }
     
-    init(currentSong: Song, httpClient: HttpClient) {
+    init(currentSong: Song, httpClient: HTTPClientProtocol) {
         self.songTitle = currentSong.title
         self.songID = currentSong.id
         self.httpClient = httpClient
