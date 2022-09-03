@@ -22,7 +22,10 @@ class AddUpdateSongViewModelTests: XCTestCase {
         super.tearDown()
     }
     
+    //노래이름이 스페이스바만 있는 스트링인 경우는 적합하지 않은 노래 이름이라고 간주하고 테스트 작성
     func testNoEmptySongCanBeAdded() {
+        sut.songTitle = "larisa"
+        
         XCTAssertTrue(sut.isValidSong(), "song name is valid")
     }
     

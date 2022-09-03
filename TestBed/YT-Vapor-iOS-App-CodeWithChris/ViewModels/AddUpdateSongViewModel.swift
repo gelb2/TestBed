@@ -73,6 +73,10 @@ final class AddUpdateSongViewModel: ObservableObject {
     }
     
     func isValidSong() -> Bool {
-        return false
+        if songTitle == "" {
+            return false
+        } else {
+            return true
+        }
     }
 }
