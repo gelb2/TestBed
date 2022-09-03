@@ -29,6 +29,12 @@ class AddUpdateSongViewModelTests: XCTestCase {
         XCTAssertTrue(sut.isValidSong(), "song name is valid")
     }
     
+    func testWhiteSpaceSnogFailed() {
+        sut.songTitle = "     "
+        
+        XCTAssertFalse(sut.isValidSong(), "song name should not be valid")
+    }
+    
     
 
 }

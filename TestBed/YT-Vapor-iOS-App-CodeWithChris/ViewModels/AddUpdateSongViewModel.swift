@@ -73,10 +73,6 @@ final class AddUpdateSongViewModel: ObservableObject {
     }
     
     func isValidSong() -> Bool {
-        if songTitle == "" {
-            return false
-        } else {
-            return true
-        }
+        songTitle.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty ? false : true
     }
 }
