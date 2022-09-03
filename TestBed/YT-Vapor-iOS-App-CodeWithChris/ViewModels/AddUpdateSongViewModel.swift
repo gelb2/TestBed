@@ -71,4 +71,8 @@ final class AddUpdateSongViewModel: ObservableObject {
         let songToUpdate = Song(id: songID, title: songTitle)
         try await httpClient.sendData(to: url, object: songToUpdate, httpMethod: HttpMethods.PUT.rawValue)
     }
+    
+    func isValidSong() -> Bool {
+        return false
+    }
 }

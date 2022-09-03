@@ -42,6 +42,7 @@
 		4C34E48328C310D200E8DA67 /* MockHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C34E48228C310D200E8DA67 /* MockHTTPClient.swift */; };
 		4C34E48528C3144400E8DA67 /* SongResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C34E48428C3144400E8DA67 /* SongResponse.json */; };
 		4C34E48828C31C5C00E8DA67 /* Mockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C34E48628C3150900E8DA67 /* Mockable.swift */; };
+		4C34E48B28C3424400E8DA67 /* AddUpdateSongViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C34E48928C341C300E8DA67 /* AddUpdateSongViewModelTests.swift */; };
 		4C6801AB27C8BCB300A5F1DC /* ButtonCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6801AA27C8BCB300A5F1DC /* ButtonCountView.swift */; };
 		4C6801AD27C8C14100A5F1DC /* ScanExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6801AC27C8C14100A5F1DC /* ScanExampleViewController.swift */; };
 		4C6801AF27C8CA5000A5F1DC /* TextFilerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6801AE27C8CA5000A5F1DC /* TextFilerView.swift */; };
@@ -149,6 +150,7 @@
 		4C34E48228C310D200E8DA67 /* MockHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHTTPClient.swift; sourceTree = "<group>"; };
 		4C34E48428C3144400E8DA67 /* SongResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SongResponse.json; sourceTree = "<group>"; };
 		4C34E48628C3150900E8DA67 /* Mockable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mockable.swift; sourceTree = "<group>"; };
+		4C34E48928C341C300E8DA67 /* AddUpdateSongViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUpdateSongViewModelTests.swift; sourceTree = "<group>"; };
 		4C4B608E280410C800583D65 /* AssociatedType.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = AssociatedType.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4C6801AA27C8BCB300A5F1DC /* ButtonCountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCountView.swift; sourceTree = "<group>"; };
 		4C6801AC27C8C14100A5F1DC /* ScanExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanExampleViewController.swift; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 				36D36B5028C18DCE0023FA4D /* Utilities */,
 				36D36B4F28C18D880023FA4D /* Models */,
 				4C34E47B28C30BE800E8DA67 /* YT_Vapor_iOS_App_CodeWithChrisTest.swift */,
+				4C34E48928C341C300E8DA67 /* AddUpdateSongViewModelTests.swift */,
 				4C34E48228C310D200E8DA67 /* MockHTTPClient.swift */,
 				4C34E48628C3150900E8DA67 /* Mockable.swift */,
 				4C34E48428C3144400E8DA67 /* SongResponse.json */,
@@ -744,6 +747,7 @@
 			files = (
 				4C34E48328C310D200E8DA67 /* MockHTTPClient.swift in Sources */,
 				4C34E48828C31C5C00E8DA67 /* Mockable.swift in Sources */,
+				4C34E48B28C3424400E8DA67 /* AddUpdateSongViewModelTests.swift in Sources */,
 				4C34E47C28C30BE800E8DA67 /* YT_Vapor_iOS_App_CodeWithChrisTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
