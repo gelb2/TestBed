@@ -37,6 +37,8 @@ class StudyListViewModel {
         
         let nsCacheExample_GCD = StudyCellViewModel(title: "NSCacheImage+GCD", description: "NSCache이용한 이미지 캐싱과 GCD를 이용한 비동기처리", destinationVC: .studyTopic(.gcd(.asyncronous_downloadImage_NSCache)))
         
+        let codeWithChris_unitTest_TDD = StudyCellViewModel(title: "codeWithChris_unitTest_TDD", description: "유닛테스트 + TDD 관련 유튜브 튜토리얼", destinationVC: .studyTopic(.unitTest(.youtube_codeWithChris_unitTest_TDD)) )
+        
         lists.append(declarativeUI)
         lists.append(swiftUIPreviewTest)
         lists.append(conclusion_MVVM)
@@ -44,5 +46,6 @@ class StudyListViewModel {
         lists.append(scanExample)
         lists.append(cacheExample)
         lists.append(nsCacheExample_GCD)
+        lists.append(codeWithChris_unitTest_TDD)
     }
 }

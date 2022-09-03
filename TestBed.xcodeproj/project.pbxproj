@@ -10,6 +10,14 @@
 		2F955AA1E4A44AF03EFC357D /* Pods_TestBed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AD6788B95F84F5C298F4694 /* Pods_TestBed.framework */; };
 		365AACBE27B6AFE100FBAC52 /* magdacleanmono-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 365AACBD27B6AFCF00FBAC52 /* magdacleanmono-bold.ttf */; };
 		365AACC027B6B32100FBAC52 /* magdacleanmono-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 365AACBF27B6B32100FBAC52 /* magdacleanmono-regular.ttf */; };
+		36D36B4E28C18D820023FA4D /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D36B4D28C18D820023FA4D /* Song.swift */; };
+		36D36B5228C18DDD0023FA4D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D36B5128C18DDD0023FA4D /* Constants.swift */; };
+		36D36B5428C18E1E0023FA4D /* ModalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D36B5328C18E1E0023FA4D /* ModalType.swift */; };
+		36D36B5628C18E740023FA4D /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D36B5528C18E740023FA4D /* HttpClient.swift */; };
+		36D36B5928C191F40023FA4D /* SongListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D36B5828C191F40023FA4D /* SongListViewModel.swift */; };
+		36D36B5B28C193330023FA4D /* AddUpdateSongViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D36B5A28C193330023FA4D /* AddUpdateSongViewModel.swift */; };
+		36D36B5E28C1939A0023FA4D /* AddUpdateSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D36B5D28C1939A0023FA4D /* AddUpdateSong.swift */; };
+		36D36B6028C194FF0023FA4D /* SongList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D36B5F28C194FF0023FA4D /* SongList.swift */; };
 		4C0242CE27A7EA2300B01FB1 /* Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0242CD27A7EA2300B01FB1 /* Chainable.swift */; };
 		4C0242D027A7EAD700B01FB1 /* Int+Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0242CF27A7EAD700B01FB1 /* Int+Chainable.swift */; };
 		4C0242D227A7EBDB00B01FB1 /* DeclarativeUITestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0242D127A7EBDB00B01FB1 /* DeclarativeUITestViewController.swift */; };
@@ -30,6 +38,11 @@
 		4C11A8D627AE61E700EC545B /* SceneCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C11A8D527AE61E700EC545B /* SceneCategory.swift */; };
 		4C18364E27ABC5DE00F56513 /* UIStackView+Chanable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C18364D27ABC5DE00F56513 /* UIStackView+Chanable.swift */; };
 		4C2E835A27C8E8BD0095AB3E /* DateToggleView_PreviewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2E835927C8E8BD0095AB3E /* DateToggleView_PreviewTest.swift */; };
+		4C34E47C28C30BE800E8DA67 /* YT_Vapor_iOS_App_CodeWithChrisTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C34E47B28C30BE800E8DA67 /* YT_Vapor_iOS_App_CodeWithChrisTest.swift */; };
+		4C34E48328C310D200E8DA67 /* MockHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C34E48228C310D200E8DA67 /* MockHTTPClient.swift */; };
+		4C34E48528C3144400E8DA67 /* SongResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C34E48428C3144400E8DA67 /* SongResponse.json */; };
+		4C34E48828C31C5C00E8DA67 /* Mockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C34E48628C3150900E8DA67 /* Mockable.swift */; };
+		4C34E48B28C3424400E8DA67 /* AddUpdateSongViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C34E48928C341C300E8DA67 /* AddUpdateSongViewModelTests.swift */; };
 		4C6801AB27C8BCB300A5F1DC /* ButtonCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6801AA27C8BCB300A5F1DC /* ButtonCountView.swift */; };
 		4C6801AD27C8C14100A5F1DC /* ScanExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6801AC27C8C14100A5F1DC /* ScanExampleViewController.swift */; };
 		4C6801AF27C8CA5000A5F1DC /* TextFilerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6801AE27C8CA5000A5F1DC /* TextFilerView.swift */; };
@@ -77,6 +90,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4C34E47D28C30BE800E8DA67 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4CE985E62765707D00239C1B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4CE985ED2765707D00239C1B;
+			remoteInfo = TestBed;
+		};
 		4CE986052765707D00239C1B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4CE985E62765707D00239C1B /* Project object */;
@@ -97,6 +117,14 @@
 		14CDBE1B5850B82835FCC2A0 /* Pods-TestBed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestBed.debug.xcconfig"; path = "Target Support Files/Pods-TestBed/Pods-TestBed.debug.xcconfig"; sourceTree = "<group>"; };
 		365AACBD27B6AFCF00FBAC52 /* magdacleanmono-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "magdacleanmono-bold.ttf"; sourceTree = "<group>"; };
 		365AACBF27B6B32100FBAC52 /* magdacleanmono-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "magdacleanmono-regular.ttf"; sourceTree = "<group>"; };
+		36D36B4D28C18D820023FA4D /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		36D36B5128C18DDD0023FA4D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		36D36B5328C18E1E0023FA4D /* ModalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalType.swift; sourceTree = "<group>"; };
+		36D36B5528C18E740023FA4D /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		36D36B5828C191F40023FA4D /* SongListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListViewModel.swift; sourceTree = "<group>"; };
+		36D36B5A28C193330023FA4D /* AddUpdateSongViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUpdateSongViewModel.swift; sourceTree = "<group>"; };
+		36D36B5D28C1939A0023FA4D /* AddUpdateSong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUpdateSong.swift; sourceTree = "<group>"; };
+		36D36B5F28C194FF0023FA4D /* SongList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongList.swift; sourceTree = "<group>"; };
 		4AD6788B95F84F5C298F4694 /* Pods_TestBed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestBed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C0242CD27A7EA2300B01FB1 /* Chainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chainable.swift; sourceTree = "<group>"; };
 		4C0242CF27A7EAD700B01FB1 /* Int+Chainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Chainable.swift"; sourceTree = "<group>"; };
@@ -117,6 +145,12 @@
 		4C11A8D527AE61E700EC545B /* SceneCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCategory.swift; sourceTree = "<group>"; };
 		4C18364D27ABC5DE00F56513 /* UIStackView+Chanable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Chanable.swift"; sourceTree = "<group>"; };
 		4C2E835927C8E8BD0095AB3E /* DateToggleView_PreviewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateToggleView_PreviewTest.swift; sourceTree = "<group>"; };
+		4C34E47928C30BE800E8DA67 /* YT-Vapor-iOS-App-CodeWithChrisTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "YT-Vapor-iOS-App-CodeWithChrisTest.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C34E47B28C30BE800E8DA67 /* YT_Vapor_iOS_App_CodeWithChrisTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YT_Vapor_iOS_App_CodeWithChrisTest.swift; sourceTree = "<group>"; };
+		4C34E48228C310D200E8DA67 /* MockHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHTTPClient.swift; sourceTree = "<group>"; };
+		4C34E48428C3144400E8DA67 /* SongResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SongResponse.json; sourceTree = "<group>"; };
+		4C34E48628C3150900E8DA67 /* Mockable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mockable.swift; sourceTree = "<group>"; };
+		4C34E48928C341C300E8DA67 /* AddUpdateSongViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUpdateSongViewModelTests.swift; sourceTree = "<group>"; };
 		4C4B608E280410C800583D65 /* AssociatedType.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = AssociatedType.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4C6801AA27C8BCB300A5F1DC /* ButtonCountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCountView.swift; sourceTree = "<group>"; };
 		4C6801AC27C8C14100A5F1DC /* ScanExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanExampleViewController.swift; sourceTree = "<group>"; };
@@ -170,6 +204,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4C34E47628C30BE800E8DA67 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4CE985EB2765707D00239C1B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -204,6 +245,58 @@
 				4C92D90627C4C03400D99854 /* FontEnum.swift */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		36D36B4C28C18D520023FA4D /* YT-Vapor-iOS-App-CodeWithChris */ = {
+			isa = PBXGroup;
+			children = (
+				36D36B5C28C1935F0023FA4D /* Views */,
+				36D36B5728C191E00023FA4D /* ViewModels */,
+				36D36B5028C18DCE0023FA4D /* Utilities */,
+				36D36B4F28C18D880023FA4D /* Models */,
+				4C34E47B28C30BE800E8DA67 /* YT_Vapor_iOS_App_CodeWithChrisTest.swift */,
+				4C34E48928C341C300E8DA67 /* AddUpdateSongViewModelTests.swift */,
+				4C34E48228C310D200E8DA67 /* MockHTTPClient.swift */,
+				4C34E48628C3150900E8DA67 /* Mockable.swift */,
+				4C34E48428C3144400E8DA67 /* SongResponse.json */,
+			);
+			path = "YT-Vapor-iOS-App-CodeWithChris";
+			sourceTree = "<group>";
+		};
+		36D36B4F28C18D880023FA4D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				36D36B4D28C18D820023FA4D /* Song.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		36D36B5028C18DCE0023FA4D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				36D36B5128C18DDD0023FA4D /* Constants.swift */,
+				36D36B5328C18E1E0023FA4D /* ModalType.swift */,
+				36D36B5528C18E740023FA4D /* HttpClient.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		36D36B5728C191E00023FA4D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				36D36B5828C191F40023FA4D /* SongListViewModel.swift */,
+				36D36B5A28C193330023FA4D /* AddUpdateSongViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		36D36B5C28C1935F0023FA4D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				36D36B5F28C194FF0023FA4D /* SongList.swift */,
+				36D36B5D28C1939A0023FA4D /* AddUpdateSong.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		4C0242CC27A7EA1200B01FB1 /* Chainable */ = {
@@ -330,13 +423,6 @@
 			path = SceneRelated;
 			sourceTree = "<group>";
 		};
-		4CB68D9B28AB635E00BD4599 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		4CB68D9C28AB65A400BD4599 /* AsyncDownload_Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -370,6 +456,7 @@
 				4CE985EE2765707D00239C1B /* TestBed.app */,
 				4CE986042765707D00239C1B /* TestBedTests.xctest */,
 				4CE9860E2765707D00239C1B /* TestBedUITests.xctest */,
+				4C34E47928C30BE800E8DA67 /* YT-Vapor-iOS-App-CodeWithChrisTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -383,7 +470,6 @@
 				365AACBC27B6AFAC00FBAC52 /* Font */,
 				4C6801A827C8BC6D00A5F1DC /* AppDelegateRelated */,
 				4CB5988227B66B68009247AD /* SceneRelated */,
-				4CB68D9B28AB635E00BD4599 /* New Group */,
 				4C11A8C927AE57AA00EC545B /* StudyList */,
 				4C0242CC27A7EA1200B01FB1 /* Chainable */,
 				4CEBA77427901CE600904EEC /* SwiftUI_Preview_AppLifeCycleStudy */,
@@ -391,6 +477,7 @@
 				4C92D91827C6516F00D99854 /* Relay_Example */,
 				4C6801A927C8BC8B00A5F1DC /* Scan_Example */,
 				4CB68D9C28AB65A400BD4599 /* AsyncDownload_Example */,
+				36D36B4C28C18D520023FA4D /* YT-Vapor-iOS-App-CodeWithChris */,
 				4C2E835827C8E8270095AB3E /* Preview_Examples */,
 				4CE985FA2765707D00239C1B /* Assets.xcassets */,
 				4CE985FC2765707D00239C1B /* LaunchScreen.storyboard */,
@@ -447,6 +534,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4C34E47828C30BE800E8DA67 /* YT-Vapor-iOS-App-CodeWithChrisTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C34E47F28C30BE800E8DA67 /* Build configuration list for PBXNativeTarget "YT-Vapor-iOS-App-CodeWithChrisTest" */;
+			buildPhases = (
+				4C34E47528C30BE800E8DA67 /* Sources */,
+				4C34E47628C30BE800E8DA67 /* Frameworks */,
+				4C34E47728C30BE800E8DA67 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C34E47E28C30BE800E8DA67 /* PBXTargetDependency */,
+			);
+			name = "YT-Vapor-iOS-App-CodeWithChrisTest";
+			productName = "YT-Vapor-iOS-App-CodeWithChrisTest";
+			productReference = 4C34E47928C30BE800E8DA67 /* YT-Vapor-iOS-App-CodeWithChrisTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		4CE985ED2765707D00239C1B /* TestBed */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4CE986182765707D00239C1B /* Build configuration list for PBXNativeTarget "TestBed" */;
@@ -512,9 +617,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1310;
+				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1310;
 				TargetAttributes = {
+					4C34E47828C30BE800E8DA67 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 4CE985ED2765707D00239C1B;
+					};
 					4CE985ED2765707D00239C1B = {
 						CreatedOnToolsVersion = 13.1;
 					};
@@ -547,11 +656,20 @@
 				4CE985ED2765707D00239C1B /* TestBed */,
 				4CE986032765707D00239C1B /* TestBedTests */,
 				4CE9860D2765707D00239C1B /* TestBedUITests */,
+				4C34E47828C30BE800E8DA67 /* YT-Vapor-iOS-App-CodeWithChrisTest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4C34E47728C30BE800E8DA67 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C34E48528C3144400E8DA67 /* SongResponse.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4CE985EC2765707D00239C1B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -623,6 +741,17 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4C34E47528C30BE800E8DA67 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C34E48328C310D200E8DA67 /* MockHTTPClient.swift in Sources */,
+				4C34E48828C31C5C00E8DA67 /* Mockable.swift in Sources */,
+				4C34E48B28C3424400E8DA67 /* AddUpdateSongViewModelTests.swift in Sources */,
+				4C34E47C28C30BE800E8DA67 /* YT_Vapor_iOS_App_CodeWithChrisTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4CE985EA2765707D00239C1B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -637,6 +766,7 @@
 				4C92D90027C4B5A600D99854 /* MVVM_ConclusionViewController.swift in Sources */,
 				4C11A8CF27AE5D7F00EC545B /* StudyModel.swift in Sources */,
 				4C8C9BE827C8F581001B6FF2 /* ViewControllerPreview.swift in Sources */,
+				36D36B6028C194FF0023FA4D /* SongList.swift in Sources */,
 				4C11A8D327AE5DAA00EC545B /* StudyViewModel.swift in Sources */,
 				4C0ECEFD27BE17D400BCA3EA /* StudyListRoutable.swift in Sources */,
 				4C0ECEFF27BE6B4B00BCA3EA /* SceneContext.swift in Sources */,
@@ -645,6 +775,7 @@
 				4CB68DA628AB79D800BD4599 /* CacheImageView.swift in Sources */,
 				4C6801AB27C8BCB300A5F1DC /* ButtonCountView.swift in Sources */,
 				4C0ECEFB27BE17A400BCA3EA /* SceneDelegateRoutable.swift in Sources */,
+				36D36B5228C18DDD0023FA4D /* Constants.swift in Sources */,
 				4C8C9BEB27C8FA13001B6FF2 /* UIView+Extension.swift in Sources */,
 				4C0242D227A7EBDB00B01FB1 /* DeclarativeUITestViewController.swift in Sources */,
 				4C0242CE27A7EA2300B01FB1 /* Chainable.swift in Sources */,
@@ -652,7 +783,9 @@
 				4C0242D627A7F98A00B01FB1 /* UILabel+Chainable.swift in Sources */,
 				4C0242D027A7EAD700B01FB1 /* Int+Chainable.swift in Sources */,
 				4C18364E27ABC5DE00F56513 /* UIStackView+Chanable.swift in Sources */,
+				36D36B5628C18E740023FA4D /* HttpClient.swift in Sources */,
 				4C68DA9F2775B2C700FEAD25 /* SwiftUILifeCycleApp.swift in Sources */,
+				36D36B5B28C193330023FA4D /* AddUpdateSongViewModel.swift in Sources */,
 				4C92D90227C4B66E00D99854 /* DateToggleView.swift in Sources */,
 				4C92D90F27C500CD00D99854 /* Entity.swift in Sources */,
 				4C11A8CD27AE595700EC545B /* StudyListCell.swift in Sources */,
@@ -663,6 +796,7 @@
 				4C8C9BE427C8EDF5001B6FF2 /* DynamicTypeSizePreview.swift in Sources */,
 				4C0242D427A7EC9F00B01FB1 /* UIView+Chainable.swift in Sources */,
 				4CB68DA228AB676100BD4599 /* PhotoCell.swift in Sources */,
+				36D36B4E28C18D820023FA4D /* Song.swift in Sources */,
 				4C92D90727C4C03400D99854 /* FontEnum.swift in Sources */,
 				4CB68DAC28AB8FD600BD4599 /* PhotoCell+NSCache.swift in Sources */,
 				4C6801AF27C8CA5000A5F1DC /* TextFilerView.swift in Sources */,
@@ -670,7 +804,9 @@
 				4C8C045727ABA5C800FFEB3B /* UITextField+Chainable.swift in Sources */,
 				4C11A8D127AE5D9700EC545B /* StudyCellViewModel.swift in Sources */,
 				4CE985F22765707D00239C1B /* AppDelegate.swift in Sources */,
+				36D36B5428C18E1E0023FA4D /* ModalType.swift in Sources */,
 				4C92D91327C5F82300D99854 /* Model.swift in Sources */,
+				36D36B5E28C1939A0023FA4D /* AddUpdateSong.swift in Sources */,
 				4C8C9BED27C8FA67001B6FF2 /* UIViewController+Extension.swift in Sources */,
 				4C11A8D627AE61E700EC545B /* SceneCategory.swift in Sources */,
 				4C92D91727C5FDB700D99854 /* ViewModel.swift in Sources */,
@@ -684,6 +820,7 @@
 				4C8C045927ABACCE00FFEB3B /* UIButton+Chainable.swift in Sources */,
 				4CB5988427B6777B009247AD /* Routable.swift in Sources */,
 				4C92D91127C5F69F00D99854 /* Repository.swift in Sources */,
+				36D36B5928C191F40023FA4D /* SongListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -707,6 +844,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4C34E47E28C30BE800E8DA67 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4CE985ED2765707D00239C1B /* TestBed */;
+			targetProxy = 4C34E47D28C30BE800E8DA67 /* PBXContainerItemProxy */;
+		};
 		4CE986062765707D00239C1B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4CE985ED2765707D00239C1B /* TestBed */;
@@ -731,6 +873,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4C34E48028C30BE800E8DA67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PDF8XXXYH9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "kakao.YT-Vapor-iOS-App-CodeWithChrisTest";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestBed.app/TestBed";
+			};
+			name = Debug;
+		};
+		4C34E48128C30BE800E8DA67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PDF8XXXYH9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "kakao.YT-Vapor-iOS-App-CodeWithChrisTest";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestBed.app/TestBed";
+			};
+			name = Release;
+		};
 		4CE986162765707D00239C1B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1006,6 +1186,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4C34E47F28C30BE800E8DA67 /* Build configuration list for PBXNativeTarget "YT-Vapor-iOS-App-CodeWithChrisTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C34E48028C30BE800E8DA67 /* Debug */,
+				4C34E48128C30BE800E8DA67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4CE985E92765707D00239C1B /* Build configuration list for PBXProject "TestBed" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
