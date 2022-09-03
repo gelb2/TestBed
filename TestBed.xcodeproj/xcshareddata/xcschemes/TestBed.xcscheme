@@ -48,6 +48,16 @@
                ReferencedContainer = "container:TestBed.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4C34E47828C30BE800E8DA67"
+               BuildableName = "YT-Vapor-iOS-App-CodeWithChrisTest.xctest"
+               BlueprintName = "YT-Vapor-iOS-App-CodeWithChrisTest"
+               ReferencedContainer = "container:TestBed.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

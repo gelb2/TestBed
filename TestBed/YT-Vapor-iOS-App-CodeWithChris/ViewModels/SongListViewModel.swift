@@ -11,6 +11,12 @@ import SwiftUI
 class SongListViewModel: ObservableObject {
     @Published var songs = [Song]()
     
+    var httpClient: HttpClient
+    
+    init(httpClient: HttpClient) {
+        self.httpClient = httpClient
+    }
+    
     func fetchSongs() async throws {
         let urlString = Constants.baseURL + Endpoints.songs
         
@@ -18,7 +24,7 @@ class SongListViewModel: ObservableObject {
             throw HttpError.badURL
         }
         
-        let songResponse: [Song] = try await HttpClient.shared.fetch(url: url)
+        let songResponse: [Song] = try await httpClient.fetch(url: url)
         
         DispatchQueue.main.async {
             self.songs = songResponse
@@ -35,7 +41,7 @@ class SongListViewModel: ObservableObject {
             
             Task {
                 do {
-                    try await HttpClient.shared.delete(at: songID, url: url)
+                    try await httpClient.delete(at: songID, url: url)
                 } catch {
                     print("❌ error: \(error)")
                 }

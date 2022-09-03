@@ -21,11 +21,16 @@ final class AddUpdateSongViewModel: ObservableObject {
         songID != nil ? "Update Song" : "Add Song"
     }
     
-    init() { }
+    var httpClient: HttpClient
     
-    init(currentSong: Song) {
+    init(httpClient: HttpClient) {
+        self.httpClient = httpClient
+    }
+    
+    init(currentSong: Song, httpClient: HttpClient) {
         self.songTitle = currentSong.title
         self.songID = currentSong.id
+        self.httpClient = httpClient
     }
     
     func addSong() async throws {
@@ -37,7 +42,7 @@ final class AddUpdateSongViewModel: ObservableObject {
         
         let song = Song(id: nil, title: songTitle)
         
-        try await HttpClient.shared.sendData(to: url,
+        try await httpClient.sendData(to: url,
                                              object: song,
                                              httpMethod: HttpMethods.POST.rawValue)
     }
@@ -64,6 +69,6 @@ final class AddUpdateSongViewModel: ObservableObject {
         }
         
         let songToUpdate = Song(id: songID, title: songTitle)
-        try await HttpClient.shared.sendData(to: url, object: songToUpdate, httpMethod: HttpMethods.PUT.rawValue)
+        try await httpClient.sendData(to: url, object: songToUpdate, httpMethod: HttpMethods.PUT.rawValue)
     }
 }

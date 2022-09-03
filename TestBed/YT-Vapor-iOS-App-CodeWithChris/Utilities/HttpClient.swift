@@ -24,9 +24,7 @@ enum HttpError: Error {
 }
 
 class HttpClient {
-    private init() { }
     
-    static let shared = HttpClient()
     
     func fetch<T: Codable>(url: URL) async throws -> [T] {
         let (data, response) = try await URLSession.shared.data(from: url)
