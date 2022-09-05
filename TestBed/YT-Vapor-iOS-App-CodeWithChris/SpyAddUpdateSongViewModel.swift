@@ -6,11 +6,27 @@
 //
 
 import Foundation
+import Combine
 @testable import TestBed
 
-//사실 AddUpdateSongViewModel 클래스를 직접 상속받는게 아니라 AddUpdateSongViewModelProtocol 같은 프로토콜을 채택하는 식으로 수정 하는 것이 맞는 걸로 보인다.
-final class SpyAddUpdateSongViewModel: AddUpdateSongViewModel {
-    override func isValidSong() -> Bool {
-        super.isValidSong()
+
+final class SpyAddUpdateSongViewModel: AddUpdateSongViewModelCheckable {
+    
+    var songID: UUID?
+    
+    @Published var songTitle: String = ""
+    
+    private var fakeHttpClient: HTTPClientProtocol
+    
+    init(fakeInstance: HTTPClientProtocol) {
+        self.fakeHttpClient = fakeInstance
+        self.songID = UUID()
+    }
+}
+
+extension AddUpdateSongViewModelCheckable where Self: SpyAddUpdateSongViewModel {
+    //Spy클래스를 쓸 경우엔 여길 탄다...이게 깔끔한 구현인지 아닌진 차치하고서라도...
+    var buttonTitle: String {
+        songID != nil ? "노래업데이트하기" : "노래추가하기"
     }
 }

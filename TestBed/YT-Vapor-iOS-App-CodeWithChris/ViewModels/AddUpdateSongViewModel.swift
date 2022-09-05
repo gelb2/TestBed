@@ -8,7 +8,30 @@
 import Foundation
 import SwiftUI
 
-class AddUpdateSongViewModel: ObservableObject {
+//AddUpdateSongViewModelCheckable은 AddUpdateSongViewModel의 SpyClass를 위한 프로토콜
+//SpyClass는 부모클래스의 실제
+protocol AddUpdateSongViewModelCheckable {
+    
+    var songID: UUID? { get set }
+    
+    var buttonTitle: String { get }
+    
+    var songTitle: String { get set }
+    
+    func isValidSong() -> Bool
+}
+
+
+extension AddUpdateSongViewModelCheckable {
+    
+    //실제 뷰모델 클래스, 뷰모델의 스파이클래스 둘 다 이 메소드를 타게 된다.
+    func isValidSong() -> Bool {
+        songTitle.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty ? false : true
+    }
+}
+
+
+class AddUpdateSongViewModel: ObservableObject, AddUpdateSongViewModelCheckable {
     @Published var songTitle = ""
     
     var songID: UUID?
@@ -70,9 +93,5 @@ class AddUpdateSongViewModel: ObservableObject {
         
         let songToUpdate = Song(id: songID, title: songTitle)
         try await httpClient.sendData(to: url, object: songToUpdate, httpMethod: HttpMethods.PUT.rawValue)
-    }
-    
-    func isValidSong() -> Bool {
-        songTitle.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty ? false : true
     }
 }
