@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-final class AddUpdateSongViewModel: ObservableObject {
+class AddUpdateSongViewModel: ObservableObject {
     @Published var songTitle = ""
     
     var songID: UUID?
