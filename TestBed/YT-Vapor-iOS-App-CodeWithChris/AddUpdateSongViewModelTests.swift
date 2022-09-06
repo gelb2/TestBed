@@ -38,3 +38,43 @@ class AddUpdateSongViewModelTests: XCTestCase {
     
 
 }
+
+//위에서 했던 동일한 유닛테스트를 SpyClass를 임의로 만들어서 해본것 + 그 외 더 끄적여본것
+class AddUpdateSongViewModelTests_WithSPY_ViewModel: XCTestCase {
+    var sut: SpyAddUpdateSongViewModel!
+
+    override func setUp() {
+        super.setUp()
+        
+        //init할때 Fake 객체를 넣어야 할것 같긴 하다. Mock한 객체가 아니라...
+        sut = SpyAddUpdateSongViewModel(fakeInstance: MockHTTPClient())
+    }
+    
+    override func tearDown() {
+        sut = nil
+        super.tearDown()
+    }
+    
+    func testNoEmptySongCanBeAdded() {
+        sut.songTitle = "larisa"
+        let isValid = sut.isValidSong()
+        
+        XCTAssertTrue(isValid, "song name is valid")
+    }
+    
+    func testWhiteSpaceSnogFailed() {
+        sut.songTitle = "     "
+        let isValid = sut.isValidSong()
+        
+        XCTAssertFalse(isValid, "song name should not be valid")
+    }
+    
+    func testButtonTitleWhenSongID_Nil() {
+        sut.songID = nil
+        XCTAssertEqual("노래추가하기", sut.buttonTitle)
+    }
+    
+    func testButtonTitleWhenSongID_NotNil() {
+        XCTAssertEqual("노래업데이트하기", sut.buttonTitle)
+    }
+}
