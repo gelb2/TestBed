@@ -44,12 +44,12 @@ class RelayExampleViewController: UIViewController {
     override func loadView() {
         initViewHierachy()
         configureViews()
-        bind()
+        
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        bind()
         // Do any additional setup after loading the view.
     }
     

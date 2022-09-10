@@ -39,11 +39,12 @@ class AsyncDownloadExampleViewController_NSCache: UIViewController {
         populateDatasourceFromPlist()
         initViewHierachy()
         configureViews()
-        bind()
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        bind()
     }
     
     private func settingCache() {

@@ -37,11 +37,12 @@ class AsyncDownloadExampleViewController: UIViewController {
         populateDatasourceFromPlist()
         initViewHierachy()
         configureViews()
-        bind()
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        bind()
     }
     
     private func populateDatasourceFromPlist() {

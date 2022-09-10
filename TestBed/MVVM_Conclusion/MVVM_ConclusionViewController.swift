@@ -39,12 +39,12 @@ class MVVM_ConclusionViewController: UIViewController {
         self.view = UIView()
         initViewHierachy()
         configureViews()
-        bind()
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        bind()
         viewModel.reload()
         
         // Do any additional setup after loading the view.
