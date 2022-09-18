@@ -10,7 +10,7 @@ def rxcocoa
   pod 'RxCocoa'
 end
 
-workspace 'TestBed'
+workspace 'BasicWorkSpace'
 
 target 'TestBed' do
   # Comment the next line if you don't want to use dynamic frameworks
