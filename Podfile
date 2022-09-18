@@ -11,6 +11,9 @@ def rxcocoa
 end
 
 workspace 'BasicWorkSpace'
+project 'TestBed.xcodeproj'
+project 'Landmarks/Landmarks.xcodeproj'
+project 'testWeather/test_weatherApp.xcodeproj'
 
 target 'TestBed' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -23,7 +26,7 @@ target 'TestBed' do
 end
 
 target 'Landmarks' do
-  
+  # Comment the next line if you don't want to use dynamic frameworks
   project 'Landmarks/Landmarks.xcodeproj'
   # Pods for Landmarks
    rxswift
@@ -31,4 +34,11 @@ target 'Landmarks' do
 
 end
 
-
+target 'test_weatherApp' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  project 'testWeather/test_weatherApp.xcodeproj'
+  
+  rxswift
+  rxcocoa
+  
+end
