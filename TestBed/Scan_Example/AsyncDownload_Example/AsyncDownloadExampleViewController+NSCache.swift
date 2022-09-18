@@ -7,7 +7,7 @@
 
 //인프런GCD강좌
 import UIKit
-
+//TODO: nscache 싱글턴 구조 바꾸기 - WeatherApp 참고
 class AsyncDownloadExampleViewController_NSCache: UIViewController {
     
     private let layout = UICollectionViewFlowLayout()
